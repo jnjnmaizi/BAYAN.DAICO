@@ -6,6 +6,10 @@ __pycache__/
 .ipynb_checkpoints/
 artifacts/*
 !artifacts/.gitkeep
+!artifacts/lab2/
+artifacts/lab2/*
+!artifacts/lab2/*.json
+!artifacts/lab2/*.png
 *.onnx
 *.bin
 *.safetensors

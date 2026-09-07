@@ -11,7 +11,12 @@ def check(label, ok, detail=""):
     print(f"{mark} {label}" + (f": {detail}" if detail else ""))
 
 check("Python 3.12", sys.version_info[:2] == (3, 12), platform.python_version())
-for mod in ["transformers", "spacy", "pandas", "pytest", "sklearn"]:
+for mod in [
+    "torch", "transformers", "accelerate", "sentencepiece", "datasets",
+    "sentence_transformers", "spacy", "camel_tools", "sklearn", "seqeval",
+    "faiss", "optimum.onnxruntime", "onnx", "onnxruntime", "fastapi",
+    "uvicorn", "pytest", "pandas", "matplotlib", "numpy", "jinja2",
+]:
     try:
         m = importlib.import_module(mod)
         check(mod, True, getattr(m, "__version__", "installed"))

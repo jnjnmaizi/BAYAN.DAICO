@@ -48,10 +48,60 @@ For each one record: example, why it matters, and clean/preserve/task-dependent.
 - Arabic emphatic complaint: `!!!` is conservatively normalised to `!!`, then `؟` and `.` create sensible boundaries.
 
 ## Lab 2 — Parameter audit
+
+### التطبيق خطوة بخطوة
+
+1. **Attention:** حسبنا `Q @ Kᵀ / √d_k`، وطبّقنا القناع قبل `softmax`، ثم ضربنا الأوزان في `V`. الخيار `need_weights=True` يرجّع الأوزان لفحصها، والاستدعاء الأصلي يرجّع المخرجات فقط.
+2. **Multi-Head Attention:** أضفنا إسقاطات متعلّمة لـQ وK وV، وقسّمناها إلى رؤوس، ثم جمعنا نتائج الرؤوس ومرّرناها عبر إسقاط الإخراج. قارنّا المخرجات والأوزان والمشتقات مع PyTorch باستخدام نفس الأوزان.
+3. **حساب البارامترات:** قرأنا إعدادات النسخ المحدّدة من النموذجين وعددنا أشكال البارامترات على جهاز `meta`؛ حساب العدد لا يحتاج تنزيل أوزان التدريب. النطاق هنا هو `BertModel` مع pooler، بدون رأس MLM أو تصنيف.
+4. **Causal mask:** أضفنا قناعًا يسمح للموضع `i` بالنظر إلى المواضع `≤ i` فقط. اختبرنا أن كل الأوزان فوق القطر صفر وأن تغيير قيمة مستقبلية لا يغيّر المخرجات السابقة. هذا نمط **Decoder-style causal attention**؛ النموذجان BERT نفسيهما encoder ثنائي الاتجاه.
+5. **تشخيص الخرائط:** شغّلنا mBERT المدرّب على مثال عربي وآخر إنجليزي من بيان، مرة بقناع صحيح ومرة بالسماح لكل المواضع. قسنا الانتباه إلى PAD من الاستعلامات الحقيقية فقط؛ المتوسط انخفض من **15.661530% إلى صفر**.
+6. **التحقق:** نجحت اختبارات اللاب، وأنتج السكربت خرائط مشروحة وملف JSON بالأرقام. الأوامر أدناه تعيد التجربة.
+
 | Checkpoint | Total params | Embeddings % | Other notes |
 |---|---:|---:|---|
-| mBERT | | | |
-| CAMeLBERT | | | |
+| mBERT | 177,853,440 | 51.84% | Vocabulary 119,547; 92,206,848 embedding parameters |
+| CAMeLBERT | 109,081,344 | 21.48% | Vocabulary 30,000; 23,434,752 embedding parameters |
+
+The embedding share is larger in mBERT because its multilingual vocabulary has 119,547 entries versus CAMeLBERT's 30,000, while both use hidden size 768 and 12 encoder layers (the multilingual vocabulary tax).
+
+| Parameter bucket | mBERT | CAMeLBERT |
+|---|---:|---:|
+| Word + position + token-type embeddings | 92,206,848 | 23,434,752 |
+| Attention Q/K/V + output projections | 28,348,416 | 28,348,416 |
+| FFN | 56,669,184 | 56,669,184 |
+| All LayerNorm weights and biases | 38,400 | 38,400 |
+| Pooler | 590,592 | 590,592 |
+| Other | 0 | 0 |
+
+- Buckets are disjoint: embedding LayerNorm belongs to **norms**, not embeddings. Total includes the base-model pooler and excludes MLM/task heads. These are architecture counts, not a claim that task-head weights were audited.
+- Config revisions: mBERT `3f076fdb1ab68d5b2880cb87a0886f315b8146f8`; CAMeLBERT `9be352797bdf28a9ae21e2ae582aaaca7abdb22d`.
+- Config sources: [mBERT](https://huggingface.co/bert-base-multilingual-cased/blob/3f076fdb1ab68d5b2880cb87a0886f315b8146f8/config.json), [CAMeLBERT](https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-mix/blob/9be352797bdf28a9ae21e2ae582aaaca7abdb22d/config.json).
+- Reproducible machine-readable counts: [parameter_audit.json](artifacts/lab2/parameter_audit.json).
+
+### Attention-map findings and pad leakage
+
+- Actual pretrained mBERT weights, pinned revision above, CPU float32, `eval()` and eager attention; dropout disabled. Inputs: preprocessed `FB-000001` (AR, 41 real + 23 PAD tokens) and `FB-000004` (EN, 21 real + 43 PAD tokens), padded to 64.
+- **Adjacent-content head:** layer 2 / head 3 assigns 96.55% mean mass to immediately neighbouring content tokens. The English map shows the stripe one position after the query.
+- **SEP concentration:** layer 2 / head 6 has the largest mean mass on `[SEP]`, 20.17% across content queries in this pair. It is a partial sink, not exclusive attention to SEP.
+- **Pad leak:** layer 4 / head 3 has 69.79% mean PAD mass across content queries when the mask is deliberately replaced with all ones. The same head has zero PAD mass with the correct mask.
+- Head numbers are **1-based**. Heads are ranked across both examples; the annotated figure displays the English example and sums all PAD columns into its final column. These are descriptive observations from two synthetic examples, not corpus-wide results or explanations of model decisions.
+- Root cause: padded positions still have position/type embeddings and hidden states, so omitting the key mask allows probability mass to reach them. Mask keys **before softmax** and exclude padded query rows when reporting the metric; masking key columns does not itself zero padded query outputs.
+- Mask conventions: our `attention(mask=...)` and functional PyTorch SDPA use boolean **True = allowed**; `MultiHeadAttention(key_padding_mask=...)` and PyTorch's module padding mask use **True = ignore**. Floating masks use `0` / `-inf`.
+- Regressions assert zero future attention, zero masked PAD mass, equivalence to PyTorch at `atol=1e-6, rtol=0`, stable outputs after changing masked values, and finite gradients for fully blocked rows.
+
+![Pretrained attention maps: adjacent head, SEP concentration, and PAD leak before/after](artifacts/lab2/attention_maps.png)
+
+![Lower-triangular causal attention with zero future attention](artifacts/lab2/causal_attention.png)
+
+Run from the project directory:
+
+```bash
+source .venv/bin/activate
+make lab2
+```
+
+This runs the attention and parameter-bucket tests, writes `artifacts/lab2/parameter_audit.json`, then runs the anatomy script to regenerate the images and [attention_diagnostics.json](artifacts/lab2/attention_diagnostics.json). The first run needs network access for model files; later runs use the local cache. Downloaded weights stay in ignored `artifacts/hf_cache/`; small Lab 2 evidence files are allowed by `.gitignore`.
 
 ## Lab 4 — Dialect audit
 - Distribution:

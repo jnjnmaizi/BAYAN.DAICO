@@ -1,4 +1,6 @@
 transformers>=4.40,<5
+accelerate>=0.26
+sentencepiece>=0.2
 datasets>=2.18
 sentence-transformers>=3.0
 spacy>=3.7

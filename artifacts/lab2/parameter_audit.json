@@ -1,0 +1,40 @@
+[
+  {
+    "checkpoint": "bert-base-multilingual-cased",
+    "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+    "scope": "BertModel encoder + pooler; no MLM/task head; all LayerNorms in norms",
+    "method": "named_parameters on a meta-device model built from checkpoint config",
+    "vocab_size": 119547,
+    "hidden_size": 768,
+    "num_hidden_layers": 12,
+    "total_params": 177853440,
+    "buckets": {
+      "embeddings": 92206848,
+      "attention": 28348416,
+      "ffn": 56669184,
+      "norms": 38400,
+      "pooler": 590592,
+      "other": 0
+    },
+    "embeddings_pct": 51.8442870714224
+  },
+  {
+    "checkpoint": "CAMeL-Lab/bert-base-arabic-camelbert-mix",
+    "revision": "9be352797bdf28a9ae21e2ae582aaaca7abdb22d",
+    "scope": "BertModel encoder + pooler; no MLM/task head; all LayerNorms in norms",
+    "method": "named_parameters on a meta-device model built from checkpoint config",
+    "vocab_size": 30000,
+    "hidden_size": 768,
+    "num_hidden_layers": 12,
+    "total_params": 109081344,
+    "buckets": {
+      "embeddings": 23434752,
+      "attention": 28348416,
+      "ffn": 56669184,
+      "norms": 38400,
+      "pooler": 590592,
+      "other": 0
+    },
+    "embeddings_pct": 21.483739694296396
+  }
+]

@@ -7,7 +7,9 @@ lab1:
 	pytest tests/test_preprocessing.py tests/test_pii_recall.py -q
 
 lab2:
-	pytest tests/test_attention.py -q
+	pytest tests/test_attention.py tests/test_parameter_audit.py -q
+	python scripts/parameter_audit.py
+	python notebooks/02_transformer_anatomy.py
 
 lab3:
 	pytest tests/test_model_data.py tests/test_ner_alignment.py tests/test_qa.py -q
