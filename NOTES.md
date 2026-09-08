@@ -103,6 +103,20 @@ make lab2
 
 This runs the attention and parameter-bucket tests, writes `artifacts/lab2/parameter_audit.json`, then runs the anatomy script to regenerate the images and [attention_diagnostics.json](artifacts/lab2/attention_diagnostics.json). The first run needs network access for model files; later runs use the local cache. Downloaded weights stay in ignored `artifacts/hf_cache/`; small Lab 2 evidence files are allowed by `.gitignore`.
 
+## Lab 3 — Implementation rationale and data findings
+
+الشرح التفصيلي لكل خطوة وسببها في [مراجعة لاب ٣](docs/LAB3_WALKTHROUGH.md). القرارات في `DECISIONS.md#lab3-training`، والأرقام النهائية في `BENCHMARKS.md`.
+
+- Topic: the supplied 8,400/2,400/1,200 split has zero citizen overlap. After Lab 1 preprocessing, 1,762 validation rows have text already present in training. High scores on these synthetic templates do not establish production generalisation.
+- TF-IDF vocabulary and IDF are fitted on training only. Topic label IDs are also derived from training only. The baseline reached 1.0000 validation macro-F1; the +8-point target must be assessed honestly against the final baseline, not by altering it.
+- Final test coverage: only digital_services, lighting, parks and water are present (300 each). Both saved models classified all 1,200 examples correctly. The fixed-eight-class macro-F1 is 0.5000 because absent classes score zero; accuracy is 1.0000 and the measured model delta is 0.00 points. No test predictions or metric values were changed when adding this coverage explanation.
+- NER: 4,000 CoNLL sentences; 644 SERVICE cells contain multiple whitespace-separated words. Expanding those cells adds 644 I-SERVICE labels and preserves complete entity boundaries. No ORGANISATION labels are present, despite the documented schema.
+- NER grouping: replacing reference values in the grouping key reveals 18 templates. Deterministic split: train 12 templates/2,674 rows, validation 4/935, test 2/391; zero template overlap.
+- Measured NER result: strict entity-F1 1.0000 on validation and 1.0000 on the held-out test; training runtime 245.71 seconds on MPS. The saved checkpoint was selected using validation only. A NumPy-to-JSON export issue was repaired using saved results, without retraining or repeating the frozen test.
+- QA smoke mismatch: supplied file has 12 answerable rows, three unique questions, zero nulls. The original file is unchanged. A separate 9-answer/3-null diagnostic was selected from three other contexts before inference, and the threshold was calibrated on 144 unique questions from 36 disjoint development contexts.
+- Tests cover citizen leakage, preserved split assignments, unseen labels, first-subword alignment, compound BIO boundaries, template grouping, QA token restrictions, span length/order, null thresholds and development/test context separation.
+- Machine-readable audit: [data_audit.json](artifacts/lab3/data_audit.json). Saved models use the same pretrained checkpoint revisions recorded in their metrics; checkpoint selection never uses frozen-test performance.
+
 ## Lab 4 — Dialect audit
 - Distribution:
 - One-sentence implication for MSA-only evaluation:

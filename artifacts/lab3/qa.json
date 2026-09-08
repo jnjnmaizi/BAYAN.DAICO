@@ -1,0 +1,417 @@
+{
+  "checkpoint": "deepset/roberta-base-squad2",
+  "revision": "adc3b06f79f797d1c575d5479d6f5efe54a9e3b4",
+  "device": "cpu",
+  "method": "Pretrained SQuAD2 QA; no Bayan fine-tuning; strict character-span exact match",
+  "source_sha256": "cc507473dc704041445d3a9517fa8ff36f110393012f947fee77f2abfd3e749d",
+  "smoke_sha256": "c14f488f2a517615a2d08311444d26d0b2968e438dc611edd15abf4333d7964c",
+  "null_rule": "null_score - best_span_score > threshold",
+  "null_threshold": 0.0,
+  "development": {
+    "answerable": 108,
+    "answerable_exact_span_correct": 108,
+    "unanswerable": 36,
+    "null_correct": 36,
+    "total": 144,
+    "correct": 144
+  },
+  "seconds": 6.3856322079955135,
+  "supplied_smoke": {
+    "answerable": 12,
+    "answerable_exact_span_correct": 12,
+    "unanswerable": 0,
+    "null_correct": 0,
+    "total": 12,
+    "correct": 12,
+    "predictions": [
+      {
+        "id": "QA-0001",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "2 business days",
+        "score_diff": -6.29001522064209,
+        "answer": "2 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0002",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "50 SAR",
+        "score_diff": -13.118749141693115,
+        "answer": "50 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0003",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.053390502929688,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0004",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "2 business days",
+        "score_diff": -6.29001522064209,
+        "answer": "2 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0005",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "50 SAR",
+        "score_diff": -13.118749141693115,
+        "answer": "50 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0006",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.053390502929688,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0007",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "2 business days",
+        "score_diff": -6.29001522064209,
+        "answer": "2 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0008",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "50 SAR",
+        "score_diff": -13.118749141693115,
+        "answer": "50 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0009",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.053390502929688,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0010",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "2 business days",
+        "score_diff": -6.29001522064209,
+        "answer": "2 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0011",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "50 SAR",
+        "score_diff": -13.118749141693115,
+        "answer": "50 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0012",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.053390502929688,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      }
+    ]
+  },
+  "supplemental_9_plus_3": {
+    "answerable": 9,
+    "answerable_exact_span_correct": 9,
+    "unanswerable": 3,
+    "null_correct": 3,
+    "total": 12,
+    "correct": 12,
+    "predictions": [
+      {
+        "id": "QA-0016",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "3 business days",
+        "score_diff": -6.640063285827637,
+        "answer": "3 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0017",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "55 SAR",
+        "score_diff": -13.377153873443604,
+        "answer": "55 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0018",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.459402561187744,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0029",
+        "candidate": [
+          146,
+          151
+        ],
+        "candidate_text": "Bayan",
+        "score_diff": 8.797097206115723,
+        "answer": null,
+        "answer_offsets": null,
+        "is_impossible": true,
+        "correct": true
+      },
+      {
+        "id": "QA-0031",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "4 business days",
+        "score_diff": -6.250861644744873,
+        "answer": "4 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0032",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "60 SAR",
+        "score_diff": -12.966262578964233,
+        "answer": "60 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0033",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.366472244262695,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0043",
+        "candidate": [
+          146,
+          151
+        ],
+        "candidate_text": "Bayan",
+        "score_diff": 8.831034183502197,
+        "answer": null,
+        "answer_offsets": null,
+        "is_impossible": true,
+        "correct": true
+      },
+      {
+        "id": "QA-0046",
+        "candidate": [
+          63,
+          78
+        ],
+        "candidate_text": "5 business days",
+        "score_diff": -6.164839267730713,
+        "answer": "5 business days",
+        "answer_offsets": [
+          63,
+          78
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0047",
+        "candidate": [
+          99,
+          105
+        ],
+        "candidate_text": "65 SAR",
+        "score_diff": -13.165476083755493,
+        "answer": "65 SAR",
+        "answer_offsets": [
+          99,
+          105
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0048",
+        "candidate": [
+          146,
+          158
+        ],
+        "candidate_text": "Bayan portal",
+        "score_diff": -11.387050151824951,
+        "answer": "Bayan portal",
+        "answer_offsets": [
+          146,
+          158
+        ],
+        "is_impossible": false,
+        "correct": true
+      },
+      {
+        "id": "QA-0059",
+        "candidate": [
+          146,
+          151
+        ],
+        "candidate_text": "Bayan",
+        "score_diff": 9.417640686035156,
+        "answer": null,
+        "answer_offsets": null,
+        "is_impossible": true,
+        "correct": true
+      }
+    ]
+  },
+  "supplied_9_plus_3_contract_met": false,
+  "data_issue": "Supplied smoke has 12 answerable rows, 3 unique questions, 0 nulls; cannot establish the documented official 9+3 target.",
+  "limitations": "Supplemental 9+3 is separate evidence, not a replacement of the supplied test; contexts share synthetic templates."
+}

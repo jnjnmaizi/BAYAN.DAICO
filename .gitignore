@@ -10,6 +10,9 @@ artifacts/*
 artifacts/lab2/*
 !artifacts/lab2/*.json
 !artifacts/lab2/*.png
+!artifacts/lab3/
+artifacts/lab3/*
+!artifacts/lab3/*.json
 *.onnx
 *.bin
 *.safetensors

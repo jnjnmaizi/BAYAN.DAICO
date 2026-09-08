@@ -43,10 +43,25 @@ Pretrained mBERT (`3f076fdb1ab68d5b2880cb87a0886f315b8146f8`), `eval()`, eager a
 ## Lab 3 — Models
 | Model | Metric | Validation | Frozen test | Train time |
 |---|---|---:|---:|---:|
-| TF-IDF + LinearSVC | macro-F1 | | | |
-| Topic classifier | macro-F1 | | | |
-| NER | entity-F1 | | | |
-| QA | span/null smoke | | | |
+| TF-IDF + LinearSVC | macro-F1 over all 8 task classes | 1.0000 | 0.5000 | 0.23 s, CPU |
+| XLM-R topic classifier | macro-F1 over all 8 task classes | 1.0000 | 0.5000 | 470.31 s, MPS |
+| XLM-R NER | strict IOB2 entity-F1 | 1.0000 | 1.0000 | 245.71 s, MPS |
+| Pretrained RoBERTa SQuAD2 QA | exact character span / null | development: 144/144 | supplied smoke: 12/12 answerable, 0 null cases | no new training |
+
+Measured on 2026-09-08; seed 42, Python 3.12.7, PyTorch 2.14.0, Transformers 4.43.4. Topic training uses the same Lab 1 preprocessing for both models, with 8,400 train / 2,400 validation / 1,200 test rows and **zero citizen overlap**. Test evaluation happened once per saved topic model after selecting the transformer checkpoint on validation.
+
+**Topic metric coverage:** the frozen test contains only four of the eight classes: digital_services, lighting, parks and water, 300 rows each. Both models have **test accuracy 1.0000**. The predeclared macro-F1 averages all eight training labels with `zero_division=0`, so absent classes contribute zero and the maximum achievable score on this test is **0.5000**. Measured transformer delta: **0.00 percentage points**; the course's +8-point target is not met. Do not interpret 0.5000 here as 50% incorrect predictions or infer performance on the absent classes.
+
+- Topic data limitation: 1,762/2,400 validation texts also occur in training after preprocessing. The synthetic templates make high scores easy; this is not evidence of generalisation to new complaint formulations.
+- NER policy: group by full sentence template with reference values excluded from the grouping key. Train 2,674 rows/12 templates, validation 935/4, test 391/2; zero template overlap. Multiword source cells are expanded with BIO continuation tags; special and non-first subword pieces are ignored in loss/evaluation.
+- NER result: test precision/recall/F1 all 1.0000, meeting the ≥0.80 target on the 391-row held-out set. The test contains only two templates; there are no ORGANISATION examples and no meaningful unseen-date coverage.
+- NER export recovery: the initial report export failed on a NumPy support count after saving weights and frozen-test aggregates. JSON conversion was fixed; metadata was recovered from the original training log, checkpoint and saved validation predictions. The frozen aggregate was reused unchanged, with no retraining or repeat test inference. Per-entity test details were not retained by that initial run.
+- QA calibration: 144 unique questions from 36 development contexts, all disjoint from supplied and supplemental evaluation contexts. Chosen null threshold **0.0**; total inference/calibration/evaluation time **6.39 s, CPU**, excluding model loading.
+- QA supplied-data discrepancy: the official smoke file has **12 answerable rows (3 unique questions), zero unanswerable rows**, so its documented 9+3 requirement cannot be verified from that file.
+- Separate predeclared QA diagnostic: **9/9 exact answer spans + 3/3 correct nulls** from three other contexts; this is supplemental evidence, not a replacement of the supplied smoke set. Source data and expected answers remain unchanged.
+- Lab 1–3 unit/regression checks: **63 passed**, including all 11 original Lab 3 contracts and 15 additional Lab 3 regressions.
+- Evidence: [baseline](artifacts/lab3/tfidf_baseline.json), [classifier](artifacts/lab3/topic_classifier.json), [NER](artifacts/lab3/ner.json), [QA](artifacts/lab3/qa.json), [QA protocol](artifacts/lab3/qa_protocol.json), [data audit](artifacts/lab3/data_audit.json).
+- Rationale and commands: [Lab 3 walkthrough](docs/LAB3_WALKTHROUGH.md). Large trained models remain under ignored `artifacts/topic_classifier/` and `artifacts/ner/`.
 
 ## Lab 4 — Arabic model bake-off
 | Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |

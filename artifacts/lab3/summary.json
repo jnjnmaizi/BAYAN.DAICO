@@ -1,0 +1,43 @@
+{
+  "completed": [
+    "topic grouped-split integrity",
+    "TF-IDF baseline",
+    "XLM-R topic fine-tuning",
+    "NER alignment and fine-tuning",
+    "constrained extractive QA and calibrated null handling"
+  ],
+  "unit_tests": {
+    "labs_1_to_3_passed": 63,
+    "lab3_original_contracts_passed": 11,
+    "lab3_additional_regressions_passed": 15
+  },
+  "topic": {
+    "validation_macro_f1": 1.0,
+    "test_macro_f1_fixed_8_classes": 0.5,
+    "test_accuracy": 1.0,
+    "baseline_test_macro_f1_fixed_8_classes": 0.5,
+    "delta_macro_f1_points": 0.0,
+    "plus_8_point_target_met": false,
+    "test_classes_present": 4,
+    "task_classes": 8
+  },
+  "ner": {
+    "validation_entity_f1": 1.0,
+    "test_entity_f1": 1.0,
+    "target_met": true,
+    "test_rows": 391,
+    "test_templates": 2
+  },
+  "qa": {
+    "supplied_answerable_correct": 12,
+    "supplied_answerable_total": 12,
+    "supplied_null_total": 0,
+    "supplemental_answerable_correct": 9,
+    "supplemental_null_correct": 3,
+    "documented_supplied_9_plus_3_contract_verified": false
+  },
+  "original_data_and_contract_tests_modified": false,
+  "frozen_test_inference_repeated": false,
+  "explanation": "docs/LAB3_WALKTHROUGH.md",
+  "notes": "NER report export recovered from saved evidence after NumPy JSON serialization fix."
+}

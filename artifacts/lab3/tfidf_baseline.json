@@ -1,0 +1,81 @@
+{
+  "model": "TF-IDF word 1-2 grams + LinearSVC(C=1)",
+  "seed": 42,
+  "preprocessing_version": "1.2.0",
+  "data_sha256": "4a13286ed3ad850dc12a12fa69c6621a0a5126711d50c47139c8ef1b55b2523c",
+  "labels": [
+    "billing",
+    "digital_services",
+    "licensing",
+    "lighting",
+    "parks",
+    "roads",
+    "waste",
+    "water"
+  ],
+  "split": {
+    "rows": {
+      "train": 8400,
+      "validation": 2400,
+      "test": 1200
+    },
+    "citizen_groups": {
+      "train": 3360,
+      "validation": 960,
+      "test": 480
+    },
+    "citizen_overlap": {
+      "train/validation": 0,
+      "train/test": 0,
+      "validation/test": 0
+    },
+    "split_policy": "supplied frozen 70/20/10, unchanged",
+    "validation_text_overlap_with_train": 336
+  },
+  "train_seconds": 0.23254100000485778,
+  "validation": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "n": 2400,
+    "num_labels_with_support": 8,
+    "num_task_labels": 8
+  },
+  "frozen_test": {
+    "macro_f1": 0.5,
+    "accuracy": 1.0,
+    "n": 1200,
+    "num_labels_with_support": 4,
+    "num_task_labels": 8
+  },
+  "macro_f1_definition": "Unweighted mean across all 8 training labels; zero_division=0, including absent test classes",
+  "class_counts_by_split": {
+    "test": {
+      "lighting": 300,
+      "water": 300,
+      "digital_services": 300,
+      "parks": 300
+    },
+    "train": {
+      "roads": 1200,
+      "waste": 1200,
+      "billing": 1200,
+      "licensing": 1200,
+      "lighting": 900,
+      "water": 900,
+      "digital_services": 900,
+      "parks": 900
+    },
+    "validation": {
+      "parks": 300,
+      "roads": 300,
+      "lighting": 300,
+      "waste": 300,
+      "water": 300,
+      "billing": 300,
+      "digital_services": 300,
+      "licensing": 300
+    }
+  },
+  "test_coverage_warning": "Frozen test contains only digital_services, lighting, parks and water; four task classes have no support.",
+  "coverage_metadata_note": "Class-support metadata added after the single final evaluation; recorded predictions and metric values unchanged."
+}

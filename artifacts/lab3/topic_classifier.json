@@ -1,0 +1,275 @@
+{
+  "checkpoint": "xlm-roberta-base",
+  "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+  "preprocessing_version": "1.2.0",
+  "data_sha256": "4a13286ed3ad850dc12a12fa69c6621a0a5126711d50c47139c8ef1b55b2523c",
+  "labels": [
+    "billing",
+    "digital_services",
+    "licensing",
+    "lighting",
+    "parks",
+    "roads",
+    "waste",
+    "water"
+  ],
+  "split": {
+    "rows": {
+      "train": 8400,
+      "validation": 2400,
+      "test": 1200
+    },
+    "citizen_groups": {
+      "train": 3360,
+      "validation": 960,
+      "test": 480
+    },
+    "citizen_overlap": {
+      "train/validation": 0,
+      "train/test": 0,
+      "validation/test": 0
+    },
+    "split_policy": "supplied frozen 70/20/10, unchanged",
+    "validation_text_overlap_with_train": 336
+  },
+  "seed": 42,
+  "epochs_requested": 2,
+  "max_steps": -1,
+  "global_steps": 524,
+  "best_checkpoint": "/Users/j.alhumaizi/Downloads/BAYAN.DAICO-main/artifacts/topic_classifier/checkpoints/checkpoint-524",
+  "learning_rate": 2e-05,
+  "max_length": 64,
+  "batch_size": 16,
+  "gradient_accumulation": 2,
+  "device": "mps",
+  "torch_version": "2.14.0",
+  "transformers_version": "4.43.4",
+  "train_seconds": 470.30818491699756,
+  "validation": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "n": 2400,
+    "num_labels_with_support": 8,
+    "num_task_labels": 8
+  },
+  "history": [
+    {
+      "loss": 2.0961,
+      "grad_norm": 5.311749458312988,
+      "learning_rate": 9.433962264150944e-06,
+      "epoch": 0.09523809523809523,
+      "step": 25
+    },
+    {
+      "loss": 2.099,
+      "grad_norm": 7.636873722076416,
+      "learning_rate": 1.8867924528301888e-05,
+      "epoch": 0.19047619047619047,
+      "step": 50
+    },
+    {
+      "loss": 1.8892,
+      "grad_norm": 8.463635444641113,
+      "learning_rate": 1.9065817409766455e-05,
+      "epoch": 0.2857142857142857,
+      "step": 75
+    },
+    {
+      "loss": 1.3912,
+      "grad_norm": 16.957231521606445,
+      "learning_rate": 1.8004246284501062e-05,
+      "epoch": 0.38095238095238093,
+      "step": 100
+    },
+    {
+      "loss": 0.695,
+      "grad_norm": 3.6211206912994385,
+      "learning_rate": 1.694267515923567e-05,
+      "epoch": 0.47619047619047616,
+      "step": 125
+    },
+    {
+      "loss": 0.3579,
+      "grad_norm": 3.2903544902801514,
+      "learning_rate": 1.5881104033970277e-05,
+      "epoch": 0.5714285714285714,
+      "step": 150
+    },
+    {
+      "loss": 0.1577,
+      "grad_norm": 1.19133460521698,
+      "learning_rate": 1.4819532908704883e-05,
+      "epoch": 0.6666666666666666,
+      "step": 175
+    },
+    {
+      "loss": 0.064,
+      "grad_norm": 0.6191559433937073,
+      "learning_rate": 1.375796178343949e-05,
+      "epoch": 0.7619047619047619,
+      "step": 200
+    },
+    {
+      "loss": 0.0464,
+      "grad_norm": 0.36738041043281555,
+      "learning_rate": 1.2696390658174097e-05,
+      "epoch": 0.8571428571428571,
+      "step": 225
+    },
+    {
+      "loss": 0.0211,
+      "grad_norm": 0.5856711268424988,
+      "learning_rate": 1.1634819532908705e-05,
+      "epoch": 0.9523809523809523,
+      "step": 250
+    },
+    {
+      "eval_loss": 0.016786623746156693,
+      "eval_macro_f1": 0.996251744005411,
+      "eval_accuracy": 0.99625,
+      "eval_n": 2400,
+      "eval_runtime": 5.3189,
+      "eval_samples_per_second": 451.219,
+      "eval_steps_per_second": 28.201,
+      "epoch": 0.9980952380952381,
+      "step": 262
+    },
+    {
+      "loss": 0.0224,
+      "grad_norm": 15.459126472473145,
+      "learning_rate": 1.0573248407643314e-05,
+      "epoch": 1.0476190476190477,
+      "step": 275
+    },
+    {
+      "loss": 0.0123,
+      "grad_norm": 0.28453338146209717,
+      "learning_rate": 9.511677282377921e-06,
+      "epoch": 1.1428571428571428,
+      "step": 300
+    },
+    {
+      "loss": 0.0344,
+      "grad_norm": 0.19208581745624542,
+      "learning_rate": 8.450106157112528e-06,
+      "epoch": 1.2380952380952381,
+      "step": 325
+    },
+    {
+      "loss": 0.0094,
+      "grad_norm": 0.12805405259132385,
+      "learning_rate": 7.388535031847134e-06,
+      "epoch": 1.3333333333333333,
+      "step": 350
+    },
+    {
+      "loss": 0.0138,
+      "grad_norm": 0.10462198406457901,
+      "learning_rate": 6.326963906581741e-06,
+      "epoch": 1.4285714285714286,
+      "step": 375
+    },
+    {
+      "loss": 0.0078,
+      "grad_norm": 0.12605233490467072,
+      "learning_rate": 5.265392781316349e-06,
+      "epoch": 1.5238095238095237,
+      "step": 400
+    },
+    {
+      "loss": 0.007,
+      "grad_norm": 0.10433557629585266,
+      "learning_rate": 4.203821656050956e-06,
+      "epoch": 1.619047619047619,
+      "step": 425
+    },
+    {
+      "loss": 0.0064,
+      "grad_norm": 0.21963538229465485,
+      "learning_rate": 3.142250530785563e-06,
+      "epoch": 1.7142857142857144,
+      "step": 450
+    },
+    {
+      "loss": 0.0128,
+      "grad_norm": 0.17060372233390808,
+      "learning_rate": 2.08067940552017e-06,
+      "epoch": 1.8095238095238095,
+      "step": 475
+    },
+    {
+      "loss": 0.0061,
+      "grad_norm": 0.09775419533252716,
+      "learning_rate": 1.0191082802547772e-06,
+      "epoch": 1.9047619047619047,
+      "step": 500
+    },
+    {
+      "eval_loss": 0.003096506465226412,
+      "eval_macro_f1": 1.0,
+      "eval_accuracy": 1.0,
+      "eval_n": 2400,
+      "eval_runtime": 5.3478,
+      "eval_samples_per_second": 448.78,
+      "eval_steps_per_second": 28.049,
+      "epoch": 1.9961904761904763,
+      "step": 524
+    },
+    {
+      "train_runtime": 469.6265,
+      "train_samples_per_second": 35.773,
+      "train_steps_per_second": 1.116,
+      "total_flos": 134481660299520.0,
+      "train_loss": 0.4272941632466462,
+      "epoch": 1.9961904761904763,
+      "step": 524
+    }
+  ],
+  "frozen_test": {
+    "macro_f1": 0.5,
+    "accuracy": 1.0,
+    "n": 1200,
+    "num_labels_with_support": 4,
+    "num_task_labels": 8
+  },
+  "baseline_frozen_test": {
+    "macro_f1": 0.5,
+    "accuracy": 1.0,
+    "n": 1200,
+    "num_labels_with_support": 4,
+    "num_task_labels": 8
+  },
+  "delta_macro_f1_points": 0.0,
+  "target_met": false,
+  "macro_f1_definition": "Unweighted mean across all 8 training labels; zero_division=0, including absent test classes",
+  "class_counts_by_split": {
+    "test": {
+      "lighting": 300,
+      "water": 300,
+      "digital_services": 300,
+      "parks": 300
+    },
+    "train": {
+      "roads": 1200,
+      "waste": 1200,
+      "billing": 1200,
+      "licensing": 1200,
+      "lighting": 900,
+      "water": 900,
+      "digital_services": 900,
+      "parks": 900
+    },
+    "validation": {
+      "parks": 300,
+      "roads": 300,
+      "lighting": 300,
+      "waste": 300,
+      "water": 300,
+      "billing": 300,
+      "digital_services": 300,
+      "licensing": 300
+    }
+  },
+  "test_coverage_warning": "Frozen test contains only digital_services, lighting, parks and water; four task classes have no support.",
+  "coverage_metadata_note": "Class-support metadata added after the single final evaluation; recorded predictions and metric values unchanged."
+}

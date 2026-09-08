@@ -1,0 +1,79 @@
+{
+  "topic_data_sha256": "4a13286ed3ad850dc12a12fa69c6621a0a5126711d50c47139c8ef1b55b2523c",
+  "topic_classes": [
+    "billing",
+    "digital_services",
+    "licensing",
+    "lighting",
+    "parks",
+    "roads",
+    "waste",
+    "water"
+  ],
+  "topic_training_class_counts": {
+    "roads": 1200,
+    "lighting": 900,
+    "waste": 1200,
+    "water": 900,
+    "billing": 1200,
+    "digital_services": 900,
+    "licensing": 1200,
+    "parks": 900
+  },
+  "validation_rows_with_text_seen_in_train": 1762,
+  "validation_rows": 2400,
+  "ner_source_sentences": 4000,
+  "ner_tags_after_expanding_compound_cells": {
+    "O": 20000,
+    "B-SERVICE": 4000,
+    "I-SERVICE": 644,
+    "B-LOCATION": 4000,
+    "B-DATE": 4000,
+    "B-REFERENCE": 4000
+  },
+  "ner_groups": {
+    "train": 12,
+    "validation": 4,
+    "test": 2
+  },
+  "qa_supplied_answerable": 12,
+  "qa_supplied_unanswerable": 0,
+  "qa_supplemental_answerable": 9,
+  "qa_supplemental_unanswerable": 3,
+  "policy": "Preserve source data and frozen topic split. Report synthetic-template limitations and QA contract mismatch.",
+  "topic_class_counts_by_split": {
+    "test": {
+      "lighting": 300,
+      "water": 300,
+      "digital_services": 300,
+      "parks": 300
+    },
+    "train": {
+      "roads": 1200,
+      "waste": 1200,
+      "billing": 1200,
+      "licensing": 1200,
+      "lighting": 900,
+      "water": 900,
+      "digital_services": 900,
+      "parks": 900
+    },
+    "validation": {
+      "parks": 300,
+      "roads": 300,
+      "lighting": 300,
+      "waste": 300,
+      "water": 300,
+      "billing": 300,
+      "digital_services": 300,
+      "licensing": 300
+    }
+  },
+  "missing_frozen_test_classes": [
+    "billing",
+    "licensing",
+    "roads",
+    "waste"
+  ],
+  "fixed_8_class_macro_f1_test_ceiling": 0.5
+}

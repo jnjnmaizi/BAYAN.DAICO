@@ -1,0 +1,9 @@
+{
+  "artifact": "artifacts/ner",
+  "saved_weights_reload": true,
+  "finite_outputs": true,
+  "validation_examples_checked": 2,
+  "predictions_match_saved_validation": true,
+  "device": "cpu",
+  "frozen_test_repeated": false
+}

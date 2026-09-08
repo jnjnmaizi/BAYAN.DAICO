@@ -1,0 +1,194 @@
+{
+  "checkpoint": "xlm-roberta-base",
+  "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+  "data_sha256": "e76f187728fd408954364c1dc9822af383db8c2e0bbdaf72e8df9b35d6a1752e",
+  "seed": 42,
+  "max_length": 96,
+  "epochs": 3,
+  "batch_size": 16,
+  "gradient_accumulation": 2,
+  "learning_rate": 3e-05,
+  "device": "mps",
+  "train_seconds": 245.7099,
+  "time_source": "Transformers train_runtime recorded in original run log",
+  "torch_version": "2.14.0",
+  "transformers_version": "4.43.4",
+  "best_checkpoint": "/Users/j.alhumaizi/Downloads/BAYAN.DAICO-main/artifacts/ner/checkpoints/checkpoint-84",
+  "rows": {
+    "train": 2674,
+    "validation": 935,
+    "test": 391
+  },
+  "template_groups": {
+    "train": 12,
+    "validation": 4,
+    "test": 2
+  },
+  "template_overlap": 0,
+  "split_policy": "seeded 70/20/10 by template groups, not rows; reference values excluded from group key",
+  "source_tags": {
+    "O": 20000,
+    "B-SERVICE": 4000,
+    "I-SERVICE": 644,
+    "B-LOCATION": 4000,
+    "B-DATE": 4000,
+    "B-REFERENCE": 4000
+  },
+  "evaluation": "seqeval strict IOB2 entity-level; special and continuation pieces ignored",
+  "validation": {
+    "entity_f1": 1.0,
+    "entity_precision": 1.0,
+    "entity_recall": 1.0
+  },
+  "validation_entities": {
+    "DATE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "LOCATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "REFERENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "SERVICE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "micro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    }
+  },
+  "history": [
+    {
+      "loss": 1.7384,
+      "grad_norm": 4.6617889404296875,
+      "learning_rate": 2.884615384615385e-05,
+      "epoch": 0.2976190476190476
+    },
+    {
+      "loss": 0.1286,
+      "grad_norm": 0.6690148115158081,
+      "learning_rate": 2.6814159292035398e-05,
+      "epoch": 0.5952380952380952
+    },
+    {
+      "loss": 0.0051,
+      "grad_norm": 0.04148314893245697,
+      "learning_rate": 2.349557522123894e-05,
+      "epoch": 0.8928571428571429
+    },
+    {
+      "eval_loss": 0.0007951489533297718,
+      "eval_entity_f1": 1.0,
+      "eval_entity_precision": 1.0,
+      "eval_entity_recall": 1.0,
+      "eval_runtime": 2.9223,
+      "eval_samples_per_second": 319.953,
+      "eval_steps_per_second": 20.19,
+      "epoch": 1.0
+    },
+    {
+      "loss": 0.0023,
+      "grad_norm": 0.033405110239982605,
+      "learning_rate": 2.017699115044248e-05,
+      "epoch": 1.1904761904761905
+    },
+    {
+      "loss": 0.0016,
+      "grad_norm": 0.027765223756432533,
+      "learning_rate": 1.6858407079646017e-05,
+      "epoch": 1.4880952380952381
+    },
+    {
+      "loss": 0.0013,
+      "grad_norm": 0.01949983462691307,
+      "learning_rate": 1.3539823008849558e-05,
+      "epoch": 1.7857142857142856
+    },
+    {
+      "eval_loss": 0.00043331837514415383,
+      "eval_entity_f1": 1.0,
+      "eval_entity_precision": 1.0,
+      "eval_entity_recall": 1.0,
+      "eval_runtime": 2.7967,
+      "eval_samples_per_second": 334.317,
+      "eval_steps_per_second": 21.096,
+      "epoch": 2.0
+    },
+    {
+      "loss": 0.0015,
+      "grad_norm": 0.016498906537890434,
+      "learning_rate": 1.0221238938053097e-05,
+      "epoch": 2.0833333333333335
+    },
+    {
+      "loss": 0.0014,
+      "grad_norm": 0.015109018422663212,
+      "learning_rate": 6.902654867256637e-06,
+      "epoch": 2.380952380952381
+    },
+    {
+      "loss": 0.001,
+      "grad_norm": 0.014647656120359898,
+      "learning_rate": 3.5840707964601774e-06,
+      "epoch": 2.678571428571429
+    },
+    {
+      "loss": 0.0016,
+      "grad_norm": 0.014106455259025097,
+      "learning_rate": 2.654867256637168e-07,
+      "epoch": 2.9761904761904763
+    },
+    {
+      "eval_loss": 0.00038581786793656647,
+      "eval_entity_f1": 1.0,
+      "eval_entity_precision": 1.0,
+      "eval_entity_recall": 1.0,
+      "eval_runtime": 2.2281,
+      "eval_samples_per_second": 419.631,
+      "eval_steps_per_second": 26.479,
+      "epoch": 3.0
+    },
+    {
+      "train_runtime": 245.7099,
+      "train_samples_per_second": 32.648,
+      "train_steps_per_second": 1.026,
+      "train_loss": 0.18678169228812858,
+      "epoch": 3.0
+    }
+  ],
+  "frozen_test": {
+    "entity_f1": 1.0,
+    "entity_precision": 1.0,
+    "entity_recall": 1.0
+  },
+  "target_met": true,
+  "report_recovery": "Initial JSON export failed on numpy.int64 after the model and frozen_test.json were saved. Recovered training metadata from the original log/checkpoint and validation details from saved predictions. Frozen aggregate copied unchanged; no retraining or repeat test inference. Per-entity test report was not retained by the failed run.",
+  "limitations": "Synthetic templates, fixed date, no ORGANISATION annotations; no evidence for unseen dates or organisations."
+}
