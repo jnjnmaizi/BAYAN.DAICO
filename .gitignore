@@ -13,6 +13,9 @@ artifacts/lab2/*
 !artifacts/lab3/
 artifacts/lab3/*
 !artifacts/lab3/*.json
+!artifacts/lab4/
+artifacts/lab4/*
+!artifacts/lab4/*.json
 *.onnx
 *.bin
 *.safetensors

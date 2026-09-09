@@ -1,0 +1,26 @@
+{
+  "data_sha256": "4a13286ed3ad850dc12a12fa69c6621a0a5126711d50c47139c8ef1b55b2523c",
+  "split": "supplied training + validation, Arabic only",
+  "train_rows": 6000,
+  "validation_rows": 1200,
+  "seed": 42,
+  "profile": "camelbert_v1, dediacritize=True after Lab 1 preprocessing",
+  "epochs": 2,
+  "learning_rate": 2e-05,
+  "batch_size": 16,
+  "gradient_accumulation": 2,
+  "max_length": 64,
+  "candidates": {
+    "mix": [
+      "CAMeL-Lab/bert-base-arabic-camelbert-mix",
+      "9be352797bdf28a9ae21e2ae582aaaca7abdb22d"
+    ],
+    "da": [
+      "CAMeL-Lab/bert-base-arabic-camelbert-da",
+      "231698eab9ebf0ae7b518a64277b81b2fe829f2d"
+    ]
+  },
+  "frozen_test_used": false,
+  "selection": "Highest Gulf validation macro-F1, then all-Arabic macro-F1; retain incumbent on a tie",
+  "incumbent_predictions_sha256": "14bfe734c0691af66535b1951195829fac6a6983eeb779bd5933db43abde43d4"
+}

@@ -66,12 +66,32 @@ Measured on 2026-09-08; seed 42, Python 3.12.7, PyTorch 2.14.0, Transformers 4.4
 - Evidence: [baseline](artifacts/lab3/tfidf_baseline.json), [classifier](artifacts/lab3/topic_classifier.json), [NER](artifacts/lab3/ner.json), [QA](artifacts/lab3/qa.json), [QA protocol](artifacts/lab3/qa_protocol.json), [data audit](artifacts/lab3/data_audit.json).
 - Rationale and commands: [Lab 3 walkthrough](docs/LAB3_WALKTHROUGH.md). Large trained models remain under ignored `artifacts/topic_classifier/` and `artifacts/ner/`.
 
-## Lab 4 — Arabic model bake-off
-| Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |
-|---|---:|---:|---:|---:|
-| multilingual incumbent | | | | |
-| Arabic dialect-aware | | | | |
-| optional third model | | | | |
+## Lab 4 — Arabic profiles, segmentation and model comparison
+
+Measured locally on 2026-09-09 with Python 3.12.7, PyTorch 2.14.0, Transformers 4.43.4, CAMeL Tools 1.5.7. Candidate fine-tuning used Apple MPS; the fixed-model NER ablation used CPU.
+
+| Model | All Arabic validation macro-F1 | Gulf | MSA macro-F1 | Validation accuracy | Train/save/eval seconds |
+|---|---:|---|---:|---:|---:|
+| Existing XLM-R | 0.5000 | N/A: 0 rows | 0.5000 | 1.0000 | reused saved validation predictions |
+| CAMeLBERT-Mix | 0.5000 | N/A: 0 rows | 0.5000 | 1.0000 | 174.33 |
+| CAMeLBERT-DA | 0.5000 | N/A: 0 rows | 0.5000 | 1.0000 | 173.85 |
+
+All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four of eight task labels are represented, so the fixed-label macro-F1 ceiling is 0.5000. Both new models and the saved incumbent reach that ceiling. There is **no measurable Gulf delta** and no evidence to replace XLM-R; the +4-point Gulf target is unassessable, not achieved. Candidate runs used 6,000 Arabic training rows, the same pinned Mix/DA revisions, two requested epochs, seed 42, LR 2e-5, batch 16 / accumulation 2, max length 64 and the conservative `camelbert_v1` profile. The optimizer completed 374 steps (1.9947 epochs as reported by Trainer). This is model-selection evidence on validation, not a frozen-test result or an isolated causal estimate of dialectal pretraining.
+
+| NER paired validation metric (935 original sentences) | Original input | CAMeL D3 input |
+|---|---:|---:|
+| LOCATION precision | 1.0000 | 1.0000 |
+| LOCATION recall | 1.0000 | 0.763636 |
+| LOCATION F1 | 1.0000 | 0.865979 |
+| Overall strict entity micro-F1 | 1.0000 | 0.940909 |
+
+- LOCATION recall delta: **−23.6364 points**; +4 target not met. Baseline recall is already 100%, so maximum positive headroom is zero. Keep the saved NER model's unsegmented path. Runtime: 6.55 seconds, CPU, excluding model loading.
+- Evaluation used the same original word/BIO boundaries, projecting each D3 lexical stem's first subword prediction back to its source word. The saved original validation predictions were reused. No frozen-test inference or NER retraining was performed.
+- Normalization: **30/30** original golden rows passed (10 unique cases). **14** new Lab 4 regressions cover the second profile, display/PII preservation, morphology alignment, empty Gulf slices and strided BERT weight serialization. Labs 1–4 total: **118 passed**.
+- Integration check: all **4,000** source NER sentences retained exactly their original supervised labels through D3 + subword alignment, with no truncation.
+- Dialect metadata: Gulf 4,800/7,200 Arabic rows (66.67%), MSA 2,400 (33.33%); every Gulf row is in training and the frozen topic test has no Arabic rows.
+- Evidence: [dialect audit](artifacts/lab4/dialect_audit.json), [profile and segmentation examples](artifacts/lab4/preprocessing_examples.json), [NER ablation](artifacts/lab4/ner_segmentation.json), [Mix/DA comparison](artifacts/lab4/arabic_bakeoff.json), [summary](artifacts/lab4/summary.json).
+- Reproduction and explanations: [Lab 4 walkthrough](docs/LAB4_WALKTHROUGH.md). Large models stay under ignored `artifacts/lab4_models/`; the published JSON files contain measured evidence only.
 
 ## Lab 5 — Search
 | Configuration | recall@10 | MRR@10 | p50 latency/query |

@@ -5,7 +5,7 @@
 - Arabic fertility evidence: XLM-R = 1.672, versus mBERT = 2.153 and DistilBERT = 4.527. CAMeLBERT is lower at 1.405, but is not bilingual-efficient.
 - English fertility evidence: XLM-R = 1.434, close to mBERT = 1.510 and DistilBERT = 1.298, while CAMeLBERT expands English heavily to 2.705.
 - p95 length evidence: XLM-R = 21 AR / 23 EN tokens, balanced across both languages. CAMeLBERT = 20 / 38 and DistilBERT = 47 / 21, creating an avoidable language-specific serving budget.
-- Operational trade-off / rationale: XLM-R had 0.00% AR UNK in this 7,200/4,800-row audit and the best balanced fertility/length profile. It is the lowest-friction shared checkpoint for bilingual topic/NER work; Lab 4 will separately test whether CAMeLBERT's Arabic advantage produces a measured Gulf-slice gain.
+- Operational trade-off / rationale: XLM-R had 0.00% AR UNK in this 7,200/4,800-row audit and the best balanced fertility/length profile. It is the lowest-friction shared checkpoint for bilingual topic/NER work; Lab 4 audits Arabic-centric candidates; the supplied validation split has no Gulf examples, so no Gulf-slice gain can be established.
 
 ## lab3-training
 - Topic incumbent: word unigram/bigram TF-IDF + LinearSVC(C=1), trained only on the supplied training rows. Its validation macro-F1 is 1.0000. Do not weaken this baseline to manufacture the course's +8-point target.
@@ -20,11 +20,15 @@
 - Detailed rationale and reproduction: [Lab 3 walkthrough](docs/LAB3_WALKTHROUGH.md).
 
 ## arabic-model
-- Incumbent:
-- Candidate:
-- All/Gulf/MSA evidence:
-- CI-backed verdict:
-- Segmentation contract:
+- Retain `xlm-roberta-base` as the shared bilingual incumbent. There is no held-out Gulf evidence to justify replacing it with a dialect-specific candidate.
+- Candidates: fine-tuned `CAMeL-Lab/bert-base-arabic-camelbert-mix` and `CAMeL-Lab/bert-base-arabic-camelbert-da`; pinned revisions and identical candidate training settings are in `artifacts/lab4/arabic_bakeoff_protocol.json`.
+- Coverage: all-Arabic validation equals MSA validation (1,200 rows); Gulf has zero validation rows. Unavailable Gulf scores are `null`, never zero performance or evidence of a win. Validation covers only 4 of 8 task labels, so fixed-label macro-F1 has a ceiling of 0.50.
+- Measured candidate result: Mix and DA each reached MSA/all-Arabic validation accuracy 1.0000 and fixed-eight-class macro-F1 0.5000, matching XLM-R. No candidate demonstrated a gain on the available slice. Training/save/evaluation took 174.33 seconds for Mix and 173.85 seconds for DA on MPS.
+- CI-backed verdict: unavailable for Gulf because there are no held-out Gulf examples. Aggregate synthetic-template performance cannot replace missing slice evidence; we do not claim a +4-point improvement.
+- Normalization contract: `bayan_ar_v1` for the supplied golden rules; `camelbert_v1` is our conservative profile based on the CAMeLBERT preprocessing description. Same profile in candidate training and validation; retain separate PII-masked display text.
+- Segmentation contract: CAMeL MLE `calima-msa-r13`, `d3tok`, no diacritics; preserve a map from each original word to its lexical stem. First-subword supervision is applied to that stem, other pieces are ignored. Version is recorded for segmented training/evaluation.
+- Measured NER decision: keep the saved model's unsegmented path. On the paired 935-row validation set, LOCATION recall fell from 100% to 76.36% with D3; the +4-point target cannot be reached above a 100% baseline. This fixed-model ablation does not establish the effect of retraining with segmentation.
+- Details: [Lab 4 walkthrough](docs/LAB4_WALKTHROUGH.md) and [benchmarks](BENCHMARKS.md).
 
 ## search-min-score
 - Threshold:

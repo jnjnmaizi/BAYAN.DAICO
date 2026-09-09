@@ -56,6 +56,8 @@ Labs 3–4 may require GPU training. Use `notebooks/00_colab_setup.ipynb` to ope
 **Checkpoint commit:** `feat(models): NER + extractive QA with honest null handling`
 
 ## Lab 4 — Arabic pipeline and dialect-aware fine-tuning
+Implementation and measured limitations: [Lab 4 walkthrough](LAB4_WALKTHROUGH.md), [Colab notebook](../notebooks/04_lab4_arabic.ipynb), and [evidence](../artifacts/lab4/summary.json). The existing NER baseline has 100% validation LOCATION recall, and no Gulf validation rows exist in the topic data; the stated gains must not be reported as achieved.
+
 1. Implement per-model `normalize_arabic`; pass 30 supplied golden pairs.
 2. Dialect audit; record distribution + implication for MSA-only evaluation.
 3. Wire clitic segmentation consistently and record LOCATION recall delta.

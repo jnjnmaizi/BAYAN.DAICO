@@ -15,7 +15,8 @@ lab3:
 	pytest tests/test_model_data.py tests/test_ner_alignment.py tests/test_qa.py tests/test_lab3_regressions.py tests/test_lab3_setup.py -q
 
 lab4:
-	pytest tests/test_arabic_normalize.py -q
+	pytest tests/test_arabic_normalize.py tests/test_lab4_regressions.py -q
+	python scripts/dialect_audit.py
 
 lab5:
 	pytest tests/test_search_contract.py -q

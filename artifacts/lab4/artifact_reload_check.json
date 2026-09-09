@@ -1,0 +1,18 @@
+{
+  "purpose": "Saved artifact reload check on one validation row per present Arabic topic; not a new quality estimate",
+  "frozen_test_used": false,
+  "models": {
+    "mix": {
+      "rows": 4,
+      "finite_logits": true,
+      "predictions_match_saved": true,
+      "model_sha256": "c0b947dd7008a2bbdf291cd5b4d1b493d993d74296e09e8857ac50afcb02df77"
+    },
+    "da": {
+      "rows": 4,
+      "finite_logits": true,
+      "predictions_match_saved": true,
+      "model_sha256": "469013dd29e56ed1390252173a205f10bd4b4582da0f2724b60231cedd194b53"
+    }
+  }
+}

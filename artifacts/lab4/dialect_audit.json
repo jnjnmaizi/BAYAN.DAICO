@@ -1,0 +1,27 @@
+{
+  "data_sha256": "4a13286ed3ad850dc12a12fa69c6621a0a5126711d50c47139c8ef1b55b2523c",
+  "total_rows": 12000,
+  "arabic_rows": 7200,
+  "method": "Count supplied dialect_region labels; no automatic dialect identification",
+  "counts": {
+    "Gulf": 4800,
+    "MSA": 2400
+  },
+  "percent_of_arabic": {
+    "Gulf": 66.66666666666667,
+    "MSA": 33.333333333333336
+  },
+  "by_split": {
+    "train": {
+      "Gulf": 4800,
+      "MSA": 1200
+    },
+    "validation": {
+      "MSA": 1200
+    },
+    "test": {}
+  },
+  "gulf_validation_available": false,
+  "gulf_test_available": false,
+  "implication": "MSA-only evaluation excludes the Gulf majority; evaluate Gulf and MSA separately. Metadata is synthetic and does not prove linguistic dialect coverage."
+}

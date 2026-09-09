@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-09",
+  "implementation": [
+    "two normalization profiles and PII-safe display copy",
+    "dialect metadata audit",
+    "CAMeL D3 segmentation and NER alignment",
+    "paired fixed-model NER validation ablation",
+    "optional Mix/DA fine-tuning and available-slice comparison"
+  ],
+  "tests": {
+    "original_arabic_golden": 30,
+    "additional_lab4": 14,
+    "labs_1_to_4": 118
+  },
+  "ner": {
+    "baseline_location_recall": 1.0,
+    "segmented_location_recall": 0.7636363636363637,
+    "delta_points": -23.636363636363633,
+    "plus_4_point_target_met": false,
+    "adopt_segmentation": false
+  },
+  "classification": {
+    "selected": "xlm-roberta-base",
+    "selection_status": "Gulf validation absent; incumbent retained, no Gulf winner established",
+    "gulf_target_assessable": false,
+    "gulf_validation_rows": 0,
+    "all_arabic_validation_macro_f1": {
+      "mix": 0.5,
+      "da": 0.5
+    }
+  },
+  "frozen_test_inference_repeated": false,
+  "source_data_modified": false,
+  "remaining_evidence": "Unseen Gulf evaluation data required; +4 LOCATION recall target is unattainable above the 100% saved baseline on this validation set.",
+  "walkthrough": "docs/LAB4_WALKTHROUGH.md"
+}

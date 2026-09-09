@@ -15,6 +15,7 @@ from transformers import (AutoModelForTokenClassification, AutoTokenizer,
                           DataCollatorForTokenClassification, Trainer, TrainingArguments, set_seed)
 
 from bayan.models.ner import TAGS, align_labels, read_conll, split_ner
+from bayan.preprocessing.arabic import ARABIC_PREPROC_VERSION, ner_segmented_view
 from bayan.models.training import EVIDENCE, ROOT, checkpoint_source, sha256, write_json
 
 
@@ -32,6 +33,7 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--learning-rate", type=float, default=3e-5)
     parser.add_argument("--max-length", type=int, default=96)
+    parser.add_argument("--segmentation", choices=["none", "camel_d3"], default="none")
     parser.add_argument("--cpu", action="store_true")
     parser.add_argument("--evaluate-only", action="store_true")
     parser.add_argument("--evaluate-test", action="store_true")
@@ -74,6 +76,9 @@ def main():
         if report["data_sha256"] != sha256(args.data):
             raise ValueError("Data changed since training")
         args.max_length = report["max_length"]
+        args.segmentation = report.get("segmentation", "none")
+        if args.segmentation == "camel_d3" and report.get("segmentation_version") != ARABIC_PREPROC_VERSION:
+            raise ValueError("Segmentation changed since training")
         source = str(output_dir)
     else:
         source = checkpoint_source(args.checkpoint, args.revision)
@@ -85,11 +90,23 @@ def main():
     tag2id = {tag: i for i, tag in enumerate(TAGS)}
 
     def tokenize(batch):
-        encoded = tokenizer(batch["tokens"], is_split_into_words=True, truncation=True, max_length=args.max_length)
-        encoded["labels"] = [align_labels(encoded.word_ids(i), [tag2id[t] for t in tags]) for i, tags in enumerate(batch["tags"])]
+        words = batch["tokens"]
+        word_labels = [[tag2id[t] for t in tags] for tags in batch["tags"]]
+        if args.segmentation == "camel_d3":
+            views = [ner_segmented_view(row) for row in words]
+            words = [pieces for pieces, _ in views]
+            projected = []
+            for (pieces, anchors), labels in zip(views, word_labels):
+                targets = [-100] * len(pieces)
+                for anchor, label in zip(anchors, labels):
+                    targets[anchor] = label
+                projected.append(targets)
+            word_labels = projected
+        encoded = tokenizer(words, is_split_into_words=True, truncation=True, max_length=args.max_length)
+        encoded["labels"] = [align_labels(encoded.word_ids(i), labels) for i, labels in enumerate(word_labels)]
         # Truncated gold entities would inflate or invalidate entity-level scores.
-        for i, tags in enumerate(batch["tags"]):
-            if set(w for w in encoded.word_ids(i) if w is not None) != set(range(len(tags))):
+        for i, tokens in enumerate(words):
+            if set(w for w in encoded.word_ids(i) if w is not None) != set(range(len(tokens))):
                 raise ValueError("NER truncation would drop labelled words; increase --max-length")
         return encoded
 
@@ -122,6 +139,8 @@ def main():
         result = trainer.predict(datasets["validation"])
         gold, guesses = decode(result.predictions, result.label_ids)
         report = {"checkpoint": args.checkpoint, "revision": Path(source).name, "data_sha256": sha256(args.data),
+                  "segmentation": args.segmentation,
+                  "segmentation_version": ARABIC_PREPROC_VERSION if args.segmentation == "camel_d3" else None,
                   "seed": 42, "max_length": args.max_length, "epochs": args.epochs,
                   "batch_size": args.batch_size, "gradient_accumulation": 2, "learning_rate": args.learning_rate,
                   "device": str(trainer.args.device), "train_seconds": seconds,

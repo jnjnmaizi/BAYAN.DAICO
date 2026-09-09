@@ -117,6 +117,16 @@ This runs the attention and parameter-bucket tests, writes `artifacts/lab2/param
 - Tests cover citizen leakage, preserved split assignments, unseen labels, first-subword alignment, compound BIO boundaries, template grouping, QA token restrictions, span length/order, null thresholds and development/test context separation.
 - Machine-readable audit: [data_audit.json](artifacts/lab3/data_audit.json). Saved models use the same pretrained checkpoint revisions recorded in their metrics; checkpoint selection never uses frozen-test performance.
 
-## Lab 4 — Dialect audit
-- Distribution:
-- One-sentence implication for MSA-only evaluation:
+## Lab 4 — Dialect audit and Arabic preprocessing
+
+الشرح خطوة بخطوة في [مراجعة لاب ٤](docs/LAB4_WALKTHROUGH.md).
+
+- Distribution: 7,200 Arabic rows; Gulf 4,800 (66.67%), MSA 2,400 (33.33%). These are supplied metadata labels, not predictions from a dialect classifier.
+- Split coverage: Arabic train = 4,800 Gulf + 1,200 MSA; Arabic validation = 1,200 MSA only; frozen test contains no Arabic rows. There is no unseen Gulf evaluation slice in the supplied assignments.
+- MSA-only evaluation excludes the Gulf majority and cannot establish Gulf generalisation. A representative unseen Gulf evaluation set is needed before claiming a dialect-specific gain.
+- Two profiles: `bayan_ar_v1` follows the golden letter folds; project-defined `camelbert_v1` removes diacritics/tatweel without letter folding. Display spelling is retained separately after PII masking.
+- The 30 golden cases contain only 10 unique input/output pairs. Additional regressions cover profile differences, idempotence, PII-safe display text, source-word alignment and empty dialect slices.
+- CAMeL resources: MLE + morphology for `calima-msa-r13`, D3 scheme; `وبالرياض` becomes `و+ ب+ ال+ رياض`. English words, dates and reference IDs stay intact in the NER path.
+- Paired NER validation ablation: LOCATION recall 1.0000 → 0.763636, delta −23.6364 points; aggregate entity micro-F1 1.0000 → 0.940909. Keep the unsegmented input path for the saved Lab 3 model. No frozen-test inference was repeated.
+- Segmented training is available via `scripts/train_ner.py --segmentation camel_d3 --output-dir artifacts/ner_d3`; it uses the same stem mapping for train/eval. This separate training experiment was not run or substituted for the saved Lab 3 model.
+- Measured artifacts: [dialect audit](artifacts/lab4/dialect_audit.json), [profile/segmentation examples](artifacts/lab4/preprocessing_examples.json), [NER comparison](artifacts/lab4/ner_segmentation.json).

@@ -1,0 +1,43 @@
+{
+  "profiles": {
+    "bayan_ar_v1": {
+      "display_text": "إضاءةُ مـدرسة <PHONE>",
+      "model_text": "اضاءه مدرسه <PHONE>",
+      "profile": "bayan_ar_v1",
+      "version": "1.0.0"
+    },
+    "camelbert_v1": {
+      "display_text": "إضاءةُ مـدرسة <PHONE>",
+      "model_text": "إضاءة مدرسة <PHONE>",
+      "profile": "camelbert_v1",
+      "version": "1.0.0"
+    }
+  },
+  "examples": {
+    "وبالرياض": [
+      "و+",
+      "ب+",
+      "ال+",
+      "رياض"
+    ],
+    "انقطعت الكهرباء وبالرياض تأخرت الصيانة": [
+      "انقطعت",
+      "ال+",
+      "كهرباء",
+      "و+",
+      "ب+",
+      "ال+",
+      "رياض",
+      "تأخرت",
+      "ال+",
+      "صيانة"
+    ]
+  },
+  "scheme": "d3tok",
+  "disambiguator": "calima-msa-r13 MLE",
+  "camel_tools_version": "1.5.7",
+  "resource_hashes": {
+    "data/morphology_db/calima-msa-r13/morphology.db": "195bc25a333237a2126470da888d7936b59ed3729f9210e0a4194ba43497dd70",
+    "data/disambig_mle/calima-msa-r13/model.json": "e7d79e7744101b6933f9a4b41063d4b9934488fc8c8b6130a24467e0f0dfe9af"
+  }
+}
