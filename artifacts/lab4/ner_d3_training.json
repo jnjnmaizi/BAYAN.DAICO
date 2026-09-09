@@ -1,0 +1,203 @@
+{
+  "checkpoint": "xlm-roberta-base",
+  "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+  "data_sha256": "e76f187728fd408954364c1dc9822af383db8c2e0bbdaf72e8df9b35d6a1752e",
+  "segmentation": "camel_d3",
+  "segmentation_version": "1.0.0",
+  "seed": 42,
+  "max_length": 96,
+  "epochs": 3,
+  "batch_size": 16,
+  "gradient_accumulation": 2,
+  "learning_rate": 3e-05,
+  "device": "mps",
+  "train_seconds": 282.9162298750016,
+  "torch_version": "2.14.0",
+  "transformers_version": "4.43.4",
+  "rows": {
+    "train": 2674,
+    "validation": 935,
+    "test": 391
+  },
+  "template_groups": {
+    "train": 12,
+    "validation": 4,
+    "test": 2
+  },
+  "template_overlap": 0,
+  "split_policy": "seeded 70/20/10 by template groups, not rows; reference values excluded from group key",
+  "source_tags": {
+    "O": 20000,
+    "B-SERVICE": 4000,
+    "I-SERVICE": 644,
+    "B-LOCATION": 4000,
+    "B-DATE": 4000,
+    "B-REFERENCE": 4000
+  },
+  "evaluation": "seqeval strict IOB2 entity-level; special and continuation pieces ignored",
+  "validation": {
+    "entity_f1": 1.0,
+    "entity_precision": 1.0,
+    "entity_recall": 1.0
+  },
+  "validation_entities": {
+    "DATE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "LOCATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "REFERENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "SERVICE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "micro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    }
+  },
+  "history": [
+    {
+      "loss": 1.7903,
+      "grad_norm": 6.87972354888916,
+      "learning_rate": 2.884615384615385e-05,
+      "epoch": 0.2976190476190476,
+      "step": 25
+    },
+    {
+      "loss": 0.1982,
+      "grad_norm": 0.3700413703918457,
+      "learning_rate": 2.6814159292035398e-05,
+      "epoch": 0.5952380952380952,
+      "step": 50
+    },
+    {
+      "loss": 0.0103,
+      "grad_norm": 0.11326979845762253,
+      "learning_rate": 2.349557522123894e-05,
+      "epoch": 0.8928571428571429,
+      "step": 75
+    },
+    {
+      "eval_loss": 0.001197866746224463,
+      "eval_entity_f1": 1.0,
+      "eval_entity_precision": 1.0,
+      "eval_entity_recall": 1.0,
+      "eval_runtime": 3.1318,
+      "eval_samples_per_second": 298.547,
+      "eval_steps_per_second": 18.839,
+      "epoch": 1.0,
+      "step": 84
+    },
+    {
+      "loss": 0.0033,
+      "grad_norm": 0.054692644625902176,
+      "learning_rate": 2.017699115044248e-05,
+      "epoch": 1.1904761904761905,
+      "step": 100
+    },
+    {
+      "loss": 0.002,
+      "grad_norm": 0.10863442718982697,
+      "learning_rate": 1.6858407079646017e-05,
+      "epoch": 1.4880952380952381,
+      "step": 125
+    },
+    {
+      "loss": 0.002,
+      "grad_norm": 0.021686501801013947,
+      "learning_rate": 1.3539823008849558e-05,
+      "epoch": 1.7857142857142856,
+      "step": 150
+    },
+    {
+      "eval_loss": 0.0005663890042342246,
+      "eval_entity_f1": 1.0,
+      "eval_entity_precision": 1.0,
+      "eval_entity_recall": 1.0,
+      "eval_runtime": 3.0357,
+      "eval_samples_per_second": 308.005,
+      "eval_steps_per_second": 19.436,
+      "epoch": 2.0,
+      "step": 168
+    },
+    {
+      "loss": 0.0015,
+      "grad_norm": 0.01631160080432892,
+      "learning_rate": 1.0221238938053097e-05,
+      "epoch": 2.0833333333333335,
+      "step": 175
+    },
+    {
+      "loss": 0.0014,
+      "grad_norm": 0.019320160150527954,
+      "learning_rate": 6.902654867256637e-06,
+      "epoch": 2.380952380952381,
+      "step": 200
+    },
+    {
+      "loss": 0.0011,
+      "grad_norm": 0.013617347925901413,
+      "learning_rate": 3.5840707964601774e-06,
+      "epoch": 2.678571428571429,
+      "step": 225
+    },
+    {
+      "loss": 0.0025,
+      "grad_norm": 0.0809844359755516,
+      "learning_rate": 2.654867256637168e-07,
+      "epoch": 2.9761904761904763,
+      "step": 250
+    },
+    {
+      "eval_loss": 0.0005024771671742201,
+      "eval_entity_f1": 1.0,
+      "eval_entity_precision": 1.0,
+      "eval_entity_recall": 1.0,
+      "eval_runtime": 2.7658,
+      "eval_samples_per_second": 338.061,
+      "eval_steps_per_second": 21.332,
+      "epoch": 3.0,
+      "step": 252
+    },
+    {
+      "train_runtime": 281.4634,
+      "train_samples_per_second": 28.501,
+      "train_steps_per_second": 0.895,
+      "total_flos": 101945671017468.0,
+      "train_loss": 0.1996712345557864,
+      "epoch": 3.0,
+      "step": 252
+    }
+  ],
+  "frozen_test": null,
+  "limitations": "Synthetic templates, fixed date, no ORGANISATION annotations; no evidence for unseen dates or organisations."
+}

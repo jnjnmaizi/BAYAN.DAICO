@@ -5,12 +5,14 @@
     "dialect metadata audit",
     "CAMeL D3 segmentation and NER alignment",
     "paired fixed-model NER validation ablation",
-    "optional Mix/DA fine-tuning and available-slice comparison"
+    "optional Mix/DA fine-tuning and available-slice comparison",
+    "D3-consistent NER training and paired validation follow-up"
   ],
   "tests": {
     "original_arabic_golden": 30,
-    "additional_lab4": 14,
-    "labs_1_to_4": 118
+    "additional_lab4": 16,
+    "initial_labs_1_to_4_passed": 118,
+    "d3_followup_affected_suites_passed": 43
   },
   "ner": {
     "baseline_location_recall": 1.0,
@@ -32,5 +34,19 @@
   "frozen_test_inference_repeated": false,
   "source_data_modified": false,
   "remaining_evidence": "Unseen Gulf evaluation data required; +4 LOCATION recall target is unattainable above the 100% saved baseline on this validation set.",
-  "walkthrough": "docs/LAB4_WALKTHROUGH.md"
+  "walkthrough": "docs/LAB4_WALKTHROUGH.md",
+  "ner_d3_followup": {
+    "training_rows": 2674,
+    "validation_rows": 935,
+    "train_seconds": 282.9162298750016,
+    "baseline_location_recall": 1.0,
+    "d3_trained_location_recall": 1.0,
+    "d3_trained_entity_micro_f1": 1.0,
+    "delta_points": 0.0,
+    "plus_4_point_target_met": false,
+    "adopt_d3": false,
+    "frozen_test_used": false,
+    "comparison": "artifacts/lab4/ner_d3_comparison.json",
+    "saved_model_reload_check": "artifacts/lab4/ner_d3_reload_check.json"
+  }
 }

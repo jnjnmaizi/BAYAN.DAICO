@@ -1,0 +1,7 @@
+{
+  "validation_rows_checked": 4,
+  "predictions_match_saved": true,
+  "finite_logits": true,
+  "model_sha256": "8b9bed88e3763f625afe1a7d57fa50a386702d3259c7de608df805f7fab77666",
+  "frozen_test_used": false
+}

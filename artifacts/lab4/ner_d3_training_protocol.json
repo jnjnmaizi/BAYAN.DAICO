@@ -1,0 +1,22 @@
+{
+  "experiment": "Train XLM-R NER with D3 from the start, then compare validation against saved Lab 3 predictions",
+  "checkpoint": "xlm-roberta-base",
+  "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+  "segmentation": "camel_d3",
+  "segmentation_version": "1.0.0",
+  "seed": 42,
+  "epochs": 3,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "gradient_accumulation": 2,
+  "max_length": 96,
+  "data_sha256": "e76f187728fd408954364c1dc9822af383db8c2e0bbdaf72e8df9b35d6a1752e",
+  "baseline_predictions_sha256": "b5d9ed28f53f1bbcf01490c98dc9e1f8d3f4b2c67f951abedc55bd1ad5e68fb0",
+  "baseline_report_sha256": "3e84e85bd40239e8e7c90c10ad7f3ffe81f2a5534c8b454d531309647cf6e6a9",
+  "split_policy": "Same template-disjoint split as Lab 3; evaluate on validation only",
+  "frozen_test_used": false,
+  "baseline_location_recall": 1.0,
+  "maximum_possible_positive_recall_gain_points": 0,
+  "decision_rule": "Record LOCATION recall and aggregate entity F1; retain original model if there is no quality gain.",
+  "interpretation": "Follow-up development experiment after the fixed-model ablation; not independent held-out evidence and not proof of the +4 course target."
+}

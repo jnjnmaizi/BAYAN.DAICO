@@ -166,7 +166,10 @@ def main():
         write_json(output_dir / "frozen_test.json", report["frozen_test"])
         write_json(output_dir / "test_predictions.json", [{"id":r["id"],"tokens":r["tokens"],"gold":g,"prediction":p} for r,g,p in zip(splits["test"],gold,guesses)])
     write_json(report_path, report)
-    write_json(EVIDENCE / "ner.json", report)
+    # A Lab 4 segmented run must not overwrite the original Lab 3 evidence.
+    evidence_path = (ROOT / "artifacts/lab4/ner_d3_training.json"
+                     if args.segmentation == "camel_d3" else EVIDENCE / "ner.json")
+    write_json(evidence_path, report)
     print(json.dumps({k:report[k] for k in ["validation","frozen_test","train_seconds"]}, indent=2), flush=True)
 
 

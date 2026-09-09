@@ -112,3 +112,27 @@ def test_bert_strided_weights_can_be_saved_and_reloaded(tmp_path):
     trainer.save_model(str(tmp_path))
     restored = BertForSequenceClassification.from_pretrained(tmp_path, local_files_only=True)
     assert torch.equal(restored.bert.encoder.layer[0].attention.self.query.weight, weight)
+
+
+@pytest.mark.parametrize("change_gold", [False, True])
+def test_d3_comparison_requires_same_gold_and_does_not_call_a_tie_an_improvement(tmp_path, change_gold):
+    import json
+    root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location("compare_ner_d3", root / "scripts/compare_ner_d3.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    for name, segmentation in [("baseline", "none"), ("candidate", "camel_d3")]:
+        directory = tmp_path / name
+        directory.mkdir()
+        (directory / "metrics.json").write_text(json.dumps({"data_sha256":"same-data", "segmentation":segmentation}))
+        gold = ["O"] if name == "candidate" and change_gold else ["B-LOCATION"]
+        (directory / "validation_predictions.json").write_text(json.dumps([
+            {"id":"NER-1", "tokens":["الرياض"], "gold":gold, "prediction":["B-LOCATION"]}]))
+    if change_gold:
+        with pytest.raises(ValueError, match="gold labels differ"):
+            module.compare(tmp_path / "baseline", tmp_path / "candidate")
+    else:
+        result = module.compare(tmp_path / "baseline", tmp_path / "candidate")
+        assert result["location_recall_delta_points"] == 0
+        assert result["adopt_d3"] is False
+        assert result["plus_4_point_target_met"] is False

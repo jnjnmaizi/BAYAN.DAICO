@@ -27,7 +27,7 @@
 - CI-backed verdict: unavailable for Gulf because there are no held-out Gulf examples. Aggregate synthetic-template performance cannot replace missing slice evidence; we do not claim a +4-point improvement.
 - Normalization contract: `bayan_ar_v1` for the supplied golden rules; `camelbert_v1` is our conservative profile based on the CAMeLBERT preprocessing description. Same profile in candidate training and validation; retain separate PII-masked display text.
 - Segmentation contract: CAMeL MLE `calima-msa-r13`, `d3tok`, no diacritics; preserve a map from each original word to its lexical stem. First-subword supervision is applied to that stem, other pieces are ignored. Version is recorded for segmented training/evaluation.
-- Measured NER decision: keep the saved model's unsegmented path. On the paired 935-row validation set, LOCATION recall fell from 100% to 76.36% with D3; the +4-point target cannot be reached above a 100% baseline. This fixed-model ablation does not establish the effect of retraining with segmentation.
+- Measured NER decision: keep the saved model's unsegmented path. On the paired 935-row validation set, LOCATION recall fell from 100% to 76.36% with D3; the +4-point target cannot be reached above a 100% baseline. A separate D3-consistent training run then recovered LOCATION recall and entity micro-F1 to 100% on the same 935 validation sentences. This is a 0-point gain against the original baseline, so retain the original model. The follow-up used validation for checkpoint selection and did not use the frozen test; it is development evidence, not independent test evidence.
 - Details: [Lab 4 walkthrough](docs/LAB4_WALKTHROUGH.md) and [benchmarks](BENCHMARKS.md).
 
 ## search-min-score

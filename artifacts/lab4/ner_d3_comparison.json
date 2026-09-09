@@ -1,0 +1,100 @@
+{
+  "scope": "Paired validation comparison of original and D3-trained models; follow-up development experiment",
+  "rows": 935,
+  "data_sha256": "e76f187728fd408954364c1dc9822af383db8c2e0bbdaf72e8df9b35d6a1752e",
+  "baseline_predictions_sha256": "b5d9ed28f53f1bbcf01490c98dc9e1f8d3f4b2c67f951abedc55bd1ad5e68fb0",
+  "candidate_predictions_sha256": "b5d9ed28f53f1bbcf01490c98dc9e1f8d3f4b2c67f951abedc55bd1ad5e68fb0",
+  "baseline": {
+    "DATE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "LOCATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "REFERENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "SERVICE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "micro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    }
+  },
+  "d3_trained": {
+    "DATE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "LOCATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "REFERENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "SERVICE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 935
+    },
+    "micro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3740
+    }
+  },
+  "location_recall_delta_points": 0.0,
+  "plus_4_point_target_met": false,
+  "adopt_d3": false,
+  "frozen_test_used": false,
+  "explanation": "A tie restores quality but is not a +4-point gain. Keep the original path absent improvement; validation was used for checkpoint selection, so this is not independent test evidence."
+}

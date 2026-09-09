@@ -105,7 +105,7 @@ segment("انقطعت الكهرباء وبالرياض تأخرت الصيان�
 أضفنا كذلك `--segmentation camel_d3` إلى `scripts/train_ner.py`. عند تدريب تجربة منفصلة بهذه الطريقة، نضع التسمية على الجزء الأساسي، و`-100` على بقية اللواصق واستمرارات subwords. نفس التحويل يُستخدم في التدريب والتحقق والتقييم. إعداد التجزئة يُحفظ مع النموذج ويُستعاد عند التقييم.
 
 ```bash
-# مثال لتجربة جديدة فقط؛ لم ندرّب هذا النموذج الإضافي في هذا اللاب.
+# Completed follow-up; existing output is protected against accidental retraining.
 python scripts/train_ner.py --segmentation camel_d3 --output-dir artifacts/ner_d3
 ```
 
@@ -128,6 +128,28 @@ python scripts/ner_segmentation_eval.py
 `Recall = المواقع المستخرجة صحيحًا ÷ جميع المواقع الصحيحة`. الفرق **−23.64 نقطة**. هدف +4 نقاط لم يتحقق؛ وهو غير ممكن فوق خط أساس 100% على هذه العينة.
 
 القرار: **نحتفظ بالمدخلات الأصلية للنموذج الحالي**. التفسير المحتمل هو اختلاف مدخلات D3 عن الكلمات التي رأى النموذج أثناء التدريب. التجربة لا تثبت أن التقسيم يضر جميع نماذج العربية؛ تثبت أنه لم يساعد هذا النموذج، بهذا الإعداد، على عينة التحقق الحالية.
+
+### Follow-up: train and evaluate with the same D3 processing
+
+The separate training run above was completed on 2026-09-09. We trained from the pinned XLM-R base checkpoint for three epochs, using 2,674 training sentences, seed 42, learning rate 3e-5, batch size 16, gradient accumulation 2 and maximum length 96. Training took 282.92 seconds on MPS. The protocol was recorded before training in `artifacts/lab4/ner_d3_training_protocol.json`.
+
+Why do this? The original experiment changed the input of a model trained on whole words. This follow-up applies the same D3 segmentation and original-word label mapping in training and validation, addressing that mismatch.
+
+| Configuration | LOCATION recall on the same 935 validation sentences |
+|---|---:|
+| Original model, original input | 100% |
+| Original model, D3 input | 76.36% |
+| D3-trained model, D3 input | 100% |
+
+The new model recovers the lost recall, but its gain against the original baseline is **0 points**, not +4. Its overall strict entity micro-F1 is also 1.0000. We retain the original model because the extra processing has not demonstrated a quality gain. Validation selected the checkpoint; these results are development evidence. The frozen test was not used, and the original Lab 3 evidence remains intact.
+
+Compare saved predictions without training or inference:
+
+```bash
+python scripts/compare_ner_d3.py
+```
+
+The script verifies matching data versions, validation IDs, source words and gold labels before comparing scores. Results are in `artifacts/lab4/ner_d3_comparison.json`; trained weights are local in `artifacts/ner_d3/`. A CPU reload check confirmed finite logits and matching saved predictions on four validation examples, one per template.
 
 ## ٨. المقارنة الاختيارية بين Mix وDA
 
