@@ -49,21 +49,19 @@ Labs 3–4 may require GPU training. Use `notebooks/00_colab_setup.ipynb` to ope
 ## Lab 3B — NER + extractive QA
 1. Implement `align_labels`; all 8 alignment tests must pass, including continuation/clitic case.
 2. Fine-tune token classification and evaluate with seqeval at entity level.
-3. Implement constrained `best_span`; run the supplied 12-question answerable smoke set. Keep the separate 9+3 diagnostic for null-handling evidence.
+3. Implement constrained `best_span`; run 12-question smoke set including 3 unanswerable questions.
 
-**Targets:** NER entity-F1 ≥ 0.80; supplied smoke set 12/12 answerable spans, with zero unanswerable cases. This follows the upstream README updated on sync 2026-09-09; its upstream checklist still states the earlier 9+3 target. Zero null cases provide no null-handling evidence. See [course sync](COURSE_SYNC.md).
+**Targets:** NER entity-F1 ≥ 0.80; smoke set 9/9 answerable spans + 3/3 nulls.
 
 **Checkpoint commit:** `feat(models): NER + extractive QA with honest null handling`
 
 ## Lab 4 — Arabic pipeline and dialect-aware fine-tuning
-Implementation and measured limitations: [Lab 4 walkthrough](LAB4_WALKTHROUGH.md), [Colab notebook](../notebooks/04_lab4_arabic.ipynb), and [evidence](../artifacts/lab4/summary.json). The existing NER baseline has 100% validation LOCATION recall, and no Gulf validation rows exist in the topic data; the stated gains must not be reported as achieved.
-
 1. Implement per-model `normalize_arabic`; pass 30 supplied golden pairs.
 2. Dialect audit; record distribution + implication for MSA-only evaluation.
 3. Wire clitic segmentation consistently and record LOCATION recall delta.
-4. **Optional / extra practice (updated upstream README):** bake-off Arabic-centric models; record all/Gulf/MSA slices and update `DECISIONS.md#arabic-model`.
+4. Bake-off Arabic-centric models; record all/Gulf/MSA slices and update `DECISIONS.md#arabic-model`.
 
-**Targets:** 30/30 Arabic golden; LOCATION recall ≥ +4 points; optional bake-off: dialect-aware model ≥ +4 macro-F1 on Gulf slice.
+**Targets:** 30/30 Arabic golden; LOCATION recall ≥ +4 points; dialect-aware model ≥ +4 macro-F1 on Gulf slice.
 
 **Checkpoint commit:** `feat(arabic): normalisation profiles + dialect audit + DA model beats mix on Gulf slice`
 
