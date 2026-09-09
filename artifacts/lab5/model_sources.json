@@ -1,0 +1,10 @@
+{
+  "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "path": "artifacts/hf_cache/models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2/snapshots/e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+  },
+  "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1": {
+    "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+    "path": "artifacts/hf_cache/models--cross-encoder--mmarco-mMiniLMv2-L12-H384-v1/snapshots/1427fd652930e4ba29e8149678df786c240d8825"
+  }
+}

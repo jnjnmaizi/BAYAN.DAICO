@@ -31,18 +31,21 @@
 - Details: [Lab 4 walkthrough](docs/LAB4_WALKTHROUGH.md) and [benchmarks](BENCHMARKS.md).
 
 ## search-min-score
-- Threshold:
-- No-answer evidence:
-- False-positive / false-negative trade-off:
+- Threshold: **0.0065950584** on sigmoid cross-encoder scores, selected by balanced answerable/no-answer retention on supplied calibration queries.
+- No-answer evidence: 20/20 empty-correct and 130/130 answerable retained, but only one unique negative text. No independent rejection-quality claim.
+- Keep normalized cosine FAISS + multilingual reranking with pinned versions and checksums. Exact-ID retrieval targets remain unmet; do not relabel the sparse relevance sets to improve reported scores.
+- The raw-vector ablation did not produce the expected collapse in this dataset. Retain the measured counterexample and investigate relevance coverage with the instructor.
 
 ## quantisation-split
-- Topic artefact:
-- NER artefact:
-- Latency evidence:
-- Paired quality-tax evidence:
-- Rollback artefact retained:
+- Topic artifact: dynamic INT8 ONNX; p99 4.84 ms, 38.70× versus padded fp32.
+- NER artifact: dynamic INT8 ONNX; p99 4.86 ms, 32.10× versus padded fp32.
+- Paired validation: all 2,400 classifier and 935 NER sentence predictions agree with saved fp32. Quality-tax intervals are zero on this synthetic validation sample. Frozen tests were not repeated.
+- HTTP: bounded 8-item microbatches, 0.5 ms collection window; p99 33.36 ms at 16 concurrent clients over 60 seconds, zero errors. No output cache.
+- Rollback: original PyTorch weights and ONNX fp32 exports remain locally available. Selected manifest and quality evidence are in `artifacts/lab7/`.
 
 ## architecture
-- Encoder/decoder rationale by task:
-- Multilingual vs Arabic-centric rationale:
-- Evidence used:
+- Bidirectional encoders support topic classification, token tagging, sentence embeddings and paired relevance scoring. Existing QA remains extractive; no generative decoder or optional extension was added.
+- Retain the bilingual XLM-R task models. The Arabic DA candidate lacks Gulf evaluation coverage; it does not replace the bilingual classifier.
+- Search and inference assets are loaded once; shared preprocessing and startup artifact checks prevent train/serve version skew. NER uses the source-word representation seen in training, with PII masking and preserved reference digits; offsets refer to returned masked text. Search runs on a dedicated CPU worker to avoid cross-thread OpenMP crashes.
+- The sentiment baseline exists solely to exercise mandatory directional probes; its 0.3333 validation macro-F1 and all-tied directional predictions do not justify a production sentiment endpoint.
+- Evidence: `BENCHMARKS.md`, `EVALUATION_REPORT.md`, and `docs/LABS_5_7_RUNBOOK.md`.

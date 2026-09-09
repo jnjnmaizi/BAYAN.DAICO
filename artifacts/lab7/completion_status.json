@@ -1,0 +1,41 @@
+{
+  "total_tests": 140,
+  "test_command": "OMP_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false .venv/bin/python -m pytest -q",
+  "requirements_and_original_tests_modified": false,
+  "source_data_modified": false,
+  "lab5": {
+    "implementation_complete": true,
+    "retrieval_targets_met": false,
+    "no_answer_calibration_empty_correct": "20/20 (one unique text)",
+    "normalization_collapse_observed": false
+  },
+  "lab6": {
+    "implementation_complete": true,
+    "topic_slices": 16,
+    "model_cards": 3,
+    "human_review_confirmed": 0,
+    "human_review_required": 120,
+    "human_review_deferred_by_user": true
+  },
+  "lab7": {
+    "implementation_complete": true,
+    "classifier_bare_p99_ms": 4.842150929616763,
+    "classifier_speedup": 38.69975300837658,
+    "paired_quality_tax": 0,
+    "http_p99_ms": 33.36067185999122,
+    "http_errors": 0,
+    "targets_met": true,
+    "all_api_endpoints_verified": true
+  },
+  "optional_deferred": [
+    "Further Arabic-model/MARBERT bake-offs",
+    "Further Gulf-gain experiments without independent Gulf evaluation data",
+    "Additional model/hyperparameter sweeps",
+    "New capstone extension projects"
+  ],
+  "earlier_unmet_targets": [
+    "Lab 3 classifier +8 macro-F1",
+    "Lab 4 LOCATION recall +4 points"
+  ],
+  "walkthrough": "docs/LABS_5_7_RUNBOOK.md"
+}

@@ -1,0 +1,138 @@
+{
+  "corpus_rows": 20000,
+  "unique_case_texts": 5401,
+  "maximum_identical_text_multiplicity": 387,
+  "labelled_case_multiplicity": [
+    {
+      "query_id": "Q-001",
+      "relevant_case_ids": [
+        "CASE-000001",
+        "CASE-000009",
+        "CASE-000017"
+      ],
+      "identical_text_case_counts": [
+        62,
+        2,
+        52
+      ]
+    },
+    {
+      "query_id": "Q-002",
+      "relevant_case_ids": [
+        "CASE-000010",
+        "CASE-000018",
+        "CASE-000026"
+      ],
+      "identical_text_case_counts": [
+        39,
+        50,
+        2
+      ]
+    },
+    {
+      "query_id": "Q-003",
+      "relevant_case_ids": [
+        "CASE-000019",
+        "CASE-000027",
+        "CASE-000035"
+      ],
+      "identical_text_case_counts": [
+        39,
+        53,
+        1
+      ]
+    },
+    {
+      "query_id": "Q-004",
+      "relevant_case_ids": [
+        "CASE-000028",
+        "CASE-000036",
+        "CASE-000044"
+      ],
+      "identical_text_case_counts": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "query_id": "Q-005",
+      "relevant_case_ids": [
+        "CASE-000037",
+        "CASE-000045",
+        "CASE-000053"
+      ],
+      "identical_text_case_counts": [
+        387,
+        51,
+        387
+      ]
+    },
+    {
+      "query_id": "Q-006",
+      "relevant_case_ids": [
+        "CASE-000046",
+        "CASE-000054",
+        "CASE-000062"
+      ],
+      "identical_text_case_counts": [
+        93,
+        54,
+        1
+      ]
+    },
+    {
+      "query_id": "Q-007",
+      "relevant_case_ids": [
+        "CASE-000055",
+        "CASE-000063",
+        "CASE-000071"
+      ],
+      "identical_text_case_counts": [
+        62,
+        92,
+        1
+      ]
+    },
+    {
+      "query_id": "Q-008",
+      "relevant_case_ids": [
+        "CASE-000064",
+        "CASE-000072",
+        "CASE-000080"
+      ],
+      "identical_text_case_counts": [
+        2,
+        58,
+        38
+      ]
+    },
+    {
+      "query_id": "Q-009",
+      "relevant_case_ids": [
+        "CASE-000065",
+        "CASE-000073",
+        "CASE-000081"
+      ],
+      "identical_text_case_counts": [
+        1,
+        46,
+        52
+      ]
+    },
+    {
+      "query_id": "Q-010",
+      "relevant_case_ids": [
+        "CASE-000074",
+        "CASE-000082",
+        "CASE-000090"
+      ],
+      "identical_text_case_counts": [
+        33,
+        50,
+        2
+      ]
+    }
+  ],
+  "normalization_ablation_conclusion": "Raw vectors perform better on supplied sparse exact-ID labels in this run; a metric collapse was NOT observed. Unit-norm integrity is enforced regardless."
+}

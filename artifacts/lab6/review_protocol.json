@@ -1,0 +1,9 @@
+{
+  "source": "data/eval/validation_predictions.csv",
+  "sha256": "7370a1f804dc17226c9296a5aa49044f3fd7ab2a64f005419539aacc4804fd06",
+  "source_error_count": 300,
+  "sample_size": 120,
+  "seed": 42,
+  "source_is": "supplied course predictions, not current trained classifier predictions",
+  "human_review_complete": false
+}

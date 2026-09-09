@@ -1,0 +1,78 @@
+{
+  "bi_encoder": {
+    "n": 130,
+    "recall_at_10": 0.002564102564102564,
+    "mrr_at_10": 0.002564102564102564
+  },
+  "reranked": {
+    "n": 130,
+    "recall_at_10": 0.023076923076923078,
+    "mrr_at_10": 0.026483516483516482
+  },
+  "unnormalized": {
+    "n": 130,
+    "recall_at_10": 0.015384615384615385,
+    "mrr_at_10": 0.008034188034188035
+  },
+  "mrr_lift": 0.023919413919413917,
+  "language_slices": {
+    "ar": {
+      "n": 60,
+      "recall_at_10": 0.03333333333333333,
+      "mrr_at_10": 0.04666666666666666
+    },
+    "en": {
+      "n": 70,
+      "recall_at_10": 0.014285714285714285,
+      "mrr_at_10": 0.009183673469387754
+    }
+  },
+  "cross_lingual": null,
+  "same_language": null,
+  "mixed_language": {
+    "n": 130,
+    "recall_at_10": 0.023076923076923078,
+    "mrr_at_10": 0.026483516483516482
+  },
+  "cross_lingual_mrr_gap": null,
+  "threshold": 0.006595058366656304,
+  "no_answer_empty_correct": 20,
+  "no_answer_total": 20,
+  "answerable_retained": 130,
+  "unique_no_answer_texts": 1,
+  "threshold_scope": "Calibration on supplied 150 queries; no independent threshold test set",
+  "latency_ms": {
+    "bi_ms": {
+      "p50": 7.945375007693656,
+      "p99": 124.3366587528726
+    },
+    "rerank_ms": {
+      "p50": 49.49156250222586,
+      "p99": 126.17365391546622
+    }
+  },
+  "raw_vector_norm_range": [
+    2.2436940670013428,
+    5.643935680389404
+  ],
+  "targets": {
+    "recall": false,
+    "mrr": false,
+    "empty": true
+  },
+  "limitations": "Synthetic corpus contains repeated texts with distinct case IDs. Exact-ID labels are sparse; semantically equivalent unlabelled cases still count as incorrect. No labels or corpus rows were changed.",
+  "within_query_language_comparison": {
+    "same_language": {
+      "n": 130,
+      "recall_at_10": 0.046153846153846156,
+      "mrr_at_10": 0.026483516483516482
+    },
+    "cross_language": {
+      "n": 130,
+      "recall_at_10": 0.0,
+      "mrr_at_10": 0.0
+    },
+    "mrr_gap_same_minus_cross": 0.026483516483516482,
+    "definition": "Same 130 queries and unfiltered top-10 ranking; separate relevant IDs by whether case and query languages match."
+  }
+}

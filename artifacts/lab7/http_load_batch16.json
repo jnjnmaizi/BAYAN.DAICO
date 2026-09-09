@@ -1,0 +1,30 @@
+{
+  "duration_seconds": 60,
+  "elapsed_seconds": 60.01850883399311,
+  "concurrency": 16,
+  "requests": 31723,
+  "errors": 0,
+  "p50_ms": 29.982291991473176,
+  "p99_ms": 42.77319674176391,
+  "requests_per_second": 528.5536181470876,
+  "target_met": false,
+  "canaries": {
+    "passed": true,
+    "preproc_version": "1.2.0",
+    "classifier_predictions": [
+      "billing",
+      "waste"
+    ],
+    "checks": [
+      "selected artifact checksums",
+      "preprocessing version",
+      "PII normalization",
+      "English billing",
+      "Arabic waste"
+    ]
+  },
+  "payload": {
+    "text": "الخدمة ممتازة ولكن التأخير طويل"
+  },
+  "method": "httpx persistent clients; closed-loop 16 concurrent requests for 60 seconds, equivalent load shape to supplied hey command; includes HTTP, queueing, preprocessing and model inference"
+}

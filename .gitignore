@@ -20,3 +20,15 @@ artifacts/lab4/*
 *.bin
 *.safetensors
 runs/
+
+# Publish measured lab evidence; retain large runtime assets locally.
+!artifacts/lab5/
+artifacts/lab5/*
+!artifacts/lab5/*.json
+!artifacts/lab6/
+artifacts/lab6/*
+!artifacts/lab6/*.json
+!artifacts/lab6/*.png
+!artifacts/lab7/
+artifacts/lab7/*
+!artifacts/lab7/*.json

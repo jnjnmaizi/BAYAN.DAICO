@@ -1,0 +1,13 @@
+{
+  "task": "ner",
+  "preproc_version": "1.2.0",
+  "source_weights_sha256": "12d38e40800f1c19e92923ace9c388476f9f088e978a38df6a5be592edeb48b6",
+  "fp32_sha256": "6b823de7c271e605753fb6cde294e2923df8b5b87eb42603044735bc73471dd4",
+  "int8_sha256": "d6cc8d4e2ec37b3257ea9e66069df42894131aa0fac8b4969f4eebc98c379f46",
+  "opset": 17,
+  "quantization": "dynamic signed INT8 per-channel MatMul constant weights; embeddings remain fp32",
+  "rollback": "fp32.onnx",
+  "quality_status": "Must pass paired validation before selection",
+  "tokenizer_sha256": "29ddd977cb79149c335fc97a18c5f2e953cde1bb12ae20cb45f155b260b1ce2b",
+  "config_sha256": "c379c5084fd1faf050f5e1fdf64855a4dff708b862d1160b50f301e2e6c2301c"
+}

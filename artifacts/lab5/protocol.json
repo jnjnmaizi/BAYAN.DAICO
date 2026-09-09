@@ -1,0 +1,9 @@
+{
+  "query_sha256": "ff24a0e7580199dd722dab58961caf06135ae789837aa20895bf59a30dc95e3a",
+  "candidates": 50,
+  "k": 10,
+  "device": "mps",
+  "threshold_policy": "Select highest balanced empty/no-empty accuracy on supplied labelled calibration queries; report resubstitution, not independent test accuracy",
+  "planted_bug": "Same raw embeddings without corpus/query L2 normalization; no artificial perturbation",
+  "labels_modified": false
+}

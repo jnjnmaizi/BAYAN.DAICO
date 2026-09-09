@@ -95,33 +95,59 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 - Reproduction and explanations: [Lab 4 walkthrough](docs/LAB4_WALKTHROUGH.md). Large models stay under ignored `artifacts/lab4_models/` and `artifacts/ner_d3/`; the published JSON files contain measured evidence only.
 
 ## Lab 5 — Search
-| Configuration | recall@10 | MRR@10 | p50 latency/query |
-|---|---:|---:|---:|
-| bi-encoder only | | | |
-| + cross-encoder rerank | | | |
-| cross-lingual slice | | | |
 
-- no-answer empty-correct: ___ / 20
-- cross-lingual gap: ___
+| Configuration | recall@10 | MRR@10 | p50 stage latency |
+|---|---:|---:|---:|
+| normalized bi-encoder | 0.002564 | 0.002564 | 7.95 ms |
+| + multilingual cross-encoder | 0.023077 | 0.026484 | +49.49 ms |
+| unnormalized-vector ablation | 0.015385 | 0.008034 | not separately benchmarked |
+
+- Full 20,000-case corpus; 130 answerable labelled queries, 50 candidates, top 10. MPS inference; encoder and reranker revisions pinned in the manifest. Original exact-ID labels remain unchanged.
+- Reranking MRR lift: **+0.023919**. Recall/MRR targets **not met**. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
+- Within-query language comparison: same-language relevant-ID recall@10 **0.046154**, cross-language **0.000000**; same-minus-cross MRR gap **0.026484**. All queries have mixed-language relevance sets.
+- Empty-correct: **20/20**, answerable retained **130/130**, threshold **0.0065950584**. This is calibration on the supplied set, whose 20 no-answer rows contain only one unique text; no independent threshold test is available.
+- The expected unnormalized-vector metric collapse was **not observed**. Raw vectors scored higher than normalized stage 1 under sparse exact-ID labels. Production still enforces normalized vectors and validates checksums.
+- Evidence: [retrieval](artifacts/lab5/retrieval.json), [data audit](artifacts/lab5/data_audit.json), [manifest](artifacts/lab5/index_manifest.json).
 
 ## Lab 6 — Evaluation
-| Model | Aggregate macro-F1 [CI] | Gulf [CI] | Invariance pass | MFT pass |
-|---|---|---|---:|---:|
-| topic classifier | | | | |
-| dialect-aware | | | | |
 
-- paired comparison verdict:
-- error taxonomy top categories:
-- top-3 prioritised fixes:
+| Model | Aggregate macro-F1 [95% CI] | Gulf | Invariance | MFT |
+|---|---|---|---:|---:|
+| topic classifier | 1.0000 [1.0000, 1.0000] | unavailable | 200/200 | 15/16 |
+| Arabic DA candidate | 0.5000 [0.5000, 0.5000] | unavailable | 200/200 | 9/16 bilingual; 8/8 Arabic |
+
+- Topic report: **16 slices**; DA report: 10 available/empty slices. Fixed eight-label macro-F1 and 500 seeded bootstrap draws resampling citizen groups. DA validation contains only four task classes, so its ceiling is 0.5.
+- Paired topic-minus-DA difference on the same 1,200 Arabic rows: **0.0000 [0.0000, 0.0000]**. No Gulf comparison can be established.
+- Separate sentiment baseline: **200/200** directional checks, all **200 ties**; validation macro-F1 **0.3333**. This does not demonstrate negation sensitivity and is not a topic-model score.
+- Human error review: **0/120 confirmed**, worksheet prepared from 300 errors in the supplied course predictions. Histogram and review-grounded top-three fixes remain pending; no automated tagging is substituted for human review.
+- Three model cards created. Full results and limitations: [evaluation report](EVALUATION_REPORT.md), [review worksheet](docs/LAB6_ERROR_REVIEW.md), [model cards](model_cards).
 
 ## Lab 7 — Optimisation ladder
-| Rung | p50 | p99 | quality metric / paired Δ | Artefact size |
-|---|---:|---:|---|---:|
-| fp32 torch @512 padded | | | | |
-| fp32 torch @128 dynamic | | | | |
-| ONNX fp32 @128 | | | | |
-| ONNX INT8 @128 | | | | |
 
-- HTTP p99, 16 concurrent:
-- classifier quantisation decision:
-- NER quantisation decision:
+CPU measurements on this Mac, four threads, batch 1, 10 warm-ups and the same 200 seeded samples from the supplied 2,000-row production mix. Bare timings exclude tokenization. The fp32 baseline was measured before ONNX export.
+
+| Task / rung | p50 ms | p99 ms | Validation quality tax [95% CI] | Artifact MiB |
+|---|---:|---:|---|---:|
+| classifier / torch padded_512 | 146.21 | 187.39 | baseline | 1060.7 |
+| classifier / torch dynamic_128 | 30.10 | 35.97 | baseline | 1060.7 |
+| classifier / onnx dynamic_128 | 7.51 | 9.23 | 0.0000 [0.0000, 0.0000] | 1060.9 |
+| classifier / int8 dynamic_128 | 3.26 | 4.84 | 0.0000 [0.0000, 0.0000] | 816.8 |
+| ner / torch padded_512 | 143.68 | 155.85 | baseline | 1058.5 |
+| ner / torch dynamic_128 | 29.12 | 31.18 | baseline | 1058.5 |
+| ner / onnx dynamic_128 | 7.08 | 8.49 | 0.0000 [0.0000, 0.0000] | 1058.7 |
+| ner / int8 dynamic_128 | 3.28 | 4.86 | 0.0000 [0.0000, 0.0000] | 816.2 |
+
+- Classifier decision: **INT8**, bare p99 **4.84 ms**, **38.70×** faster than padded fp32 p99; quality tax 0 points, upper paired-bootstrap bound 0. All 2,400 saved validation predictions match.
+- NER decision: **INT8**, bare p99 **4.86 ms**, **32.10×** faster than padded fp32 p99. All 935 saved validation sentence predictions match. The quality interval resamples only four NER template groups, so external generalisation remains unproven.
+- Original PyTorch and ONNX fp32 weights retained for rollback. Dynamic quantization covers constant MatMul weights; the large embedding tables remain fp32.
+
+| HTTP configuration, 16 concurrent clients / 60 seconds | p50 ms | p99 ms | Requests | Errors |
+|---|---:|---:|---:|---:|
+| unbatched | 21.86 | 325.78 | 22110 | 0 |
+| 16-item / 1 ms microbatch | 29.98 | 42.77 | 31723 | 0 |
+| 8-item / 0.5 ms microbatch (selected) | 28.74 | 33.36 | 33259 | 0 |
+
+- Selected HTTP p99 **33.36 ms ≤40 ms**, zero request errors, startup canaries green. No prediction caching. The load driver uses persistent httpx clients with the same concurrency, duration and fixed payload as the supplied hey command.
+- Classifier bare p99, speed-up, quality-tax and HTTP targets all met on this measured machine/run. HTTP performance for longer or more varied payloads is not established by this fixed-payload test.
+- Startup checks cover selected model checksums, tokenizer/config hashes, preprocessing version, PII handling and Arabic/English label probes.
+- Final unit/contract suite: **140 passed**. Evidence and runnable commands: [runbook](docs/LABS_5_7_RUNBOOK.md), [selection](artifacts/lab7/selection.json), [HTTP result](artifacts/lab7/http_load.json).

@@ -1,0 +1,41 @@
+{
+  "paired_topic_minus_da_on_same_arabic_rows": {
+    "point": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "n": 1200,
+    "groups": 480,
+    "small_slice": false
+  },
+  "human_review": {
+    "confirmed": 0,
+    "required": 120,
+    "complete": false,
+    "histogram": {}
+  },
+  "slice_counts": {
+    "topic": 16,
+    "dialect_aware": 10
+  },
+  "frozen_test_used": false,
+  "top_3_fixes": [
+    {
+      "fix": "Add independent Gulf and complete-class evaluation coverage",
+      "predicted_delta": "Not estimable from current data; improves coverage, not an asserted model gain"
+    },
+    {
+      "fix": "Improve sparse case-ID relevance judgements before retrieval tuning",
+      "predicted_delta": "Unknown pending human relevance review"
+    },
+    {
+      "fix": "Train with consistent clitic segmentation when deploying segmented NER",
+      "predicted_delta": "Measured recovery +23.6364 recall points versus mismatched input; 0 versus original baseline"
+    }
+  ],
+  "sentiment_directional": {
+    "passed": 200,
+    "total": 200,
+    "unchanged_predictions": 200,
+    "validation_macro_f1": 0.3333333333333333
+  }
+}

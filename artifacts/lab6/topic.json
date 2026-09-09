@@ -1,0 +1,2845 @@
+{
+  "slices": {
+    "all": {
+      "point": 1.0,
+      "low": 1.0,
+      "high": 1.0,
+      "n": 2400,
+      "groups": 960,
+      "small_slice": false
+    },
+    "lang=ar": {
+      "point": 0.5,
+      "low": 0.5,
+      "high": 0.5,
+      "n": 1200,
+      "groups": 480,
+      "small_slice": false
+    },
+    "lang=en": {
+      "point": 0.5,
+      "low": 0.5,
+      "high": 0.5,
+      "n": 1200,
+      "groups": 480,
+      "small_slice": false
+    },
+    "dialect_region=MSA": {
+      "point": 0.5,
+      "low": 0.5,
+      "high": 0.5,
+      "n": 1200,
+      "groups": 480,
+      "small_slice": false
+    },
+    "dialect_region=unknown": {
+      "point": 0.5,
+      "low": 0.5,
+      "high": 0.5,
+      "n": 1200,
+      "groups": 480,
+      "small_slice": false
+    },
+    "y_true=billing": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=digital_services": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=licensing": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=lighting": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=parks": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=roads": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=waste": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "y_true=water": {
+      "point": 0.125,
+      "low": 0.125,
+      "high": 0.125,
+      "n": 300,
+      "groups": 120,
+      "small_slice": false
+    },
+    "length_bucket=medium": {
+      "point": 1.0,
+      "low": 0.875,
+      "high": 1.0,
+      "n": 690,
+      "groups": 460,
+      "small_slice": false
+    },
+    "length_bucket=short": {
+      "point": 1.0,
+      "low": 1.0,
+      "high": 1.0,
+      "n": 1710,
+      "groups": 860,
+      "small_slice": false
+    },
+    "dialect_region=Gulf": null
+  },
+  "behavioural": {
+    "invariance": {
+      "passed": 200,
+      "total": 200,
+      "rate": 1.0,
+      "checks": [
+        {
+          "test_id": "BEH-001",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-003",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-005",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-007",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-009",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-011",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-013",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-015",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-017",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-019",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-021",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-023",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-025",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-027",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-029",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-031",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-033",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-035",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-037",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-039",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-041",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-043",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-045",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-047",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-049",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-051",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-053",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-055",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-057",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-059",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-061",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-063",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-065",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-067",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-069",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-071",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-073",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-075",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-077",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-079",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-081",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-083",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-085",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-087",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-089",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-091",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-093",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-095",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-097",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-099",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-101",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-103",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-105",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-107",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-109",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-111",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-113",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-115",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-117",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-119",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-121",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-123",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-125",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-127",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-129",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-131",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-133",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-135",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-137",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-139",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-141",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-143",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-145",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-147",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-149",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-151",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-153",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-155",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-157",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-159",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-161",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-163",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-165",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-167",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-169",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-171",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-173",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-175",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-177",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-179",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-181",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-183",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-185",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-187",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-189",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-191",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-193",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-195",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-197",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-199",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-201",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-203",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-205",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-207",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-209",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-211",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-213",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-215",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-217",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-219",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-221",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-223",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-225",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-227",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-229",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-231",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-233",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-235",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-237",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-239",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-241",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-243",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-245",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-247",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-249",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-251",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-253",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-255",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-257",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-259",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-261",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-263",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-265",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-267",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-269",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-271",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-273",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-275",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-277",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-279",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-281",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-283",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-285",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-287",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-289",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-291",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-293",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-295",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-297",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-299",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-301",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-303",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-305",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-307",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-309",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-311",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-313",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-315",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-317",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-319",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-321",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-323",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-325",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-327",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-329",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-331",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-333",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-335",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-337",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-339",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-341",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-343",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-345",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-347",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-349",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-351",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-353",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-355",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-357",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-359",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-361",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-363",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-365",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-367",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-369",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-371",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-373",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-375",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-377",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-379",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-381",
+          "original": "الخدمة في Riyadh لا تعمل",
+          "variant": "  الخدمة   في   Riyadh   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-383",
+          "original": "The service in Dammam is not working",
+          "variant": "  The   service   in   Dammam   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-385",
+          "original": "الخدمة في جدة لا تعمل",
+          "variant": "  الخدمة   في   جدة   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-387",
+          "original": "The service in today is not working",
+          "variant": "  The   service   in   today   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-389",
+          "original": "الخدمة في اليوم لا تعمل",
+          "variant": "  الخدمة   في   اليوم   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-391",
+          "original": "The service in Riyadh is not working",
+          "variant": "  The   service   in   Riyadh   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-393",
+          "original": "الخدمة في Dammam لا تعمل",
+          "variant": "  الخدمة   في   Dammam   لا   تعمل  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-395",
+          "original": "The service in جدة is not working",
+          "variant": "  The   service   in   جدة   is   not   working  ",
+          "prediction_before": "lighting",
+          "prediction_after": "lighting",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-397",
+          "original": "الخدمة في today لا تعمل",
+          "variant": "  الخدمة   في   today   لا   تعمل  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        },
+        {
+          "test_id": "BEH-399",
+          "original": "The service in اليوم is not working",
+          "variant": "  The   service   in   اليوم   is   not   working  ",
+          "prediction_before": "digital_services",
+          "prediction_after": "digital_services",
+          "passed": true
+        }
+      ]
+    },
+    "mft": {
+      "passed": 15,
+      "total": 16,
+      "rate": 0.9375,
+      "checks": [
+        {
+          "text": "There is a dangerous pothole in the road.",
+          "expected": "roads",
+          "prediction": "roads",
+          "passed": true
+        },
+        {
+          "text": "الطريق يحتاج إصلاح الحفر والأسفلت",
+          "expected": "roads",
+          "prediction": "roads",
+          "passed": true
+        },
+        {
+          "text": "The street lights are broken.",
+          "expected": "lighting",
+          "prediction": "lighting",
+          "passed": true
+        },
+        {
+          "text": "إنارة الشارع لا تعمل والشارع مظلم",
+          "expected": "lighting",
+          "prediction": "lighting",
+          "passed": true
+        },
+        {
+          "text": "The garbage bin is overflowing and needs collection.",
+          "expected": "waste",
+          "prediction": "water",
+          "passed": false
+        },
+        {
+          "text": "الحاوية ممتلئة ولم يتم جمع النفايات",
+          "expected": "waste",
+          "prediction": "waste",
+          "passed": true
+        },
+        {
+          "text": "There is a water leak and no water supply.",
+          "expected": "water",
+          "prediction": "water",
+          "passed": true
+        },
+        {
+          "text": "انقطاع المياه وتسرب في أنبوب المياه",
+          "expected": "water",
+          "prediction": "water",
+          "passed": true
+        },
+        {
+          "text": "I paid the bill but it still shows as unpaid.",
+          "expected": "billing",
+          "prediction": "billing",
+          "passed": true
+        },
+        {
+          "text": "دفعت الفاتورة لكن الحالة ما زالت غير مسددة",
+          "expected": "billing",
+          "prediction": "billing",
+          "passed": true
+        },
+        {
+          "text": "My permit renewal application is delayed.",
+          "expected": "licensing",
+          "prediction": "licensing",
+          "passed": true
+        },
+        {
+          "text": "طلب تجديد الرخصة متأخر",
+          "expected": "licensing",
+          "prediction": "licensing",
+          "passed": true
+        },
+        {
+          "text": "The playground in the park needs maintenance.",
+          "expected": "parks",
+          "prediction": "parks",
+          "passed": true
+        },
+        {
+          "text": "ألعاب الحديقة تحتاج صيانة",
+          "expected": "parks",
+          "prediction": "parks",
+          "passed": true
+        },
+        {
+          "text": "The online portal crashes when I log in.",
+          "expected": "digital_services",
+          "prediction": "digital_services",
+          "passed": true
+        },
+        {
+          "text": "التطبيق يتعطل عند تسجيل الدخول",
+          "expected": "digital_services",
+          "prediction": "digital_services",
+          "passed": true
+        }
+      ]
+    },
+    "directional": {
+      "total": 200,
+      "assessable": false,
+      "checks": [
+        {
+          "test_id": "BEH-002",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-004",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-006",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-008",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-010",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-012",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-014",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-016",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-018",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-020",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-022",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-024",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-026",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-028",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-030",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-032",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-034",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-036",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-038",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-040",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-042",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-044",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-046",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-048",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-050",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-052",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-054",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-056",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-058",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-060",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-062",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-064",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-066",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-068",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-070",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-072",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-074",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-076",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-078",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-080",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-082",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-084",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-086",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-088",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-090",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-092",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-094",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-096",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-098",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-100",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-102",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-104",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-106",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-108",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-110",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-112",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-114",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-116",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-118",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-120",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-122",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-124",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-126",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-128",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-130",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-132",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-134",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-136",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-138",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-140",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-142",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-144",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-146",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-148",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-150",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-152",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-154",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-156",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-158",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-160",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-162",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-164",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-166",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-168",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-170",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-172",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-174",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-176",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-178",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-180",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-182",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-184",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-186",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-188",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-190",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-192",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-194",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-196",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-198",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-200",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-202",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-204",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-206",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-208",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-210",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-212",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-214",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-216",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-218",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-220",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-222",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-224",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-226",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-228",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-230",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-232",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-234",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-236",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-238",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-240",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-242",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-244",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-246",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-248",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-250",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-252",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-254",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-256",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-258",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-260",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-262",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-264",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-266",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-268",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-270",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-272",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-274",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-276",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-278",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-280",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-282",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-284",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-286",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-288",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-290",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-292",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-294",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-296",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-298",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-300",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-302",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-304",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-306",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-308",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-310",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-312",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-314",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-316",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-318",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-320",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-322",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-324",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-326",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-328",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-330",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-332",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-334",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-336",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-338",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-340",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-342",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-344",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-346",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-348",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-350",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-352",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-354",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-356",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-358",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-360",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-362",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-364",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-366",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-368",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-370",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-372",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-374",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-376",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-378",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-380",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-382",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-384",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-386",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-388",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-390",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-392",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-394",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-396",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-398",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        },
+        {
+          "test_id": "BEH-400",
+          "status": "not_applicable",
+          "reason": "Topic model has no sentiment output; cannot grade sentiment direction using topic probabilities"
+        }
+      ]
+    },
+    "limitations": "Invariance checks supplied templates under whitespace changes only; MFT cases are explicit supplemental development probes, not held-out accuracy."
+  },
+  "scope": "saved validation predictions for slices; new development probes for behaviour"
+}

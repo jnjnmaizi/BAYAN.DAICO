@@ -1,0 +1,341 @@
+{
+  "classify": [
+    {
+      "status_code": 200,
+      "response": {
+        "topic": "billing",
+        "score": 0.9973887801170349,
+        "preproc_version": "1.2.0",
+        "backend": "int8"
+      }
+    }
+  ],
+  "entities": [
+    {
+      "status_code": 200,
+      "response": {
+        "text": "انقطعت الكهرباء في الرياض بتاريخ 2025-01-01 المرجع BYN-2026-000001",
+        "entities": [
+          {
+            "label": "SERVICE",
+            "start": 7,
+            "end": 15,
+            "text": "الكهرباء"
+          },
+          {
+            "label": "LOCATION",
+            "start": 19,
+            "end": 25,
+            "text": "الرياض"
+          },
+          {
+            "label": "DATE",
+            "start": 33,
+            "end": 43,
+            "text": "2025-01-01"
+          },
+          {
+            "label": "REFERENCE",
+            "start": 51,
+            "end": 66,
+            "text": "BYN-2026-000001"
+          }
+        ],
+        "offsets_refer_to": "returned PII-masked source text",
+        "truncated": false
+      }
+    }
+  ],
+  "search": [
+    {
+      "status_code": 200,
+      "response": {
+        "results": [
+          {
+            "case_id": "CASE-002298",
+            "lang": "ar",
+            "topic": "lighting",
+            "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة <br>",
+            "resolution": "تم استبدال وحدة الإنارة واختبارها",
+            "status": "resolved",
+            "closed_at": "2025-05-07T17:00",
+            "synthetic": true,
+            "bi_score": 0.975848376750946,
+            "score": 0.9991318583488464
+          },
+          {
+            "case_id": "CASE-015938",
+            "lang": "ar",
+            "topic": "lighting",
+            "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة <br>",
+            "resolution": "تم استبدال وحدة الإنارة واختبارها",
+            "status": "resolved",
+            "closed_at": "2026-11-27T01:00",
+            "synthetic": true,
+            "bi_score": 0.975848376750946,
+            "score": 0.9991318583488464
+          },
+          {
+            "case_id": "CASE-000786",
+            "lang": "ar",
+            "topic": "lighting",
+            "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة",
+            "resolution": "أصلح فريق الصيانة التوصيلات وأعاد الخدمة",
+            "status": "resolved",
+            "closed_at": "2025-03-05T17:00",
+            "synthetic": true,
+            "bi_score": 0.9801132678985596,
+            "score": 0.9988415837287903
+          },
+          {
+            "case_id": "CASE-001386",
+            "lang": "ar",
+            "topic": "lighting",
+            "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة",
+            "resolution": "أصلح فريق الصيانة التوصيلات وأعاد الخدمة",
+            "status": "resolved",
+            "closed_at": "2025-03-30T17:00",
+            "synthetic": true,
+            "bi_score": 0.9801132678985596,
+            "score": 0.9988415837287903
+          },
+          {
+            "case_id": "CASE-001658",
+            "lang": "ar",
+            "topic": "lighting",
+            "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة",
+            "resolution": "تم استبدال وحدة الإنارة واختبارها",
+            "status": "resolved",
+            "closed_at": "2025-04-11T01:00",
+            "synthetic": true,
+            "bi_score": 0.9801132678985596,
+            "score": 0.9988415837287903
+          }
+        ],
+        "threshold": 0.006595058366656304
+      }
+    }
+  ],
+  "analyse": [
+    {
+      "status_code": 200,
+      "response": {
+        "classification": {
+          "topic": "water",
+          "score": 0.9968992471694946,
+          "preproc_version": "1.2.0",
+          "backend": "int8"
+        },
+        "entities": {
+          "text": "There is a water leak in Riyadh",
+          "entities": [
+            {
+              "label": "SERVICE",
+              "start": 9,
+              "end": 10,
+              "text": "a"
+            },
+            {
+              "label": "SERVICE",
+              "start": 11,
+              "end": 16,
+              "text": "water"
+            },
+            {
+              "label": "SERVICE",
+              "start": 17,
+              "end": 21,
+              "text": "leak"
+            },
+            {
+              "label": "LOCATION",
+              "start": 25,
+              "end": 31,
+              "text": "Riyadh"
+            }
+          ],
+          "offsets_refer_to": "returned PII-masked source text",
+          "truncated": false
+        },
+        "search": {
+          "results": [
+            {
+              "case_id": "CASE-008020",
+              "lang": "en",
+              "topic": "water",
+              "case_text": "There is a water leak at Riyadh; reference BYN-2026-058019 — very frustrating 😡",
+              "resolution": "The fault was fixed and water service was gradually restored",
+              "status": "resolved",
+              "closed_at": "2026-01-01T03:00",
+              "synthetic": true,
+              "bi_score": 0.9009726047515869,
+              "score": 0.999969482421875
+            },
+            {
+              "case_id": "CASE-007084",
+              "lang": "en",
+              "topic": "water",
+              "case_text": "There is a water leak at Riyadh; reference BYN-2026-057083 — very frustrating 😡",
+              "resolution": "The leak was repaired and network pressure was restored",
+              "status": "resolved",
+              "closed_at": "2025-11-23T03:00",
+              "synthetic": true,
+              "bi_score": 0.8992238640785217,
+              "score": 0.9999692440032959
+            },
+            {
+              "case_id": "CASE-010460",
+              "lang": "en",
+              "topic": "water",
+              "case_text": "There is a water leak at Riyadh; reference BYN-2026-060459",
+              "resolution": "The leak was repaired and network pressure was restored",
+              "status": "resolved",
+              "closed_at": "2026-04-12T19:00",
+              "synthetic": true,
+              "bi_score": 0.9350695610046387,
+              "score": 0.999956488609314
+            },
+            {
+              "case_id": "CASE-000380",
+              "lang": "en",
+              "topic": "water",
+              "case_text": "There is a water leak at Riyadh; reference BYN-2026-050379",
+              "resolution": "The fault was fixed and water service was gradually restored",
+              "status": "resolved",
+              "closed_at": "2025-02-16T19:00",
+              "synthetic": true,
+              "bi_score": 0.9329566955566406,
+              "score": 0.9999558925628662
+            },
+            {
+              "case_id": "CASE-010180",
+              "lang": "en",
+              "topic": "water",
+              "case_text": "There is a water leak at Riyadh; reference BYN-2026-060179",
+              "resolution": "The leak was repaired and network pressure was restored",
+              "status": "resolved",
+              "closed_at": "2026-04-01T03:00",
+              "synthetic": true,
+              "bi_score": 0.932807981967926,
+              "score": 0.9999556541442871
+            }
+          ],
+          "threshold": 0.006595058366656304
+        }
+      }
+    },
+    {
+      "status_code": 200,
+      "response": {
+        "classification": {
+          "topic": "lighting",
+          "score": 0.9958292841911316,
+          "preproc_version": "1.2.0",
+          "backend": "int8"
+        },
+        "entities": {
+          "text": "الشارع مظلم ونحتاج إصلاح الإنارة",
+          "entities": [
+            {
+              "label": "SERVICE",
+              "start": 0,
+              "end": 6,
+              "text": "الشارع"
+            },
+            {
+              "label": "SERVICE",
+              "start": 7,
+              "end": 11,
+              "text": "مظلم"
+            },
+            {
+              "label": "SERVICE",
+              "start": 12,
+              "end": 18,
+              "text": "ونحتاج"
+            },
+            {
+              "label": "SERVICE",
+              "start": 19,
+              "end": 24,
+              "text": "إصلاح"
+            },
+            {
+              "label": "SERVICE",
+              "start": 25,
+              "end": 32,
+              "text": "الإنارة"
+            }
+          ],
+          "offsets_refer_to": "returned PII-masked source text",
+          "truncated": false
+        },
+        "search": {
+          "results": [
+            {
+              "case_id": "CASE-002298",
+              "lang": "ar",
+              "topic": "lighting",
+              "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة <br>",
+              "resolution": "تم استبدال وحدة الإنارة واختبارها",
+              "status": "resolved",
+              "closed_at": "2025-05-07T17:00",
+              "synthetic": true,
+              "bi_score": 0.975848376750946,
+              "score": 0.9991318583488464
+            },
+            {
+              "case_id": "CASE-015938",
+              "lang": "ar",
+              "topic": "lighting",
+              "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة <br>",
+              "resolution": "تم استبدال وحدة الإنارة واختبارها",
+              "status": "resolved",
+              "closed_at": "2026-11-27T01:00",
+              "synthetic": true,
+              "bi_score": 0.975848376750946,
+              "score": 0.9991318583488464
+            },
+            {
+              "case_id": "CASE-000786",
+              "lang": "ar",
+              "topic": "lighting",
+              "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة",
+              "resolution": "أصلح فريق الصيانة التوصيلات وأعاد الخدمة",
+              "status": "resolved",
+              "closed_at": "2025-03-05T17:00",
+              "synthetic": true,
+              "bi_score": 0.9801132678985596,
+              "score": 0.9988415837287903
+            },
+            {
+              "case_id": "CASE-001386",
+              "lang": "ar",
+              "topic": "lighting",
+              "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة",
+              "resolution": "أصلح فريق الصيانة التوصيلات وأعاد الخدمة",
+              "status": "resolved",
+              "closed_at": "2025-03-30T17:00",
+              "synthetic": true,
+              "bi_score": 0.9801132678985596,
+              "score": 0.9988415837287903
+            },
+            {
+              "case_id": "CASE-001658",
+              "lang": "ar",
+              "topic": "lighting",
+              "case_text": "الشارع مظلم قرب الدمام ونحتاج إصلاح الإنارة",
+              "resolution": "تم استبدال وحدة الإنارة واختبارها",
+              "status": "resolved",
+              "closed_at": "2025-04-11T01:00",
+              "synthetic": true,
+              "bi_score": 0.9801132678985596,
+              "score": 0.9988415837287903
+            }
+          ],
+          "threshold": 0.006595058366656304
+        }
+      }
+    }
+  ]
+}

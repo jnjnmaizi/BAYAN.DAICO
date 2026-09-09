@@ -1,0 +1,8 @@
+{
+  "command": "OMP_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false .venv/bin/python -m pytest -q",
+  "passed": 140,
+  "warnings": 2,
+  "seconds": 5.53,
+  "original_contract_tests_modified": false,
+  "warnings_summary": "Starlette TestClient / anyio API deprecations"
+}

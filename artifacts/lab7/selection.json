@@ -1,0 +1,20 @@
+{
+  "preproc_version": "1.2.0",
+  "policy": "Fastest measured dynamic-128 p99 among candidates with quality-tax upper 95% bound <= 0.01; keep original fp32 rollback",
+  "classifier": {
+    "backend": "int8",
+    "p99_ms": 4.842150929616763,
+    "quality_tax_high": 0.0,
+    "speedup_vs_padded_p99": 38.69975300837658,
+    "bare_p99_target_met": true,
+    "speedup_target_met": true
+  },
+  "ner": {
+    "backend": "int8",
+    "p99_ms": 4.855541676370193,
+    "quality_tax_high": 0.0,
+    "speedup_vs_padded_p99": 32.0963390840951,
+    "bare_p99_target_met": true,
+    "speedup_target_met": true
+  }
+}

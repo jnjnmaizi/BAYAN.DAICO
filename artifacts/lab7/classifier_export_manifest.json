@@ -1,0 +1,13 @@
+{
+  "task": "classifier",
+  "preproc_version": "1.2.0",
+  "source_weights_sha256": "9886d8050ca2646c9cf22d66496f2d3b6da3762bc0727b2a9ab51d32ded0e4a8",
+  "fp32_sha256": "1e0d6d7d37e1c5410802b0142cfbac088e46a0db22d52ab5d89a79cfb5426664",
+  "int8_sha256": "275cf0dac8c30cde3d8bf18ffa096d94cc5129c370ae2fc8f569eec2b983f8f8",
+  "opset": 17,
+  "quantization": "dynamic signed INT8 per-channel MatMul constant weights; embeddings remain fp32",
+  "rollback": "fp32.onnx",
+  "quality_status": "Must pass paired validation before selection",
+  "tokenizer_sha256": "ea09a711f7adcb7e3bc41b614e59b829fc98e7b50b94d273d029315524364069",
+  "config_sha256": "71a0788b84ec75e41dfb5f50de64d64c6e727a9462cb631f3cd0647762328128"
+}

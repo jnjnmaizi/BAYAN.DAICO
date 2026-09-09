@@ -1,0 +1,15 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "model_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "reranker": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "reranker_revision": "1427fd652930e4ba29e8149678df786c240d8825",
+  "preproc_version": "1.2.0",
+  "n_vectors": 20000,
+  "dim": 384,
+  "metric": "cosine via normalized inner product",
+  "normalized": true,
+  "max_length": 128,
+  "data_sha256": "f36633f15e65ad10e4cf31859924da2f014e51b94024c0019bd1ecd712fb61e4",
+  "index_sha256": "0f54b8b1e797e30f97e3431a3470c1724873b55c1c321076dc2138ecdcc68301",
+  "metadata_sha256": "504c96dcbb90bf81e11dd3b2ca8953214c2a62db56484431666d118c4e1b344a"
+}

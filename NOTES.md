@@ -132,3 +132,11 @@ This runs the attention and parameter-bucket tests, writes `artifacts/lab2/param
 - Measured artifacts: [dialect audit](artifacts/lab4/dialect_audit.json), [profile/segmentation examples](artifacts/lab4/preprocessing_examples.json), [NER comparison](artifacts/lab4/ner_segmentation.json).
 
 - D3 follow-up evidence: [training](artifacts/lab4/ner_d3_training.json), [paired comparison](artifacts/lab4/ner_d3_comparison.json), [saved-model reload check](artifacts/lab4/ner_d3_reload_check.json).
+
+## Labs 5–7 — Implementation and measured integration (2026-09-09)
+
+- Implemented normalized FAISS persistence, multilingual two-stage search and the complete retrieval evaluation. Exact-ID recall/MRR targets remain unmet; negative calibration has only one unique text. Original corpus and labels are unchanged.
+- Implemented bootstrap intervals, 16 topic slices, behavioural probes, three model cards and the evaluation report. Topic invariance 200/200, MFT 15/16. Prepared 120 supplied-course errors for human review; zero are falsely counted as reviewed.
+- Exported classifier and NER to ONNX and INT8, preserved fp32 rollback, measured the full CPU ladder and paired quality. INT8 agrees with all saved validation predictions.
+- Assembled all service endpoints and startup canaries. Final 16-client/60-second HTTP test: p99 33.36 ms, 33,259 requests, zero errors. Bounded microbatching addressed concurrent queueing without caching results.
+- Full unit/contract suite: 140 passed. Remaining mandatory evidence and optional work deferred at the user's request are listed in [the runbook](docs/LABS_5_7_RUNBOOK.md). The 120-error human review is deferred until the user returns to it.
