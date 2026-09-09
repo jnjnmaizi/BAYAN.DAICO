@@ -1,0 +1,34 @@
+{
+  "metric_policy": "macro-F1 over all training labels; zero_division=0",
+  "class_support": {
+    "billing": 0,
+    "digital_services": 300,
+    "licensing": 0,
+    "lighting": 300,
+    "parks": 300,
+    "roads": 0,
+    "waste": 0,
+    "water": 300
+  },
+  "missing_classes": [
+    "billing",
+    "licensing",
+    "roads",
+    "waste"
+  ],
+  "maximum_possible_macro_f1": 0.5,
+  "baseline_macro_f1": 0.5,
+  "maximum_possible_improvement_points": 0.0,
+  "required_improvement_points": 8,
+  "target_attainable_on_this_frozen_test": false,
+  "data_sha256": "4a13286ed3ad850dc12a12fa69c6621a0a5126711d50c47139c8ef1b55b2523c",
+  "baseline_evidence_sha256": "b1e419e6ba2d667e2331c9113dce46e679162c7da2c85dc6133d055859d1cc0b",
+  "classifier_evidence_sha256": "f8c121cd190a550bd67fed5f0ad7b400c54412930683c374b72c25773190c8f9",
+  "test_rows": 1200,
+  "baseline_accuracy": 1.0,
+  "classifier_macro_f1": 0.5,
+  "classifier_accuracy": 1.0,
+  "observed_delta_points": 0.0,
+  "new_training_or_test_inference": false,
+  "next_step": "Request a representative unseen evaluation set and a predeclared comparison protocol, or instructor acceptance of the measured zero delta. Do not weaken the baseline or tune on this test."
+}

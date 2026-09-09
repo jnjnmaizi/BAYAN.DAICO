@@ -12,7 +12,7 @@ lab2:
 	python notebooks/02_transformer_anatomy.py
 
 lab3:
-	pytest tests/test_model_data.py tests/test_ner_alignment.py tests/test_qa.py tests/test_lab3_regressions.py -q
+	pytest tests/test_model_data.py tests/test_ner_alignment.py tests/test_qa.py tests/test_lab3_regressions.py tests/test_lab3_setup.py -q
 
 lab4:
 	pytest tests/test_arabic_normalize.py -q
