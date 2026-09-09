@@ -140,3 +140,22 @@ def test_qa_protocol_has_disjoint_contexts_and_real_nulls():
     assert len(supplemental) == 12
     assert sum(r["is_impossible"] for r in supplemental) == 3
     assert {r["context"] for r in development}.isdisjoint(r["context"] for r in supplied + supplemental)
+
+
+@pytest.mark.parametrize("answerable,nulls,correct,expected", [
+    (12, 0, 12, True),
+    (12, 0, 11, False),
+    (9, 3, 9, False),
+    (0, 0, 0, False),
+])
+def test_revised_qa_target_does_not_credit_wrong_spans_or_wrong_composition(answerable, nulls, correct, expected):
+    root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location("qa_smoke", root / "scripts/qa_smoke.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    assessment = module.course_smoke_assessment({
+        "answerable": answerable, "unanswerable": nulls,
+        "answerable_exact_span_correct": correct,
+    })
+    assert assessment["target_met"] is expected
+    assert assessment["null_handling_tested_by_supplied_set"] is (nulls > 0)

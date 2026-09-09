@@ -1,7 +1,7 @@
 """Evaluate the supplied QA smoke set and a separately declared 9+3 diagnostic.
 
-The supplied smoke file actually has 12 answerable rows and zero nulls. Preserve
-it verbatim, report that mismatch, and select a supplemental 9-answer/3-null set
+The updated course README requires 12 answerable rows and zero nulls. Preserve
+the supplied file verbatim and select a supplemental 9-answer/3-null set
 from distinct source contexts before running inference. Calibrate the no-answer
 threshold on other contexts only. No QA weights are trained in this lab.
 """
@@ -102,6 +102,19 @@ def score(rows, inferred, threshold):
             "predictions": predictions}
 
 
+def course_smoke_assessment(supplied):
+    """Assess the revised README target without changing predictions or thresholds."""
+    matches = supplied["answerable"] == 12 and supplied["unanswerable"] == 0
+    return {
+        "source": "https://github.com/AljawharaAlbahlalDev/SDA-AIE-211-Bayan-Course/blob/7949de02de71cd3ae644cd89f766dfc73aa9b7f4/README.md#lab-3b--step-4-qa-smoke-set",
+        "expected_answerable": 12,
+        "expected_unanswerable": 0,
+        "composition_matches": matches,
+        "target_met": matches and supplied["answerable_exact_span_correct"] == 12,
+        "null_handling_tested_by_supplied_set": supplied["unanswerable"] > 0,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--checkpoint", default="deepset/roberta-base-squad2")
@@ -145,6 +158,7 @@ def main():
     dev = score(development, dev_predictions, threshold)
     supplied = results["supplied_smoke"]
     matches_contract = supplied["answerable"] == 9 and supplied["unanswerable"] == 3
+    assessment = course_smoke_assessment(supplied)
     unique_questions = len({(r["context"], r["question"]) for r in smoke})
     report = {"checkpoint": args.checkpoint, "revision": Path(source).name, "device": "cpu",
               "method": "Pretrained SQuAD2 QA; no Bayan fine-tuning; strict character-span exact match",
@@ -152,13 +166,15 @@ def main():
               "null_rule": "null_score - best_span_score > threshold", "null_threshold": threshold,
               "development": {k:v for k,v in dev.items() if k != "predictions"},
               "seconds": time.perf_counter()-start, **results,
+              "course_smoke_assessment": assessment,
               "supplied_9_plus_3_contract_met": matches_contract and supplied["correct"] == 12,
-              "data_issue": None if matches_contract else (
+              "data_issue": None if assessment["composition_matches"] else (
                   f"Supplied smoke has {supplied['answerable']} answerable rows, {unique_questions} unique questions, "
-                  f"{supplied['unanswerable']} nulls; cannot establish the documented official 9+3 target."),
+                  f"{supplied['unanswerable']} nulls; expected 12 answerable rows and zero nulls per the updated README."),
               "limitations": "Supplemental 9+3 is separate evidence, not a replacement of the supplied test; contexts share synthetic templates."}
     write_json(report_path, report)
     write_json(EVIDENCE / "qa.json", report)
+    print("Course smoke assessment:", assessment, flush=True)
     for name, result in results.items():
         print(name, {k:v for k,v in result.items() if k != "predictions"}, flush=True)
 

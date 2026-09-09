@@ -1,0 +1,25 @@
+{
+  "assessment_date": "2026-09-09",
+  "upstream_commit": "7949de02de71cd3ae644cd89f766dfc73aa9b7f4",
+  "existing_evidence": "artifacts/lab3/qa.json",
+  "existing_evidence_sha256": "e6ee5af4792744f497fe7690ad5897e0c53098bff43452b5a3573039f56fb359",
+  "smoke_sha256": "c14f488f2a517615a2d08311444d26d0b2968e438dc611edd15abf4333d7964c",
+  "frozen_test_inference_repeated": false,
+  "assessment": {
+    "source": "https://github.com/AljawharaAlbahlalDev/SDA-AIE-211-Bayan-Course/blob/7949de02de71cd3ae644cd89f766dfc73aa9b7f4/README.md#lab-3b--step-4-qa-smoke-set",
+    "expected_answerable": 12,
+    "expected_unanswerable": 0,
+    "composition_matches": true,
+    "target_met": true,
+    "null_handling_tested_by_supplied_set": false
+  },
+  "supplied_result": {
+    "answerable": 12,
+    "answerable_exact_span_correct": 12,
+    "unanswerable": 0,
+    "null_correct": 0,
+    "total": 12,
+    "correct": 12
+  },
+  "note": "Reassessment of saved predictions against the revised README; historical run reports remain unchanged."
+}
