@@ -1,5 +1,8 @@
 # Lab 6 — Short assistant review
 
+**Current workflow:** [follow the course GitHub steps](LAB6_GITHUB_WORKFLOW.md). Run `python scripts/review_lab6.py --limit 5` to review and save individual decisions without editing JSON.
+
+
 **All 120 examples have been reviewed by the assistant. This is not a claim that you reviewed them.**
 
 You do not need to fill 120 blank explanations to understand the result: the sample contains **45 distinct texts and only three recurring scenarios**, all labelled **parks** and predicted **roads**. Details for every original ID are saved in `artifacts/lab6/assistant_error_review.json`.

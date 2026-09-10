@@ -16,6 +16,8 @@ Empty-correct is **20/20**, while retaining all 130 answerable queries, on the c
 
 ## Lab 6 — Evaluation
 
+For the current step-by-step course workflow, use [Lab 6 GitHub workflow](LAB6_GITHUB_WORKFLOW.md). The upstream manual-review requirement remains unchanged.
+
 1. `python scripts/prepare_error_review.py` prepared a fixed seed-42 sample of 120 errors from the **supplied course predictions**. It refuses to overwrite an existing review. These are not errors from our current topic model, whose saved validation predictions are perfect.
 2. Start with [the short assistant review](LAB6_QUICK_REVIEW.md): all 120 entries have assistant explanations and collapse into three recurring scenarios. These annotations do not count as human confirmation. If the instructor accepts a representative/grouped review, follow that agreed alternative; otherwise review [the worksheet](LAB6_ERROR_REVIEW.md). Record your chosen `category`, `reviewer_note`, and `human_confirmed: true` in `artifacts/lab6/human_error_review.json`. Only explicitly confirmed entries count; no automatic taxonomy tags are treated as human work.
 3. `python scripts/sentiment_behaviour.py` trains a small TF-IDF/LinearSVC sentiment baseline on the existing training split. This is necessary to exercise the supplied sentiment-direction tests, because topic probabilities are not sentiment scores. All 200 checks pass through unchanged predictions; sentiment validation macro-F1 is only 0.3333, so this is a weak test result, not evidence of negation understanding.
