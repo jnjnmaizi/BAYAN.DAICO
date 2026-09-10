@@ -1,0 +1,974 @@
+{
+  "scope": "Post-hoc audit of original saved results; not a new retrieval evaluation",
+  "new_training_or_inference": false,
+  "original_labels_modified": false,
+  "source_sha256": {
+    "data/search/bayan_cases.csv": "f36633f15e65ad10e4cf31859924da2f014e51b94024c0019bd1ecd712fb61e4",
+    "artifacts/search/cases_metadata.json": "504c96dcbb90bf81e11dd3b2ca8953214c2a62db56484431666d118c4e1b344a",
+    "artifacts/search/cases.faiss": "0f54b8b1e797e30f97e3431a3470c1724873b55c1c321076dc2138ecdcc68301",
+    "artifacts/search/cases_raw.npy": "ced484440f6bb5f1b4ce2f255b64e7db8879c2b512ba811e907c75f77155bba2",
+    "data/search/bayan_queries.jsonl": "ff24a0e7580199dd722dab58961caf06135ae789837aa20895bf59a30dc95e3a",
+    "artifacts/lab5/query_results.json": "ccf155e46bc7f944cc693fd0c729b835dc527396fe2ddff8572c5f7825e1f5b9"
+  },
+  "integrity": {
+    "corpus_matches_metadata_including_order": true,
+    "vectors": 20000,
+    "dimensions": 384,
+    "index_vs_normalized_raw_max_abs_error": 0.0,
+    "unit_norm_range": [
+      0.9999998211860657,
+      1.0000001192092896
+    ],
+    "identical_input_vector_max_abs_error": 0.0,
+    "unique_normalized_corpus_texts": 5401
+  },
+  "candidate_diversity": {
+    "answerable_queries": 130,
+    "mean_distinct_texts_among_candidates": 10.492307692307692,
+    "mean_distinct_texts_in_reranked_top10": 3.3384615384615386,
+    "queries_with_only_one_distinct_candidate_text": 38,
+    "queries_with_only_one_distinct_top10_text": 44,
+    "candidate_distinct_text_count_histogram": {
+      "1": 38,
+      "2": 10,
+      "3": 10,
+      "4": 9,
+      "5": 13,
+      "6": 14,
+      "7": 3,
+      "8": 3,
+      "12": 1,
+      "13": 1,
+      "17": 2,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "22": 3,
+      "23": 1,
+      "24": 1,
+      "28": 2,
+      "29": 1,
+      "32": 1,
+      "50": 14
+    }
+  },
+  "conclusions": [
+    "No index corruption, row-order mismatch, or corpus-vector normalization failure was detected by these checks.",
+    "Repeated case text crowds the fixed-size candidate pool and the displayed results.",
+    "Different case IDs can have different resolutions and timestamps despite identical text; do not delete original records.",
+    "Candidate diversity is a development hypothesis, not proof of better official recall or MRR.",
+    "Next experiment: retrieve distinct text groups, retain all member IDs, and rerank group texts before presenting case details. Use independent development judgments and preserve original evaluation results."
+  ],
+  "queries": [
+    {
+      "query_id": "Q-001",
+      "candidate_count": 50,
+      "unique_candidate_texts": 22,
+      "largest_identical_text_group": 6,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-002",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-003",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 44,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-004",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 49,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-005",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-006",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-007",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-008",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 43,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-009",
+      "candidate_count": 50,
+      "unique_candidate_texts": 24,
+      "largest_identical_text_group": 4,
+      "unique_reranked_top10_texts": 9
+    },
+    {
+      "query_id": "Q-010",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 45,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-011",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-012",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 46,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-013",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 44,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-014",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-015",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-016",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-017",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 39,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-018",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 46,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-019",
+      "candidate_count": 50,
+      "unique_candidate_texts": 22,
+      "largest_identical_text_group": 5,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-020",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-021",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-022",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 46,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-023",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-024",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-025",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 47,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-026",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 36,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-027",
+      "candidate_count": 50,
+      "unique_candidate_texts": 17,
+      "largest_identical_text_group": 5,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-028",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 46,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-029",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-030",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-031",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-032",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-033",
+      "candidate_count": 50,
+      "unique_candidate_texts": 23,
+      "largest_identical_text_group": 4,
+      "unique_reranked_top10_texts": 6
+    },
+    {
+      "query_id": "Q-034",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-035",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-036",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-037",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 46,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-038",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-039",
+      "candidate_count": 50,
+      "unique_candidate_texts": 28,
+      "largest_identical_text_group": 5,
+      "unique_reranked_top10_texts": 9
+    },
+    {
+      "query_id": "Q-040",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-041",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 46,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-042",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 47,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-043",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-044",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-045",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-046",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 47,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-047",
+      "candidate_count": 50,
+      "unique_candidate_texts": 18,
+      "largest_identical_text_group": 6,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-048",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 34,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-049",
+      "candidate_count": 50,
+      "unique_candidate_texts": 22,
+      "largest_identical_text_group": 6,
+      "unique_reranked_top10_texts": 6
+    },
+    {
+      "query_id": "Q-050",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-051",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-052",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-053",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-054",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-055",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-056",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-057",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 47,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-058",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 49,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-059",
+      "candidate_count": 50,
+      "unique_candidate_texts": 13,
+      "largest_identical_text_group": 28,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-060",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-061",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 33,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-062",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-063",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-064",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 30,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-065",
+      "candidate_count": 50,
+      "unique_candidate_texts": 8,
+      "largest_identical_text_group": 32,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-066",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 37,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-067",
+      "candidate_count": 50,
+      "unique_candidate_texts": 32,
+      "largest_identical_text_group": 3,
+      "unique_reranked_top10_texts": 7
+    },
+    {
+      "query_id": "Q-068",
+      "candidate_count": 50,
+      "unique_candidate_texts": 7,
+      "largest_identical_text_group": 26,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-069",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-070",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-071",
+      "candidate_count": 50,
+      "unique_candidate_texts": 17,
+      "largest_identical_text_group": 5,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-072",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 29,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-073",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 32,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-074",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 36,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-075",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 37,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-076",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 39,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-077",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-078",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 42,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-079",
+      "candidate_count": 50,
+      "unique_candidate_texts": 20,
+      "largest_identical_text_group": 6,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-080",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 45,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-081",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 34,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-082",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 36,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-083",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 33,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-084",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 39,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-085",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-086",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-087",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 48,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-088",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 33,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-089",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 37,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-090",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 30,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-091",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 34,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-092",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 37,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-093",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-094",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-095",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-096",
+      "candidate_count": 50,
+      "unique_candidate_texts": 8,
+      "largest_identical_text_group": 37,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-097",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 32,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-098",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 33,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-099",
+      "candidate_count": 50,
+      "unique_candidate_texts": 8,
+      "largest_identical_text_group": 37,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-100",
+      "candidate_count": 50,
+      "unique_candidate_texts": 7,
+      "largest_identical_text_group": 27,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-101",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-102",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-103",
+      "candidate_count": 50,
+      "unique_candidate_texts": 19,
+      "largest_identical_text_group": 5,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-104",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 42,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-105",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 35,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-106",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 35,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-107",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 34,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-108",
+      "candidate_count": 50,
+      "unique_candidate_texts": 7,
+      "largest_identical_text_group": 26,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-109",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-110",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-111",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 49,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-112",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 33,
+      "unique_reranked_top10_texts": 4
+    },
+    {
+      "query_id": "Q-113",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 32,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-114",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 22,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-115",
+      "candidate_count": 50,
+      "unique_candidate_texts": 28,
+      "largest_identical_text_group": 4,
+      "unique_reranked_top10_texts": 6
+    },
+    {
+      "query_id": "Q-116",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-117",
+      "candidate_count": 50,
+      "unique_candidate_texts": 2,
+      "largest_identical_text_group": 45,
+      "unique_reranked_top10_texts": 2
+    },
+    {
+      "query_id": "Q-118",
+      "candidate_count": 50,
+      "unique_candidate_texts": 3,
+      "largest_identical_text_group": 47,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-119",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-120",
+      "candidate_count": 50,
+      "unique_candidate_texts": 4,
+      "largest_identical_text_group": 30,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-121",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 32,
+      "unique_reranked_top10_texts": 5
+    },
+    {
+      "query_id": "Q-122",
+      "candidate_count": 50,
+      "unique_candidate_texts": 6,
+      "largest_identical_text_group": 35,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-123",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 33,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-124",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-125",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-126",
+      "candidate_count": 50,
+      "unique_candidate_texts": 1,
+      "largest_identical_text_group": 50,
+      "unique_reranked_top10_texts": 1
+    },
+    {
+      "query_id": "Q-127",
+      "candidate_count": 50,
+      "unique_candidate_texts": 50,
+      "largest_identical_text_group": 1,
+      "unique_reranked_top10_texts": 10
+    },
+    {
+      "query_id": "Q-128",
+      "candidate_count": 50,
+      "unique_candidate_texts": 5,
+      "largest_identical_text_group": 29,
+      "unique_reranked_top10_texts": 3
+    },
+    {
+      "query_id": "Q-129",
+      "candidate_count": 50,
+      "unique_candidate_texts": 29,
+      "largest_identical_text_group": 4,
+      "unique_reranked_top10_texts": 8
+    },
+    {
+      "query_id": "Q-130",
+      "candidate_count": 50,
+      "unique_candidate_texts": 12,
+      "largest_identical_text_group": 31,
+      "unique_reranked_top10_texts": 5
+    }
+  ]
+}

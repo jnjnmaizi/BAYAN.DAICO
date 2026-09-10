@@ -1,4 +1,4 @@
-# Model Card — Bayan topic
+# Model Card — Jana Alhumaizi NLP — topic
 
 ## Intended use
 Citizen-feedback topic classification for course demonstration; human review required for operational decisions.

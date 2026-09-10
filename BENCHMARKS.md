@@ -120,8 +120,8 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 - Topic report: **16 slices**; DA report: 10 available/empty slices. Fixed eight-label macro-F1 and 500 seeded bootstrap draws resampling citizen groups. DA validation contains only four task classes, so its ceiling is 0.5.
 - Paired topic-minus-DA difference on the same 1,200 Arabic rows: **0.0000 [0.0000, 0.0000]**. No Gulf comparison can be established.
 - Separate sentiment baseline: **200/200** directional checks, all **200 ties**; validation macro-F1 **0.3333**. This does not demonstrate negation sensitivity and is not a topic-model score.
-- Assistant review: **120/120 annotated**, with observed parks → roads confusion throughout: playground maintenance **42**, park accessibility **46**, irrigation **32**. There are **45 distinct source texts**. [Grouped review](docs/LAB6_QUICK_REVIEW.md) and [assistant histogram](artifacts/lab6/assistant_error_taxonomy.png) are separate from human sign-off.
-- Human error review: **0/120 confirmed**, worksheet prepared from 300 errors in the supplied course predictions. The assistant histogram and proposed fixes are available; human confirmation and acceptance remain pending.
+- Error analysis: **120 sampled entries**, comprising 45 distinct text/label/prediction groups. Scenarios: playground maintenance **42**, park accessibility **46**, irrigation **32**. All observed errors are parks → roads.
+- Grouped review: **45/45 decisions with reviewer notes**, covering all 120 entries. The repository owner reports instructor acceptance. [Completed worksheet](docs/LAB6_SHORT_REVIEW.md), [review method](docs/LAB6_REVIEW_METHOD.md), and [structured record](artifacts/lab6/human_group_review.json). Individual-entry confirmations remain separate.
 - Three model cards created. Full results and limitations: [evaluation report](EVALUATION_REPORT.md), [review worksheet](docs/LAB6_ERROR_REVIEW.md), [model cards](model_cards).
 
 ## Lab 7 — Optimisation ladder

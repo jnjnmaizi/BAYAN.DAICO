@@ -1,4 +1,4 @@
-# Model Card — Bayan ner
+# Model Card — Jana Alhumaizi NLP — ner
 
 ## Intended use
 Entity extraction for course demonstration; human review required for operational decisions.

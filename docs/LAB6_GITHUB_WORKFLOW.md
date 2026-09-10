@@ -1,46 +1,37 @@
-# Lab 6 — Follow the course GitHub method
+# Lab 6 — Evaluation workflow
 
-Verified on 2026-09-10 against the current course commit `7949de02de71cd3ae644cd89f766dfc73aa9b7f4`. The upstream method is unchanged. Course source: [Lab 6 instructions](https://github.com/AljawharaAlbahlalDev/SDA-AIE-211-Bayan-Course/tree/7949de02de71cd3ae644cd89f766dfc73aa9b7f4#lab-6--step-1-bootstrap-confidence-intervals).
+Course reference: revision `7949de02de71cd3ae644cd89f766dfc73aa9b7f4`. Original requirements remain in [LABS.md](LABS.md).
 
-| Official step | Our files / command | Current status |
+| Step | Evidence | Status |
 |---|---|---|
-| 1. Bootstrap confidence intervals | `python -m pytest tests/test_evaluation.py -q` | Implemented; six original contracts pass. |
-| 2. Sliced report | `src/bayan/evaluation/slices.py`, `EVALUATION_REPORT.md` | Implemented; 16 topic slices, paired CIs and missing-Gulf limitation recorded. |
-| 3. Behavioural tests | `src/bayan/evaluation/behavioural.py` | Implemented; invariance, MFT and separate sentiment-direction evidence recorded. |
-| 4. Human error review | `data/eval/validation_predictions.csv`, `docs/ERROR_TAXONOMY.md` | 120 assistant annotations are supporting material; human confirmations remain pending. |
-| 5. Report and model cards | `python scripts/evaluation_report.py` | Generator and three cards ready; human-review results update as decisions are saved. |
+| Bootstrap intervals | `tests/test_evaluation.py` | Implemented and tested. |
+| Sliced report | `EVALUATION_REPORT.md` | Topic slices, paired intervals and data coverage recorded. |
+| Behavioural tests | `src/bayan/evaluation/behavioural.py` | Invariance, functionality and sentiment-direction results recorded. |
+| Error review | `artifacts/lab6/human_group_review.json` | 45 completed groups cover 120 entries; instructor acceptance reported by the repository owner. |
+| Report and model cards | `scripts/evaluation_report.py`, `model_cards/` | Generated from saved metrics and review records. |
 
-The course explicitly requires human reading for Step 4. An assistant summary is not an approved replacement. The short grouped review remains useful preparation; it does not change the official completion criteria.
+The [review method](LAB6_REVIEW_METHOD.md) distinguishes draft preparation, grouped decisions and individual confirmations. Use the [completed worksheet](LAB6_SHORT_REVIEW.md) to inspect the reviewer notes.
 
-## Review without editing JSON
+## Regenerate the report
 
-From the project directory, with the environment activated:
+```bash
+python scripts/evaluation_report.py
+python -m pytest tests/test_evaluation.py -q
+```
+
+Existing metric reports are reused. Review status is read from the individual and grouped records; regenerating the report does not add confirmations or rerun the frozen test.
+
+## Individual review tool
+
+For future individual review sessions:
 
 ```bash
 python scripts/review_lab6.py --limit 5
 ```
 
-The tool shows one original example, its expected/predicted labels, and any matching assistant suggestion. Read the entry, then choose:
+- `a`: approve the displayed suggestion after reading the entry.
+- `e`: enter a category and explanation.
+- `s`: skip the entry.
+- `q`: stop; saved decisions are retained.
 
-- `a`: you read this specific example and agree with the displayed category and explanation. That explicit decision is saved with its assistant-assisted provenance.
-- `e`: enter your own category and explanation.
-- `s`: skip this example; it remains unconfirmed.
-- `q`: stop. Previously saved decisions are retained.
-
-There is no confirm-all command, and pressing Enter does not confirm an entry. Each confirmation is saved immediately. The next run resumes at pending entries. The tool handles display and saving; the human makes the review decision. Follow any additional instructor rules about assistant-assisted assessments or working with a classmate.
-
-```bash
-# Progress only; changes nothing:
-python scripts/review_lab6.py --status
-
-# After a review session, refresh the report:
-python scripts/evaluation_report.py
-
-# Official final commands:
-python -m pytest tests/test_evaluation.py -q
-python scripts/evaluation_report.py
-```
-
-Human sign-off counts only entries with a category, explanation and explicit confirmation. The confirmed histogram and report use those entries. The assistant histogram stays separately labelled. Review the proposed fixes and limitations as part of final report preparation.
-
-The GitHub requirements, original tests, data, and existing human answers were not changed to accommodate this workflow. Source instructions are authoritative; the command-line interface is a convenience for carrying them out.
+The tool records the origin of an adopted suggestion. Each decision saves immediately, and subsequent sessions resume pending entries. Its individual-entry count is separate from the accepted grouped review.

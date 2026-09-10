@@ -1,0 +1,108 @@
+{
+  "purpose": "Development investigation; no official pass claims",
+  "queries": [
+    {
+      "lang": "ar",
+      "expected_broad_topic": "roads",
+      "query": "أبحث عن بلاغ سابق عن حفرة بجوار مدخل الحي تعيق مرور السيارات"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "parks",
+      "query": "The wheelchair path inside our neighbourhood park needs repair."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "lighting",
+      "query": "هل توجد حالات مشابهة لتعطل إنارة الشارع قرب المنازل؟"
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "billing",
+      "query": "لدي اعتراض على مبلغ الفاتورة وأحتاج مراجعة الرسوم"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "billing",
+      "query": "I need help disputing an incorrect charge on my bill."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "digital_services",
+      "query": "لا يمكنني تسجيل الدخول إلى بوابة الخدمات الإلكترونية"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "digital_services",
+      "query": "The online service portal will not let me log in."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "licensing",
+      "query": "طلب تجديد الرخصة متأخر وأريد معرفة سبب التأخير"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "licensing",
+      "query": "My license renewal application has been delayed."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "lighting",
+      "query": "مصابيح الشارع لا تعمل والمنطقة مظلمة في الليل"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "lighting",
+      "query": "The street lights are broken and the road is dark at night."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "parks",
+      "query": "ألعاب الأطفال داخل الحديقة مكسورة وتحتاج إلى إصلاح"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "parks",
+      "query": "The playground equipment in the public park is broken."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "roads",
+      "query": "هناك حفرة كبيرة في الإسفلت تسبب مشكلة للسيارات"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "roads",
+      "query": "A large pothole in the asphalt is damaging passing cars."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "waste",
+      "query": "حاويات النفايات ممتلئة ولم يتم جمع القمامة"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "waste",
+      "query": "The rubbish bins are overflowing and collection has been missed."
+    },
+    {
+      "lang": "ar",
+      "expected_broad_topic": "water",
+      "query": "انقطعت المياه عن المنزل وأحتاج بلاغاً عن انقطاع الخدمة"
+    },
+    {
+      "lang": "en",
+      "expected_broad_topic": "water",
+      "query": "The water supply to our home has stopped."
+    }
+  ],
+  "query_origin": "Three previously inspected development queries plus sixteen new assistant-authored bilingual prompts",
+  "labels_origin": "Assistant broad-intent expectations, not independent case-level relevance judgments",
+  "method": "Unique text groups; dense top50 plus positive TF-IDF word1-2 top50; cross-encoder reranks union; equal-weight RRF across dense, lexical and cross-encoder ranks with constant60",
+  "proxy": "Top-ranked group contains only cases with the expected broad topic; not recall@10 or MRR@10",
+  "no_answer_threshold": "Not calibrated; prototype must not use the existing API threshold",
+  "default_api_changed": false,
+  "official_evaluation_rerun": false,
+  "ranking_code_sha256": "325f419d45bde889632a99e0dfa8731817be9111769db4f2db59b57416cd6ac9"
+}

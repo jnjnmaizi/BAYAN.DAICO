@@ -1,0 +1,773 @@
+{
+  "status": "45/45 grouped assessments submitted with reviewer notes",
+  "scope": "Human review of unique text/expected-label/prediction groups",
+  "reviewer": "Repository owner",
+  "recorded_at": "2026-09-10T22:44:41.636688+00:00",
+  "groups_reviewed": 45,
+  "groups_total": 45,
+  "source_entries_covered": 120,
+  "decisions": {
+    "Agree": 45,
+    "Disagree": 0,
+    "Unsure": 0
+  },
+  "individual_human_confirmations_added": 0,
+  "individual_review_sha256": "ccb18f1bebfc2dedaf2ef72e10a84bd65d815c99e8a86d641a57bb7ae9214a09",
+  "submitted_file": "docs/LAB6_SHORT_REVIEW_SUBMITTED.md",
+  "submitted_file_sha256": "3384a3e14bdabb25cca62426c33295901a5b8207bcb4bc94061092a33329a2fd",
+  "instructor_acceptance_of_grouped_method": true,
+  "groups": [
+    {
+      "group_id": "G01",
+      "text": "الري متوقف في حديقة حي العليا <PHONE>",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-000408"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "الري داخل حديقة محددة، فالتصنيف الصحيح parks. توقف الري قد يخص جهة المياه أيضاً في تصنيفات أخرى، لكن هذا لا يجعله roads.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G02",
+      "text": "الري متوقف في حديقة الدمام",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-000688",
+        "FB-006568",
+        "FB-011128",
+        "FB-001208"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس الحالة السابقة، الأصل حديقة لا طريق.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G03",
+      "text": "لووووسمحت ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-001248"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "كلمة \"شارع\" هنا جزء من اسم موقع الحديقة، والخدمة المطلوبة صيانة ألعاب أطفال داخل حديقة، فالتصنيف parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G04",
+      "text": "الممر في حديقة شارع التحلية غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-002928",
+        "FB-009248",
+        "FB-006528",
+        "FB-006168",
+        "FB-000648"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "الممر المذكور داخل الحديقة نفسها، وليس طريقاً عاماً، فـ parks هو التصنيف الصحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G05",
+      "text": "الري متوقف في حديقة الدمام  ",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-003008"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "تكرار لنفس نص G02، والحكم نفسه: parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G06",
+      "text": "ألري متوقف في حديقة الدمام",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-003288"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "اختلاف الهمزة (ألري/الري) لا يغيّر المعنى أو التصنيف؛ يبقى parks.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G07",
+      "text": "الري متوقف في حديقة حي العليا",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-004448",
+        "FB-004328",
+        "FB-005608",
+        "FB-008248"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس نمط G01، حديقة صريحة داخل حي معيّن.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G08",
+      "text": "لووووسمحت الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-005888"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "\"طريق الملك فهد\" اسم موقع الحديقة فقط، والممر المتحدث عنه داخلها، فالتصنيف parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G09",
+      "text": "الري متوقف في حديقة الرياض",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-006088",
+        "FB-011248",
+        "FB-003088",
+        "FB-002728",
+        "FB-010968",
+        "FB-010488",
+        "FB-009928"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط، حديقة الرياض اسم مكان محدد، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G10",
+      "text": "الري متوقف في حديقة جدة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-006608",
+        "FB-009528",
+        "FB-002368",
+        "FB-005848"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط المتكرر، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G11",
+      "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة 😡",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-007008",
+        "FB-001808"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "الإيموجي لا يغيّر التصنيف؛ الطلب صيانة ألعاب أطفال داخل حديقة.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G12",
+      "text": "الري متوقف في حديقة طريق الملك فهد",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-007448",
+        "FB-000608"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks.",
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "\"طريق الملك فهد\" جزء من اسم الحديقة، والري متوقف داخلها، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G13",
+      "text": "ألعأب الأطفال في حديقة شارع التحلية تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-008608"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "خطأ إملائي بسيط (ألعأب) لا يغيّر المعنى، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G14",
+      "text": "الري متوقف في حديقة حي النرجس",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-008728",
+        "FB-008448",
+        "FB-001688",
+        "FB-010248"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس نمط الري داخل حديقة حي معيّن، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G15",
+      "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة <PHONE>",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009288"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "رقم الهاتف لا يؤثر على التصنيف، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G16",
+      "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009488",
+        "FB-002288",
+        "FB-007288",
+        "FB-007408"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس نمط G03/G11، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G17",
+      "text": "ألعاب الأطفال في حديقة طريق الملك فهد تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009568",
+        "FB-003688",
+        "FB-005048",
+        "FB-004568"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "اسم الطريق هنا جزء من اسم الحديقة فقط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G18",
+      "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة 😡",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-010648"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "الممر داخل الحديقة، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G19",
+      "text": "الري متوقف في حديقة شارع التحلية",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-011568",
+        "FB-001848",
+        "FB-000888",
+        "FB-005288"
+      ],
+      "review_focus": [
+        "Check service ownership: park irrigation could be assigned to parks or water under different taxonomies; the supplied label is parks.",
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "نفس نمط الري داخل حديقة تحمل اسم شارع، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G20",
+      "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-011808",
+        "FB-006288",
+        "FB-001328",
+        "FB-004768",
+        "FB-011448",
+        "FB-007208",
+        "FB-007328"
+      ],
+      "review_focus": [
+        "Check that the road/street wording names the park location rather than the requested service."
+      ],
+      "decision": "Agree",
+      "reviewer_notes": "تكرار نفس نمط G08/G18، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G21",
+      "text": "ألعأب الأطفال في حديقة الدمام تحتاج صيانة 😡",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-000248"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "لا يوجد ذكر لطريق هنا أصلاً، الحديقة صريحة، parks صحيح بوضوح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G22",
+      "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة <NATIONAL_ID>",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-000288"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نص مباشر عن ألعاب حديقة، لا علاقة بطرق، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G23",
+      "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة 😡",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-000768"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس G22، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G24",
+      "text": "الممر في حديقة حي العليا غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-000968",
+        "FB-003728",
+        "FB-011528"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "ممر داخل حديقة، لا يوجد ذكر لطريق عام، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G25",
+      "text": "ألممر في حديقة الدمام غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-001008"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "اختلاف الهمزة لا يغيّر التصنيف، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G26",
+      "text": "لووووسمحت الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-002408"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "الإطالة في \"لووووسمحت\" أسلوبية فقط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G27",
+      "text": "ألعاب الأطفال في حديقة حي النرجس تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-002648",
+        "FB-009128",
+        "FB-003848"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "لا صلة بالطرق، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G28",
+      "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-003128",
+        "FB-007768",
+        "FB-008968",
+        "FB-007168",
+        "FB-000728"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نص واضح عن حديقة، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G29",
+      "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة 😡 <PHONE>",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-003368"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "الإيموجي ورقم الهاتف لا يغيّران التصنيف، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G30",
+      "text": "الممر في حديقة حي العليا غير مناسب للكراسي المتحركة 😡",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-003888"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس G24 مع إيموجي إضافي، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G31",
+      "text": "ألعأب الأطفال في حديقة الرياض تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-004048"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "خطأ إملائي بسيط لا يغيّر التصنيف، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G32",
+      "text": "ألعاب الأطفال في حديقة حي العليا تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-004368",
+        "FB-004168",
+        "FB-002688"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نص مباشر، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G33",
+      "text": "لووووسمحت الممر في حديقة جدة غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-004728"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "الإطالة اللفظية لا تغيّر المضمون، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G34",
+      "text": "ألعاب الأطفال في حديقة الدمام تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-004968",
+        "FB-001488",
+        "FB-009808"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G35",
+      "text": "ألعأب الأطفال في حديقة الدمام تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-007848",
+        "FB-002528"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "خطأ إملائي بسيط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G36",
+      "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-008128",
+        "FB-000368",
+        "FB-000208",
+        "FB-005928",
+        "FB-003048",
+        "FB-003168",
+        "FB-004648",
+        "FB-007888"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "ممر داخل حديقة جدة تحديداً، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G37",
+      "text": "الممر في حديقة حي النرجس غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-008848",
+        "FB-006928",
+        "FB-009008",
+        "FB-007248"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G38",
+      "text": "الممر في حديقة الدمام غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009048",
+        "FB-004528",
+        "FB-002248",
+        "FB-002768"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G39",
+      "text": "الممر في حديقة حي الياسمين غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009168",
+        "FB-002888"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G40",
+      "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة  ",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009208"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "تكرار لنص G36، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G41",
+      "text": "ألعاب الأطفال في حديقة جدة تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009328",
+        "FB-010008",
+        "FB-007688"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نص مباشر عن حديقة جدة، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G42",
+      "text": "لووووسمحت ألممر في حديقة حي العليا غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009368"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "لا تأثير للإطالة أو الهمزة على المعنى، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G43",
+      "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-009968",
+        "FB-003608",
+        "FB-005768",
+        "FB-007728",
+        "FB-005168"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نص مباشر عن حديقة، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G44",
+      "text": "لووووسمحت الممر في حديقة الدمام غير مناسب للكراسي المتحركة 😡  ",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-011688"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "الإطالة والإيموجي لا يغيّران التصنيف، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    },
+    {
+      "group_id": "G45",
+      "text": "الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
+      "y_true": "parks",
+      "y_pred": "roads",
+      "feedback_ids": [
+        "FB-011888",
+        "FB-011288",
+        "FB-010608",
+        "FB-003448"
+      ],
+      "review_focus": [],
+      "decision": "Agree",
+      "reviewer_notes": "نفس النمط، parks صحيح.",
+      "human_confirmed": true,
+      "confirmation_scope": "This grouped text/label/prediction combination only; no individual-record confirmation inferred"
+    }
+  ],
+  "acceptance_record": {
+    "source": "Repository owner report in conversation",
+    "reported_statement": "she says that it's perfict",
+    "scope": "Acceptance of the completed grouped Lab 6 review only; no acceptance of Lab 3–5 targets inferred"
+  }
+}

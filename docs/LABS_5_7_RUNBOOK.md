@@ -19,13 +19,13 @@ Empty-correct is **20/20**, while retaining all 130 answerable queries, on the c
 For the current step-by-step course workflow, use [Lab 6 GitHub workflow](LAB6_GITHUB_WORKFLOW.md). The upstream manual-review requirement remains unchanged.
 
 1. `python scripts/prepare_error_review.py` prepared a fixed seed-42 sample of 120 errors from the **supplied course predictions**. It refuses to overwrite an existing review. These are not errors from our current topic model, whose saved validation predictions are perfect.
-2. Start with [the short assistant review](LAB6_QUICK_REVIEW.md): all 120 entries have assistant explanations and collapse into three recurring scenarios. These annotations do not count as human confirmation. If the instructor accepts a representative/grouped review, follow that agreed alternative; otherwise review [the worksheet](LAB6_ERROR_REVIEW.md). Record your chosen `category`, `reviewer_note`, and `human_confirmed: true` in `artifacts/lab6/human_error_review.json`. Only explicitly confirmed entries count; no automatic taxonomy tags are treated as human work.
+2. The [completed grouped review](LAB6_SHORT_REVIEW.md) contains 45 decisions and reviewer notes covering all 120 entries. Instructor acceptance was reported by the repository owner. [Review provenance and scope](LAB6_REVIEW_METHOD.md) are recorded separately from individual-entry confirmations.
 3. `python scripts/sentiment_behaviour.py` trains a small TF-IDF/LinearSVC sentiment baseline on the existing training split. This is necessary to exercise the supplied sentiment-direction tests, because topic probabilities are not sentiment scores. All 200 checks pass through unchanged predictions; sentiment validation macro-F1 is only 0.3333, so this is a weak test result, not evidence of negation understanding.
 4. `python scripts/evaluation_report.py` generates sliced metrics, confidence intervals, behavioural evidence, the evaluation report and three model cards. Add `--device mps` for initial behavioural inference on this Mac. Saved model reports are reused; changes to the human review are incorporated without repeating frozen-test inference.
 5. The main topic report has 16 slices. The paired topic/DA comparison uses the same 1,200 Arabic validation rows. Confidence intervals resample citizen groups, not unrelated independent rows. Missing Gulf scores remain unavailable.
 6. Topic invariance is **200/200**, MFT **15/16**. The optional Arabic DA model passes **8/8 Arabic MFT**, but only 1/8 English stress probes; its combined bilingual score is reported without concealing that intended-use difference.
 
-The **120 human confirmations, confirmed-category histogram and review-grounded top-three fixes remain pending your review**. Suggested fixes in the report are clearly marked proposals; unknown future metric gains are not invented. See [EVALUATION_REPORT.md](../EVALUATION_REPORT.md) and [model cards](../model_cards).
+The grouped review is complete and its acceptance is recorded. Individual-entry confirmations remain separate. The proposed fixes retain unmeasured expected gains. See [EVALUATION_REPORT.md](../EVALUATION_REPORT.md) and [model cards](../model_cards).
 
 ## Lab 7 — CPU optimization and serving
 
@@ -76,7 +76,7 @@ All **140 tests passed** after implementing search, bootstrap, reports, ONNX sel
 | 3 | Topic +8 macro-F1 gain remains unmet: the original baseline already reaches the supplied test ceiling. |
 | 4 | LOCATION +4 points remains unmet above a 100% original validation baseline. |
 | 5 | Recall/MRR targets remain unmet; sparse exact-ID relevance judgements and repeated cases need course guidance/review. Normalization ablation did not demonstrate the expected collapse. |
-| 6 | Human review 0/120 confirmed, category histogram and review-grounded prioritization pending. |
+| 6 | Grouped review accepted as reported by the repository owner; 45 decisions cover 120 entries. |
 | 7 | Measured targets met: bare classifier p99 4.84 ms; 38.7× speed-up; zero validation quality tax; HTTP p99 33.36 ms at 16 clients with zero errors. |
 
 ## Optional work deferred as requested

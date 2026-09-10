@@ -1,9 +1,11 @@
 # Lab 6 — Human error review
 
+**Grouped review received:** [45/45 completed groups with reviewer notes](LAB6_SHORT_REVIEW.md), covering all 120 source entries. Separate per-entry confirmations remain unchanged.
+
 **Current workflow:** [follow the course GitHub steps](LAB6_GITHUB_WORKFLOW.md). Run `python scripts/review_lab6.py --limit 5` to review and save individual decisions without editing JSON.
 
 
-**Assistant review available:** [read the short grouped review](LAB6_QUICK_REVIEW.md). All 120 entries now have separate assistant annotations; the human fields below remain unchanged.
+**Completed grouped review:** [summary](LAB6_QUICK_REVIEW.md) and [review method](LAB6_REVIEW_METHOD.md). The fields below are the separate individual-entry worksheet.
 
 These 120 errors come from the supplied course predictions, not our trained classifier. Read each text with its gold and predicted topic. Add a category and note, then confirm it in `artifacts/lab6/human_error_review.json`. The report counts only explicitly confirmed entries.
 

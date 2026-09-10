@@ -136,7 +136,9 @@ def main():
         'For understanding, read the three rows above and the spelling caveat. If you want this grouped assistant review accepted instead of the course’s human review, ask the instructor to approve that substitution. Reading three summaries does not automatically certify 120 individual human reviews.',
         '', 'You can send the instructor: “The supplied 120-error sample repeats three parks→roads scenarios. I have an explicitly labelled assistant review for every entry, a grouped summary, and a histogram. May I submit that with a representative human check instead of 120 separate handwritten annotations?”',
         '', 'The original human review fields remain unchanged. No requirement, expected label or source prediction was edited.']
-    (ROOT/'docs/LAB6_QUICK_REVIEW.md').write_text('\n'.join(lines)+'\n')
+    # Draft regeneration must not replace a submitted review summary.
+    if not (out/'human_group_review.json').exists():
+        (ROOT/'docs/LAB6_QUICK_REVIEW.md').write_text('\n'.join(lines)+'\n')
     print(json.dumps({k:summary[k] for k in ['assistant_reviewed','scenario_histogram','source_macro_f1','oracle_scenarios']},indent=2))
 
 

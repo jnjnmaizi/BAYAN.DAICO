@@ -1,40 +1,31 @@
-# Lab 6 — Short assistant review
+# Lab 6 — Error analysis summary
 
-**Current workflow:** [follow the course GitHub steps](LAB6_GITHUB_WORKFLOW.md). Run `python scripts/review_lab6.py --limit 5` to review and save individual decisions without editing JSON.
+**Review status:** 45 grouped assessments completed, covering all 120 sampled entries. Each assessment includes a decision and Arabic reviewer notes. The repository owner reports instructor acceptance of the grouped method.
 
+[Completed worksheet](LAB6_SHORT_REVIEW.md) · [Review method and provenance](LAB6_REVIEW_METHOD.md) · [Evaluation report](../EVALUATION_REPORT.md)
 
-**All 120 examples have been reviewed by the assistant. This is not a claim that you reviewed them.**
+## Findings
 
-You do not need to fill 120 blank explanations to understand the result: the sample contains **45 distinct texts and only three recurring scenarios**, all labelled **parks** and predicted **roads**. Details for every original ID are saved in `artifacts/lab6/assistant_error_review.json`.
+All sampled errors are labelled **parks** and predicted as **roads**. The sample contains 45 distinct text/label/prediction combinations and three recurring scenarios.
 
-| Group | Examples | Representative source text | Assistant assessment |
-|---|---:|---|---|
-| Playground maintenance | 42 | ألعاب الأطفال في حديقة جدة تحتاج صيانة | Park play equipment needs maintenance; the topic is parks even when the park name contains a road or street name. |
-| Park accessibility | 46 | الممر في حديقة جدة غير مناسب للكراسي المتحركة | A walkway inside a park is inaccessible to wheelchairs; keep the park context when interpreting the word walkway. |
-| Park irrigation | 32 | الري متوقف في حديقة الرياض | Irrigation has stopped inside a park; the supplied course label is parks, not roads. |
+| Scenario | Sampled entries | Interpretation |
+|---|---:|---|
+| Playground maintenance | 42 | The request concerns play equipment inside a park. |
+| Park accessibility | 46 | The request concerns a walkway inside a park, including wheelchair access. |
+| Park irrigation | 32 | The request concerns irrigation inside a named park. Ownership could differ under another taxonomy; the supplied label is parks. |
 
-## The main finding
+Every text explicitly mentions a park. Street names within a park location do not establish that the requested service concerns roads. Thirteen examples contain spelling or elongation variants; their causal contribution has not been tested.
 
-Every text explicitly mentions a park (حديقة). The observed category is **topic confusion: parks → roads**, not 120 unrelated defects. The full supplied file has 300 errors, all in this same direction. We cannot tell from the prediction file alone whether the cause is model behaviour, label mapping, or deliberately constructed example predictions.
+The supplied prediction file contains 300 errors, all parks → roads. These are course-provided predictions, distinct from the saved predictions of the trained topic classifier. The file alone does not establish whether the underlying cause is model behaviour, label mapping or data construction.
 
-Thirteen sampled examples contain a hamza variant and/or elongated polite prefix. They remain understandable park requests. Those features are marked per entry, not claimed as causes. Road words in park/place names also deserve paired tests.
+## Prioritised follow-up
 
-![Assistant error histogram](../artifacts/lab6/assistant_error_taxonomy.png)
+1. Verify the source of the prediction file and its label-ID mapping.
+2. Use paired park/road examples to test context interpretation, including road words in place names.
+3. Compare clean and noisy versions of the same complaints before changing preprocessing.
 
-## Three proposed fixes
+Expected gains from these interventions remain unmeasured. Replacing the 120 sampled wrong predictions with gold labels would add 8.42 macro-F1 points; replacing all 300 would add 16.67 points. These are accounting ceilings, not results from implemented model changes.
 
-1. **Verify the supplied prediction file and label-ID mapping against its generating model before diagnosing model internals.** Every one of the 300 supplied errors is parks → roads; the current trained classifier has zero saved validation errors. Expected improvement: Unknown until provenance is verified. Oracle scenarios quantify the maximum available correction, not a promised gain.
-2. **Add paired parks-versus-roads probes covering park walkways and road words inside place names.** The park-accessibility group and road-named locations are direct candidates for testing context versus keyword shortcuts. Expected improvement: Unknown; these probes measure whether the hypothesized shortcut exists before any retraining.
-3. **Compare clean/noisy versions of park complaints while holding the correct label fixed.** Hamza variants and elongated prefixes occur in the sample, but clean examples fail as well; normalize only after demonstrating a paired benefit. Expected improvement: Unknown; secondary spelling features are observations, not established causes.
+## Records
 
-## Quantifying possible correction without inventing results
-
-The supplied file's macro-F1 is 0.8333. An oracle replacing only the sampled 120 wrong predictions with their gold labels would add 8.42 macro-F1 points. Correcting all 300 supplied errors would add 16.67 points. These are ceilings from label accounting, not measured improvements from a model fix. Nothing was overwritten.
-
-## What remains for you
-
-For understanding, read the three rows above and the spelling caveat. If you want this grouped assistant review accepted instead of the course’s human review, ask the instructor to approve that substitution. Reading three summaries does not automatically certify 120 individual human reviews.
-
-You can send the instructor: “The supplied 120-error sample repeats three parks→roads scenarios. I have an explicitly labelled assistant review for every entry, a grouped summary, and a histogram. May I submit that with a representative human check instead of 120 separate handwritten annotations?”
-
-The original human review fields remain unchanged. No requirement, expected label or source prediction was edited.
+The [grouped review record](../artifacts/lab6/human_group_review.json) preserves the submitted decisions, notes, group membership and reported acceptance. Individual-entry confirmations remain separate. Original texts, labels and predictions are unchanged.

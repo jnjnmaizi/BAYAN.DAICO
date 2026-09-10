@@ -1,5 +1,7 @@
 # Lab results and exact remaining items — 2026-09-10
 
+Historical snapshot. For the subsequent accepted grouped review, see [review method](LAB6_REVIEW_METHOD.md). For newer retrieval experiments, see [Labs 3–5 follow-up](LABS_3_5_FOLLOWUP.md).
+
 This status was checked against saved local evidence at code commit `dbf3323`. The current complete test suite passed **147 tests**, with two dependency deprecation warnings, in **7.75 seconds**. The earlier 140-test record in BENCHMARKS reflects the earlier Lab 7 run; seven review-related regression cases have since been added. No model training, frozen-test inference, requirements changes, source-data changes or human confirmations were performed for this status check.
 
 ## Lab 1 — Preprocessing and tokenizers

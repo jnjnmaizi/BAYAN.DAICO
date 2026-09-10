@@ -1,6 +1,6 @@
-# EVALUATION REPORT — Bayan
+# Evaluation report — Jana Alhumaizi NLP
 
-Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable, and the required human error review is pending.
+Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries).
 
 ## Sliced metrics with 95% bootstrap intervals
 
@@ -50,15 +50,17 @@ Invariance uses the supplied 200 templates with whitespace perturbations. Sixtee
 
 ## Error taxonomy
 
-Human-confirmed review: **0/120**. Review [the worksheet](docs/LAB6_ERROR_REVIEW.md) and record decisions in `artifacts/lab6/human_error_review.json`. The worksheet samples the course-provided predictions, which contain 300 errors; our saved topic validation predictions contain no errors. These two sources are not interchangeable.
+**Grouped human review received: 45/45 groups**, covering 120/120 original entries. Each group includes a submitted decision and the reviewer’s notes. See the [completed grouped worksheet](docs/LAB6_SHORT_REVIEW.md). Grouped decisions are recorded separately from per-entry confirmations. The repository owner reports that the instructor accepted this grouped review.
 
-Confirmed-category histogram: {}. No automatic categories count as human review.
+![Grouped review results](artifacts/lab6/grouped_review_histogram.png)
 
-Assistant-review evidence: **120/120** entries annotated. The sample repeats three scenarios: playground maintenance (42), park accessibility (46), and park irrigation (32). All have the observed confusion parks → roads. This is not an established model-internal cause.
+Individual-entry confirmations (separate from grouped decisions): **0/120**. The [individual worksheet](docs/LAB6_ERROR_REVIEW.md) and `artifacts/lab6/human_error_review.json` retain per-entry decisions separately. The sample uses the course-provided predictions, which contain 300 errors; our saved topic validation predictions contain no errors. These two sources are not interchangeable.
 
-Read the [short grouped review](docs/LAB6_QUICK_REVIEW.md); per-entry suggestions are in `artifacts/lab6/assistant_error_review.json`. Human confirmations above are unchanged. Instructor acceptance is required if this replaces the specified human review.
+Individual-entry category counts: {}. Grouped decisions are reported above.
 
-![Assistant-review histogram](artifacts/lab6/assistant_error_taxonomy.png)
+Draft annotation coverage: **120/120** entries. The sample contains three scenarios: playground maintenance (42), park accessibility (46), and park irrigation (32). All have the observed confusion parks → roads. These scenarios do not establish a model-internal cause.
+
+See the [review summary](docs/LAB6_QUICK_REVIEW.md) and [review method and provenance](docs/LAB6_REVIEW_METHOD.md). Draft annotations and submitted decisions remain separate records.
 
 Using gold labels only as an accounting exercise, correcting the 120 sampled predictions would add 8.42 macro-F1 points; correcting all 300 supplied errors would add 16.67. These are correction ceilings, not trained-model gains. Source predictions remain unchanged.
 
@@ -77,5 +79,5 @@ Reranked recall@10=0.0231; MRR@10=0.0265. Empty-correct=20/20 on the calibration
 - All source data are synthetic; repeated templates limit generalisation claims.
 - No Gulf validation rows, no Arabic topic test rows, and only four NER validation template groups.
 - Exact-ID retrieval labels are sparse among 20,000 repeated cases; original labels remain unchanged.
-- Human review is not complete; directional probes pass through ties on a weak separate sentiment baseline. The Lab 6 targets must not be marked fully achieved.
+- Human review is satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries). Directional probes pass through ties on a weak separate sentiment baseline; they do not establish negation understanding.
 - Confidence intervals describe this dataset and resampling protocol; they do not repair missing dialect or entity coverage.

@@ -41,7 +41,7 @@ async def lifespan(app):
     ensure_ready()
     yield
 
-app=FastAPI(title='Bayan — Bilingual Citizen-Feedback Intelligence Service',lifespan=lifespan)
+app=FastAPI(title='Jana Alhumaizi NLP — Bilingual Feedback Analysis',lifespan=lifespan)
 
 @app.get('/health')
 def health():

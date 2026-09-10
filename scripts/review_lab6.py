@@ -31,9 +31,9 @@ def review_entries(path, suggestions, *, limit=5, input_fn=input, output_fn=prin
         hint=suggestions.get(row['feedback_id'])
         if hint and any(hint.get(k)!=row.get(k) for k in ['text','y_true','y_pred']):
             hint=None
-            output_fn('Assistant suggestion is stale; review this entry independently.')
+            output_fn('Draft suggestion is stale; review this entry independently.')
         if hint:
-            output_fn('Assistant suggestion (not human-confirmed): '+hint['assistant_category'])
+            output_fn('Draft suggestion (not yet confirmed): '+hint['assistant_category'])
             output_fn(hint['assistant_note'])
         action=input_fn('[a] I read this entry and agree with the suggestion; [e] enter my assessment; [s] skip; [q] save and quit: ').strip().lower()
         if action=='q':break

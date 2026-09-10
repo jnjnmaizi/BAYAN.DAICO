@@ -145,6 +145,11 @@ This runs the attention and parameter-bucket tests, writes `artifacts/lab2/param
 - Assembled all service endpoints and startup canaries. Final 16-client/60-second HTTP test: p99 33.36 ms, 33,259 requests, zero errors. Bounded microbatching addressed concurrent queueing without caching results.
 - Full unit/contract suite: 140 passed. Remaining mandatory evidence and optional work deferred at the user's request are listed in [the runbook](docs/LABS_5_7_RUNBOOK.md). The 120-error human review is deferred until the user returns to it.
 
-## Lab 6 — Grouped assistant review (2026-09-10)
+## Lab 6 — Draft error analysis (2026-09-10)
 
-Read all 120 sampled texts and supplied assistant explanations for every ID. They contain 45 exact texts and three scenarios (42 playground, 46 accessibility, 32 irrigation); all are parks predicted as roads. All 300 errors in the supplied prediction file share that label confusion. Visible orthographic noise occurs in 13 sampled rows, but is not established as causal. The short review and assistant histogram reduce repetition without claiming human sign-off. Original review answers and course/data files remain unchanged.
+Prepared an initial explanation for each of the 120 sampled IDs. They contain 45 exact texts and three scenarios (42 playground, 46 accessibility, 32 irrigation); all are parks predicted as roads. All 300 errors in the supplied prediction file share that label confusion. Visible orthographic noise occurs in 13 sampled rows, but is not established as causal. The initial summary and category counts were preparation for review. Original review answers and course/data files remain unchanged.
+
+
+## Lab 6 — Completed grouped review (2026-09-11)
+
+The reviewer submitted decisions and Arabic notes for 45 exact text/label/prediction groups, covering all 120 entries. Submitted IDs and content matched the source worksheet. Instructor acceptance of the grouped method was reported by the repository owner. [Review method and provenance](docs/LAB6_REVIEW_METHOD.md).

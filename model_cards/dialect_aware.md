@@ -1,4 +1,4 @@
-# Model Card — Bayan dialect_aware
+# Model Card — Jana Alhumaizi NLP — dialect_aware
 
 ## Intended use
 Citizen-feedback topic classification for course demonstration; human review required for operational decisions.

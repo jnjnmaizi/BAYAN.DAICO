@@ -1,0 +1,165 @@
+{
+  "scope": "Three newly authored unlabelled development queries; descriptive probe only",
+  "device": "cpu",
+  "new_training": false,
+  "original_evaluation_modified": false,
+  "relevance_labels_used_to_select_candidates": false,
+  "official_recall_mrr_targets_reassessed": false,
+  "index_sha256": "0f54b8b1e797e30f97e3431a3470c1724873b55c1c321076dc2138ecdcc68301",
+  "helper_sha256": "016331da746c43024dcbc1fef26a1f528b2a17453eb5ea991221aa72588474ed",
+  "protocol": "Search all index positions once; take first 50 distinct normalized text groups, retain all member case records, rerank each group once. No threshold is calibrated or applied.",
+  "limitations": "No held-out relevance judgments; broader candidate coverage does not establish semantic quality or exact-ID target attainment. Group scores describe shared text, not verification of each resolution. Default API behavior is unchanged.",
+  "queries": [
+    {
+      "query": "أبحث عن بلاغ سابق عن حفرة بجوار مدخل الحي تعيق مرور السيارات",
+      "original_top50_distinct_texts": 25,
+      "grouped_candidate_distinct_texts": 50,
+      "top10_group_distinct_texts": 10,
+      "case_records_represented_in_50_groups": 133,
+      "elapsed_ms_including_full_index_search_grouping_and_reranking": 1317.2136659995886,
+      "top5_groups": [
+        {
+          "case_text": "حفرة في الطريق أمام حي العليا منذ 16 أيام",
+          "score": 0.028378920629620552,
+          "member_case_ids": [
+            "CASE-002537",
+            "CASE-008921"
+          ]
+        },
+        {
+          "case_text": "حفرة في الطريق أمام حي العليا منذ 17 أيام",
+          "score": 0.02816597931087017,
+          "member_case_ids": [
+            "CASE-008817"
+          ]
+        },
+        {
+          "case_text": "حفرة في الطريق أمام حي العليا منذ 14 أيام",
+          "score": 0.02812727726995945,
+          "member_case_ids": [
+            "CASE-000393",
+            "CASE-008121",
+            "CASE-011313",
+            "CASE-014841"
+          ]
+        },
+        {
+          "case_text": "حفرة في الطريق أمام حي العليا منذ 15 أيام",
+          "score": 0.027522170916199684,
+          "member_case_ids": [
+            "CASE-005161",
+            "CASE-015241"
+          ]
+        },
+        {
+          "case_text": "حفرة في الطريق أمام حي العليا منذ 17 أيام <br>",
+          "score": 0.025381943210959435,
+          "member_case_ids": [
+            "CASE-016713"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "The wheelchair path inside our neighbourhood park needs repair.",
+      "original_top50_distinct_texts": 7,
+      "grouped_candidate_distinct_texts": 50,
+      "top10_group_distinct_texts": 10,
+      "case_records_represented_in_50_groups": 464,
+      "elapsed_ms_including_full_index_search_grouping_and_reranking": 310.9054590022424,
+      "top5_groups": [
+        {
+          "case_text": "ألطريق المؤدي إلى حي النرجس يحتاج صيانة عاجلة",
+          "score": 0.9410890340805054,
+          "member_case_ids": [
+            "CASE-017641",
+            "CASE-018857"
+          ]
+        },
+        {
+          "case_text": "ألطريق المؤدي إلى حي العليا يحتاج صيانة عاجلة",
+          "score": 0.9271528124809265,
+          "member_case_ids": [
+            "CASE-017793"
+          ]
+        },
+        {
+          "case_text": "ألعأب الأطفال في حديقة شارع التحلية تحتاج صيانة",
+          "score": 0.8747126460075378,
+          "member_case_ids": [
+            "CASE-000712",
+            "CASE-001168",
+            "CASE-013632"
+          ]
+        },
+        {
+          "case_text": "ألعأب الأطفال في حديقة شارع التحلية تحتاج صيانة <br>",
+          "score": 0.8413045406341553,
+          "member_case_ids": [
+            "CASE-017736"
+          ]
+        },
+        {
+          "case_text": "ألطريق المؤدي إلى شارع التحلية يحتاج صيانة عاجلة",
+          "score": 0.7854533791542053,
+          "member_case_ids": [
+            "CASE-001681",
+            "CASE-015361"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "هل توجد حالات مشابهة لتعطل إنارة الشارع قرب المنازل؟",
+      "original_top50_distinct_texts": 4,
+      "grouped_candidate_distinct_texts": 50,
+      "top10_group_distinct_texts": 10,
+      "case_records_represented_in_50_groups": 516,
+      "elapsed_ms_including_full_index_search_grouping_and_reranking": 333.2762920035748,
+      "top5_groups": [
+        {
+          "case_text": "لووسمحت الشارع مظلم قرب شارع التحلية ونحتاج إصلاح الإنارة",
+          "score": 0.0737786516547203,
+          "member_case_ids": [
+            "CASE-008842",
+            "CASE-017658"
+          ]
+        },
+        {
+          "case_text": "THE STREET IS DARK NEAR DAMMAM AND THE LIGHTING NEEDS REPAIR — VERY FRUSTRATING 😡 <br>",
+          "score": 0.054343078285455704,
+          "member_case_ids": [
+            "CASE-018914"
+          ]
+        },
+        {
+          "case_text": "لووسمحت الشارع مظلم قرب حي العليا ونحتاج إصلاح الإنارة",
+          "score": 0.04766587167978287,
+          "member_case_ids": [
+            "CASE-005826",
+            "CASE-008378",
+            "CASE-018818"
+          ]
+        },
+        {
+          "case_text": "لووسمحت الشارع مظلم قرب حي العليا ونحتاج إصلاح الإنارة 😡 <PHONE>",
+          "score": 0.04693526402115822,
+          "member_case_ids": [
+            "CASE-019746"
+          ]
+        },
+        {
+          "case_text": "الشارع مظلم قرب شارع التحلية ونحتاج إصلاح الإنارة 😡",
+          "score": 0.04642648994922638,
+          "member_case_ids": [
+            "CASE-002482",
+            "CASE-005498",
+            "CASE-005706",
+            "CASE-009866",
+            "CASE-014338"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,8 @@
     "confirmed": 0,
     "required": 120,
     "complete": false,
-    "histogram": {}
+    "histogram": {},
+    "methods": []
   },
   "slice_counts": {
     "topic": 16,
@@ -49,5 +50,17 @@
     "total": 200,
     "unchanged_predictions": 200,
     "validation_macro_f1": 0.3333333333333333
+  },
+  "human_group_review": {
+    "groups_reviewed": 45,
+    "source_entries_covered": 120,
+    "decisions": {
+      "Agree": 45,
+      "Disagree": 0,
+      "Unsure": 0
+    },
+    "individual_human_confirmations_added": 0,
+    "instructor_acceptance_of_grouped_method": true,
+    "accepted_review_requirement_satisfied": true
   }
 }
