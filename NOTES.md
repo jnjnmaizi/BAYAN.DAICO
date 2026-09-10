@@ -140,3 +140,7 @@ This runs the attention and parameter-bucket tests, writes `artifacts/lab2/param
 - Exported classifier and NER to ONNX and INT8, preserved fp32 rollback, measured the full CPU ladder and paired quality. INT8 agrees with all saved validation predictions.
 - Assembled all service endpoints and startup canaries. Final 16-client/60-second HTTP test: p99 33.36 ms, 33,259 requests, zero errors. Bounded microbatching addressed concurrent queueing without caching results.
 - Full unit/contract suite: 140 passed. Remaining mandatory evidence and optional work deferred at the user's request are listed in [the runbook](docs/LABS_5_7_RUNBOOK.md). The 120-error human review is deferred until the user returns to it.
+
+## Lab 6 — Grouped assistant review (2026-09-10)
+
+Read all 120 sampled texts and supplied assistant explanations for every ID. They contain 45 exact texts and three scenarios (42 playground, 46 accessibility, 32 irrigation); all are parks predicted as roads. All 300 errors in the supplied prediction file share that label confusion. Visible orthographic noise occurs in 13 sampled rows, but is not established as causal. The short review and assistant histogram reduce repetition without claiming human sign-off. Original review answers and course/data files remain unchanged.

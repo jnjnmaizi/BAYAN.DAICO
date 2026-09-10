@@ -1,5 +1,7 @@
 # Lab 6 — Human error review
 
+**Assistant review available:** [read the short grouped review](LAB6_QUICK_REVIEW.md). All 120 entries now have separate assistant annotations; the human fields below remain unchanged.
+
 These 120 errors come from the supplied course predictions, not our trained classifier. Read each text with its gold and predicted topic. Add a category and note, then confirm it in `artifacts/lab6/human_error_review.json`. The report counts only explicitly confirmed entries.
 
 Categories: label ambiguity; Arabic spelling; dialect/code-switching; entity alignment; truncation; retrieval relevance; preprocessing/serving skew; annotation defect; unexplained model confusion. Do not infer a root cause merely from the wrong label.

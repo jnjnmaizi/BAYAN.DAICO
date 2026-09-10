@@ -1,0 +1,71 @@
+{
+  "reviewer_type": "assistant",
+  "assistant_reviewed": 120,
+  "human_confirmed_in_original_file": 0,
+  "official_human_requirement_satisfied_by_assistant_review": false,
+  "source_predictions_sha256": "7370a1f804dc17226c9296a5aa49044f3fd7ab2a64f005419539aacc4804fd06",
+  "source_sample_sha256": "ccb18f1bebfc2dedaf2ef72e10a84bd65d815c99e8a86d641a57bb7ae9214a09",
+  "source_scope": "Supplied course predictions, not errors from the current trained topic classifier",
+  "primary_category_histogram": {
+    "Topic confusion: parks → roads": 120
+  },
+  "scenario_histogram": {
+    "park_accessibility": 46,
+    "park_irrigation": 32,
+    "playground_maintenance": 42
+  },
+  "feature_counts": {
+    "road_word_in_place_name": 33,
+    "emoji": 8,
+    "orthographic_variation": 8,
+    "masked_pii_placeholder": 4,
+    "elongated_polite_prefix": 6,
+    "trailing_whitespace": 3
+  },
+  "unique_sample_texts": 45,
+  "full_source_error_count": 300,
+  "full_source_confusions": [
+    {
+      "gold": "parks",
+      "prediction": "roads",
+      "count": 300
+    }
+  ],
+  "source_macro_f1": 0.8333333333333333,
+  "oracle_scenarios": {
+    "warning": "Upper-bound accounting with gold labels, not an implemented fix, forecast, or deployable model; no source predictions changed",
+    "correct_sample_only": {
+      "corrected_rows": 120,
+      "macro_f1": 0.9175824175824177,
+      "macro_f1_gain_points": 8.42490842490844,
+      "accuracy_gain_points": 5.000000000000004
+    },
+    "correct_all_supplied_errors": {
+      "corrected_rows": 300,
+      "macro_f1": 1.0,
+      "macro_f1_gain_points": 16.666666666666675,
+      "accuracy_gain_points": 12.5
+    }
+  },
+  "prioritized_fixes": [
+    {
+      "priority": 1,
+      "fix": "Verify the supplied prediction file and label-ID mapping against its generating model before diagnosing model internals.",
+      "reason": "Every one of the 300 supplied errors is parks → roads; the current trained classifier has zero saved validation errors.",
+      "expected_delta": "Unknown until provenance is verified. Oracle scenarios quantify the maximum available correction, not a promised gain."
+    },
+    {
+      "priority": 2,
+      "fix": "Add paired parks-versus-roads probes covering park walkways and road words inside place names.",
+      "reason": "The park-accessibility group and road-named locations are direct candidates for testing context versus keyword shortcuts.",
+      "expected_delta": "Unknown; these probes measure whether the hypothesized shortcut exists before any retraining."
+    },
+    {
+      "priority": 3,
+      "fix": "Compare clean/noisy versions of park complaints while holding the correct label fixed.",
+      "reason": "Hamza variants and elongated prefixes occur in the sample, but clean examples fail as well; normalize only after demonstrating a paired benefit.",
+      "expected_delta": "Unknown; secondary spelling features are observations, not established causes."
+    }
+  ],
+  "acceptance_note": "A grouped assistant review reduces repetition, but instructor acceptance is needed if it is to replace the specified 120-row human review."
+}

@@ -54,11 +54,19 @@ Human-confirmed review: **0/120**. Review [the worksheet](docs/LAB6_ERROR_REVIEW
 
 Confirmed-category histogram: {}. No automatic categories count as human review.
 
+Assistant-review evidence: **120/120** entries annotated. The sample repeats three scenarios: playground maintenance (42), park accessibility (46), and park irrigation (32). All have the observed confusion parks → roads. This is not an established model-internal cause.
+
+Read the [short grouped review](docs/LAB6_QUICK_REVIEW.md); per-entry suggestions are in `artifacts/lab6/assistant_error_review.json`. Human confirmations above are unchanged. Instructor acceptance is required if this replaces the specified human review.
+
+![Assistant-review histogram](artifacts/lab6/assistant_error_taxonomy.png)
+
+Using gold labels only as an accounting exercise, correcting the 120 sampled predictions would add 8.42 macro-F1 points; correcting all 300 supplied errors would add 16.67. These are correction ceilings, not trained-model gains. Source predictions remain unchanged.
+
 ### Top three proposed fixes (not measured promises)
 
-- Add independent Gulf and complete-class evaluation coverage: Not estimable from current data; improves coverage, not an asserted model gain.
-- Improve sparse case-ID relevance judgements before retrieval tuning: Unknown pending human relevance review.
-- Train with consistent clitic segmentation when deploying segmented NER: Measured recovery +23.6364 recall points versus mismatched input; 0 versus original baseline.
+- Verify the supplied prediction file and label-ID mapping against its generating model before diagnosing model internals: Unknown until provenance is verified. Oracle scenarios quantify the maximum available correction, not a promised gain.
+- Add paired parks-versus-roads probes covering park walkways and road words inside place names: Unknown; these probes measure whether the hypothesized shortcut exists before any retraining.
+- Compare clean/noisy versions of park complaints while holding the correct label fixed: Unknown; secondary spelling features are observations, not established causes.
 
 ## Retrieval quality
 

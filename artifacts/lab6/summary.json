@@ -20,18 +20,30 @@
   "frozen_test_used": false,
   "top_3_fixes": [
     {
-      "fix": "Add independent Gulf and complete-class evaluation coverage",
-      "predicted_delta": "Not estimable from current data; improves coverage, not an asserted model gain"
+      "fix": "Verify the supplied prediction file and label-ID mapping against its generating model before diagnosing model internals.",
+      "predicted_delta": "Unknown until provenance is verified. Oracle scenarios quantify the maximum available correction, not a promised gain."
     },
     {
-      "fix": "Improve sparse case-ID relevance judgements before retrieval tuning",
-      "predicted_delta": "Unknown pending human relevance review"
+      "fix": "Add paired parks-versus-roads probes covering park walkways and road words inside place names.",
+      "predicted_delta": "Unknown; these probes measure whether the hypothesized shortcut exists before any retraining."
     },
     {
-      "fix": "Train with consistent clitic segmentation when deploying segmented NER",
-      "predicted_delta": "Measured recovery +23.6364 recall points versus mismatched input; 0 versus original baseline"
+      "fix": "Compare clean/noisy versions of park complaints while holding the correct label fixed.",
+      "predicted_delta": "Unknown; secondary spelling features are observations, not established causes."
     }
   ],
+  "assistant_review": {
+    "reviewed": 120,
+    "scenario_histogram": {
+      "park_accessibility": 46,
+      "park_irrigation": 32,
+      "playground_maintenance": 42
+    },
+    "primary_category_histogram": {
+      "Topic confusion: parks → roads": 120
+    },
+    "counts_as_human_review": false
+  },
   "sentiment_directional": {
     "passed": 200,
     "total": 200,

@@ -62,6 +62,14 @@ def main():
         'top_3_fixes':[{'fix':'Add independent Gulf and complete-class evaluation coverage','predicted_delta':'Not estimable from current data; improves coverage, not an asserted model gain'},
                        {'fix':'Improve sparse case-ID relevance judgements before retrieval tuning','predicted_delta':'Unknown pending human relevance review'},
                        {'fix':'Train with consistent clitic segmentation when deploying segmented NER','predicted_delta':'Measured recovery +23.6364 recall points versus mismatched input; 0 versus original baseline'}]}
+    assistant_path=out/'assistant_review_summary.json'
+    assistant=json.loads(assistant_path.read_text()) if assistant_path.exists() else None
+    if assistant:
+        summary['assistant_review']={'reviewed':assistant['assistant_reviewed'],
+            'scenario_histogram':assistant['scenario_histogram'],
+            'primary_category_histogram':assistant['primary_category_histogram'],
+            'counts_as_human_review':False}
+        summary['top_3_fixes']=[{'fix':r['fix'],'predicted_delta':r['expected_delta']} for r in assistant['prioritized_fixes']]
     directional_path=out/'sentiment_directional.json'
     directional=json.loads(directional_path.read_text()) if directional_path.exists() else None
     summary['sentiment_directional']={k:directional[k] for k in ['passed','total','unchanged_predictions','validation_macro_f1']} if directional else None
@@ -76,7 +84,15 @@ def main():
     if directional:
         lines += ['', f"Separate TF-IDF sentiment baseline: {directional['passed']}/{directional['total']} directional checks passed, with {directional['unchanged_predictions']} unchanged predictions. Validation sentiment macro-F1={directional['validation_macro_f1']:.4f}. The test permits ties; this result does not demonstrate sensitivity to negation. Training uses only the supplied training split."]
     lines+=['','Invariance uses the supplied 200 templates with whitespace perturbations. Sixteen explicit bilingual topic probes supplement the supplied file, which has no MFT rows. The 200 directional templates require sentiment output; topic probabilities cannot substitute for sentiment. DA English probes are deliberately reported as an out-of-scope stress test.','', '## Error taxonomy','', f"Human-confirmed review: **{len(confirmed)}/120**. Review [the worksheet](docs/LAB6_ERROR_REVIEW.md) and record decisions in `artifacts/lab6/human_error_review.json`. The worksheet samples the course-provided predictions, which contain 300 errors; our saved topic validation predictions contain no errors. These two sources are not interchangeable.", '', 'Confirmed-category histogram: '+json.dumps(histogram)+'. No automatic categories count as human review.','', '### Top three proposed fixes (not measured promises)','']
-    lines += [f"- {r['fix']}: {r['predicted_delta']}." for r in summary['top_3_fixes']]
+    if assistant:
+        # Keep assistant observations separate from the human confirmation count.
+        position=lines.index('### Top three proposed fixes (not measured promises)')
+        lines[position:position]=[
+            'Assistant-review evidence: **'+str(assistant['assistant_reviewed'])+'/120** entries annotated. The sample repeats three scenarios: playground maintenance (42), park accessibility (46), and park irrigation (32). All have the observed confusion parks → roads. This is not an established model-internal cause.',
+            '', 'Read the [short grouped review](docs/LAB6_QUICK_REVIEW.md); per-entry suggestions are in `artifacts/lab6/assistant_error_review.json`. Human confirmations above are unchanged. Instructor acceptance is required if this replaces the specified human review.',
+            '', '![Assistant-review histogram](artifacts/lab6/assistant_error_taxonomy.png)', '',
+            f"Using gold labels only as an accounting exercise, correcting the 120 sampled predictions would add {assistant['oracle_scenarios']['correct_sample_only']['macro_f1_gain_points']:.2f} macro-F1 points; correcting all 300 supplied errors would add {assistant['oracle_scenarios']['correct_all_supplied_errors']['macro_f1_gain_points']:.2f}. These are correction ceilings, not trained-model gains. Source predictions remain unchanged.", '']
+    lines += [f"- {r['fix'].rstrip('.')}: {r['predicted_delta'].rstrip('.')}." for r in summary['top_3_fixes']]
     retrieval=json.loads((ROOT/'artifacts/lab5/retrieval.json').read_text())
     lines+=['','## Retrieval quality','',f"Reranked recall@10={retrieval['reranked']['recall_at_10']:.4f}; MRR@10={retrieval['reranked']['mrr_at_10']:.4f}. Empty-correct={retrieval['no_answer_empty_correct']}/20 on the calibration queries, which contain only one unique no-answer text. This is not independent rejection accuracy. See `artifacts/lab5/retrieval.json`.",'','## Known limitations','', '- All source data are synthetic; repeated templates limit generalisation claims.','- No Gulf validation rows, no Arabic topic test rows, and only four NER validation template groups.','- Exact-ID retrieval labels are sparse among 20,000 repeated cases; original labels remain unchanged.','- Human review is not complete; directional probes pass through ties on a weak separate sentiment baseline. The Lab 6 targets must not be marked fully achieved.','- Confidence intervals describe this dataset and resampling protocol; they do not repair missing dialect or entity coverage.','']
     (ROOT/'EVALUATION_REPORT.md').write_text('\n'.join(lines))
