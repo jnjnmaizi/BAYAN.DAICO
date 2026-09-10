@@ -13,6 +13,7 @@
 - Audit corpus: 7,200 Arabic and 4,800 English feedback rows; content pieces were used for fertility and special tokens were included in lengths.
 - Golden preprocessing: 25 / 25 passed
 - PII masking recall: 60 / 60 = 100%
+- Histogram follow-up (2026-09-10): saved [four-panel length distributions](artifacts/lab1/token_length_histograms.png) and [exact counts/statistics](artifacts/lab1/tokenizer_audit.json). All eight language/tokenizer distributions match the original table; full untruncated lengths include special tokens, and language histograms are independently normalized to 100%. Source data unchanged. Original Lab 1 checks: **26 passed**. [Run and interpretation guide](docs/LAB1_HISTOGRAM_GUIDE.md).
 
 ## Lab 2 — Attention and mask diagnostics
 

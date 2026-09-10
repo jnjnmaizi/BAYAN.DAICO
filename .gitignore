@@ -32,3 +32,8 @@ artifacts/lab6/*
 !artifacts/lab7/
 artifacts/lab7/*
 !artifacts/lab7/*.json
+
+!artifacts/lab1/
+artifacts/lab1/*
+!artifacts/lab1/*.json
+!artifacts/lab1/*.png
