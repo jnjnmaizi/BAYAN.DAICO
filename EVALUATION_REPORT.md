@@ -1,7 +1,7 @@
 # Evaluation report — Jana Alhumaizi NLP
 
-Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries).
-Labs 3–5 are recorded as satisfied by an instructor-approved alternative; their raw metrics and original course requirements remain unchanged. See [the acceptance record](artifacts/instructor_approved_alternatives.json).
+Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is complete (120/120, confirmed by the reviewer).
+Labs 3–5 have documented alternative evidence, but instructor approval is pending; their raw metrics and original course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).
 
 ## Sliced metrics with 95% bootstrap intervals
 
@@ -51,17 +51,19 @@ Invariance uses the supplied 200 templates with whitespace perturbations. Sixtee
 
 ## Error taxonomy
 
-**Grouped human review received: 45/45 groups**, covering 120/120 original entries. Each group includes a submitted decision and the reviewer’s notes. See the [completed grouped worksheet](docs/LAB6_SHORT_REVIEW.md). Grouped decisions are recorded separately from per-entry confirmations. The repository owner reports that the instructor accepted this grouped review.
+**Grouped human review received: 45/45 groups**, covering 120/120 original entries. Each group includes a submitted decision and the reviewer’s notes. See the [completed grouped worksheet](docs/LAB6_SHORT_REVIEW.md). Grouped decisions are recorded separately from per-entry confirmations. The grouped review is retained as a compact summary; the individual review is counted separately.
 
 ![Grouped review results](artifacts/lab6/grouped_review_histogram.png)
 
-Individual-entry confirmations (separate from grouped decisions): **0/120**. The [individual worksheet](docs/LAB6_ERROR_REVIEW.md) and `artifacts/lab6/human_error_review.json` retain per-entry decisions separately. The sample uses the course-provided predictions, which contain 300 errors; our saved topic validation predictions contain no errors. These two sources are not interchangeable.
+Individual-entry confirmations (separate from grouped decisions): **120/120**. The [individual worksheet](docs/LAB6_ERROR_REVIEW.md) and `artifacts/lab6/human_error_review.json` retain per-entry decisions separately. The sample uses the course-provided predictions, which contain 300 errors; our saved topic validation predictions contain no errors. These two sources are not interchangeable.
 
-Individual-entry category counts: {}. Grouped decisions are reported above.
+Individual-entry category counts: {"Topic confusion: parks \u2192 roads": 120}. Grouped decisions are reported above.
 
 Draft annotation coverage: **120/120** entries. The sample contains three scenarios: playground maintenance (42), park accessibility (46), and park irrigation (32). All have the observed confusion parks → roads. These scenarios do not establish a model-internal cause.
 
 See the [review summary](docs/LAB6_QUICK_REVIEW.md) and [review method and provenance](docs/LAB6_REVIEW_METHOD.md). Draft annotations and submitted decisions remain separate records.
+
+![Individual-review histogram](artifacts/lab6/error_taxonomy.png)
 
 Using gold labels only as an accounting exercise, correcting the 120 sampled predictions would add 8.42 macro-F1 points; correcting all 300 supplied errors would add 16.67. These are correction ceilings, not trained-model gains. Source predictions remain unchanged.
 
@@ -75,14 +77,14 @@ Using gold labels only as an accounting exercise, correcting the 120 sampled pre
 
 Reranked recall@10=0.0231; MRR@10=0.0265. Empty-correct=20/20 on the calibration queries, which contain only one unique no-answer text. This is not independent rejection accuracy. See `artifacts/lab5/retrieval.json`.
 
-## Instructor-approved completion decision
+## Alternative evidence pending instructor decision
 
-Labs 3–5 are recorded as **satisfied by instructor-approved alternative**. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as the accepted evidence. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).
+Labs 3–5 have documented alternative evidence, but are **pending instructor decision**. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as proposals. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).
 
 ## Known limitations
 
 - All source data are synthetic; repeated templates limit generalisation claims.
 - No Gulf validation rows, no Arabic topic test rows, and only four NER validation template groups.
 - Exact-ID retrieval labels are sparse among 20,000 repeated cases; original labels remain unchanged.
-- Human review is satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries). Directional probes pass through ties on a weak separate sentiment baseline; they do not establish negation understanding.
+- Human review is complete (120/120, confirmed by the reviewer). Directional probes pass through ties on a weak separate sentiment baseline; they do not establish negation understanding.
 - Confidence intervals describe this dataset and resampling protocol; they do not repair missing dialect or entity coverage.

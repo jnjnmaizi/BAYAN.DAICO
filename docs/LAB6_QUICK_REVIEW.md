@@ -1,6 +1,6 @@
 # Lab 6 — Error analysis summary
 
-**Review status:** 45 grouped assessments completed, covering all 120 sampled entries. Each assessment includes a decision and Arabic reviewer notes. The repository owner reports instructor acceptance of the grouped method.
+**Review status:** 120/120 individual entries reviewed, with the 45 grouped assessments retained as a compact summary. Each assessment includes a decision and Arabic reviewer notes.
 
 [Completed worksheet](LAB6_SHORT_REVIEW.md) · [Review method and provenance](LAB6_REVIEW_METHOD.md) · [Evaluation report](../EVALUATION_REPORT.md)
 
@@ -28,4 +28,4 @@ Expected gains from these interventions remain unmeasured. Replacing the 120 sam
 
 ## Records
 
-The [grouped review record](../artifacts/lab6/human_group_review.json) preserves the submitted decisions, notes, group membership and reported acceptance. Individual-entry confirmations remain separate. Original texts, labels and predictions are unchanged.
+The [individual review record](../artifacts/lab6/human_error_review.json) preserves the 120 confirmations. The [grouped review record](../artifacts/lab6/human_group_review.json) preserves repeated-pattern summaries. Original texts, labels and predictions are unchanged.

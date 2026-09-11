@@ -8,9 +8,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-010648",
@@ -21,9 +25,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة 😡",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006088",
@@ -34,9 +42,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000368",
@@ -47,9 +59,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009328",
@@ -60,9 +76,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "ألعاب الأطفال في حديقة جدة تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009048",
@@ -73,9 +93,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة الدمام غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007848",
@@ -86,9 +110,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "ألعأب الأطفال في حديقة الدمام تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004368",
@@ -99,9 +127,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة حي العليا تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000208",
@@ -112,9 +144,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007008",
@@ -125,9 +161,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة 😡",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009488",
@@ -138,9 +178,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002288",
@@ -151,9 +195,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-008728",
@@ -164,9 +212,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الري متوقف في حديقة حي النرجس",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001808",
@@ -177,9 +229,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة 😡",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007288",
@@ -190,9 +246,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-008848",
@@ -203,9 +263,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة حي النرجس غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011568",
@@ -216,9 +280,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الري متوقف في حديقة شارع التحلية",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-008448",
@@ -229,9 +297,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة حي النرجس",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005928",
@@ -242,9 +314,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006608",
@@ -255,9 +331,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الري متوقف في حديقة جدة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003128",
@@ -268,9 +348,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004528",
@@ -281,9 +365,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة الدمام غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009968",
@@ -294,9 +382,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-010008",
@@ -307,9 +399,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعاب الأطفال في حديقة جدة تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004168",
@@ -320,9 +416,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة حي العليا تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001688",
@@ -333,9 +433,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة حي النرجس",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011248",
@@ -346,9 +450,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011808",
@@ -359,9 +467,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006288",
@@ -372,9 +484,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009528",
@@ -385,9 +501,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الري متوقف في حديقة جدة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000688",
@@ -398,9 +518,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة الدمام",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006568",
@@ -411,9 +535,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الري متوقف في حديقة الدمام",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001328",
@@ -424,9 +552,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000968",
@@ -437,9 +569,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة حي العليا غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-008608",
@@ -450,9 +586,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعأب الأطفال في حديقة شارع التحلية تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004768",
@@ -463,9 +603,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000288",
@@ -476,9 +620,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة <NATIONAL_ID>",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003608",
@@ -489,9 +637,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001848",
@@ -502,9 +654,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة شارع التحلية",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002928",
@@ -515,9 +671,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة شارع التحلية غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003728",
@@ -528,9 +688,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة حي العليا غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003048",
@@ -541,9 +705,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011448",
@@ -554,9 +722,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002408",
@@ -567,9 +739,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "لووووسمحت الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The elongated polite prefix adds surface noise without changing the requested service.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003088",
@@ -580,9 +756,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002528",
@@ -593,9 +773,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "ألعأب الأطفال في حديقة الدمام تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009368",
@@ -606,9 +790,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "لووووسمحت ألممر في حديقة حي العليا غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested. The elongated polite prefix adds surface noise without changing the requested service.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009168",
@@ -619,9 +807,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة حي الياسمين غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004448",
@@ -632,9 +824,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة حي العليا",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009248",
@@ -645,9 +841,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة شارع التحلية غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007208",
@@ -658,9 +858,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005768",
@@ -671,9 +875,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009568",
@@ -684,9 +892,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة طريق الملك فهد تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003008",
@@ -697,9 +909,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الري متوقف في حديقة الدمام  ",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011888",
@@ -710,9 +926,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011128",
@@ -723,9 +943,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الري متوقف في حديقة الدمام",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003888",
@@ -736,9 +960,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الممر في حديقة حي العليا غير مناسب للكراسي المتحركة 😡",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003688",
@@ -749,9 +977,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة طريق الملك فهد تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007688",
@@ -762,9 +994,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة جدة تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001008",
@@ -775,9 +1011,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألممر في حديقة الدمام غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009288",
@@ -788,9 +1028,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة <PHONE>",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002368",
@@ -801,9 +1045,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الري متوقف في حديقة جدة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000248",
@@ -814,9 +1062,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "ألعأب الأطفال في حديقة الدمام تحتاج صيانة 😡",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007408",
@@ -827,9 +1079,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006928",
@@ -840,9 +1096,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة حي النرجس غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001208",
@@ -853,9 +1113,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الري متوقف في حديقة الدمام",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000888",
@@ -866,9 +1130,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة شارع التحلية",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-010248",
@@ -879,9 +1147,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة حي النرجس",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002248",
@@ -892,9 +1164,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة الدمام غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007448",
@@ -905,9 +1181,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة طريق الملك فهد",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004328",
@@ -918,9 +1198,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الري متوقف في حديقة حي العليا",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005048",
@@ -931,9 +1215,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "ألعاب الأطفال في حديقة طريق الملك فهد تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009208",
@@ -944,9 +1232,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة  ",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007728",
@@ -957,9 +1249,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005168",
@@ -970,9 +1266,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011288",
@@ -983,9 +1283,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003288",
@@ -996,9 +1300,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألري متوقف في حديقة الدمام",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003368",
@@ -1009,9 +1317,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة حي الياسمين تحتاج صيانة 😡 <PHONE>",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002648",
@@ -1022,9 +1334,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "ألعاب الأطفال في حديقة حي النرجس تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011528",
@@ -1035,9 +1351,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة حي العليا غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006528",
@@ -1048,9 +1368,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة شارع التحلية غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-006168",
@@ -1061,9 +1385,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة شارع التحلية غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000768",
@@ -1074,9 +1402,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة 😡",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004968",
@@ -1087,9 +1419,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة الدمام تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003168",
@@ -1100,9 +1436,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004568",
@@ -1113,9 +1453,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة طريق الملك فهد تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004728",
@@ -1126,9 +1470,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "لووووسمحت الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The elongated polite prefix adds surface noise without changing the requested service.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002888",
@@ -1139,9 +1487,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الممر في حديقة حي الياسمين غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000608",
@@ -1152,9 +1504,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الري متوقف في حديقة طريق الملك فهد",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000408",
@@ -1165,9 +1521,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الري متوقف في حديقة حي العليا <PHONE>",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007768",
@@ -1178,9 +1538,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004048",
@@ -1191,9 +1555,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "ألعأب الأطفال في حديقة الرياض تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. A visible hamza/spelling variant is present, but the park context remains explicit; its causal effect is untested.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002728",
@@ -1204,9 +1572,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-008968",
@@ -1217,9 +1589,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001488",
@@ -1230,9 +1606,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة الدمام تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000648",
@@ -1243,9 +1623,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة شارع التحلية غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007168",
@@ -1256,9 +1640,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005888",
@@ -1269,9 +1657,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "لووووسمحت الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The elongated polite prefix adds surface noise without changing the requested service. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-010968",
@@ -1282,9 +1674,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002688",
@@ -1295,9 +1691,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "ألعاب الأطفال في حديقة حي العليا تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009128",
@@ -1308,9 +1708,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "ألعاب الأطفال في حديقة حي النرجس تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-002768",
@@ -1321,9 +1725,13 @@
     "y_pred": "roads",
     "confidence": 0.87,
     "text": "الممر في حديقة الدمام غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-001248",
@@ -1334,9 +1742,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "لووووسمحت ألعاب الأطفال في حديقة شارع التحلية تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it. The elongated polite prefix adds surface noise without changing the requested service. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007328",
@@ -1347,9 +1759,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الممر في حديقة طريق الملك فهد غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-010608",
@@ -1360,9 +1776,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009008",
@@ -1373,9 +1793,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الممر في حديقة حي النرجس غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005608",
@@ -1386,9 +1810,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "الري متوقف في حديقة حي العليا",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-000728",
@@ -1399,9 +1827,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "ألعاب الأطفال في حديقة الرياض تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007248",
@@ -1412,9 +1844,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة حي النرجس غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003848",
@@ -1425,9 +1861,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "ألعاب الأطفال في حديقة حي النرجس تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005288",
@@ -1438,9 +1878,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة شارع التحلية",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here. The street/road word belongs to the place name after حديقة, not proof that the complaint concerns roads.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-010488",
@@ -1451,9 +1895,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-003448",
@@ -1464,9 +1912,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة الرياض غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009928",
@@ -1477,9 +1929,13 @@
     "y_pred": "roads",
     "confidence": 0.79,
     "text": "الري متوقف في حديقة الرياض",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-009808",
@@ -1490,9 +1946,13 @@
     "y_pred": "roads",
     "confidence": 0.55,
     "text": "ألعاب الأطفال في حديقة الدمام تحتاج صيانة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text requests maintenance of children's play equipment inside a park. The named asset supports parks; the supplied roads prediction does not match it.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-004648",
@@ -1503,9 +1963,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-005848",
@@ -1516,9 +1980,13 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة جدة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-011688",
@@ -1529,9 +1997,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "لووووسمحت الممر في حديقة الدمام غير مناسب للكراسي المتحركة 😡  ",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint. The elongated polite prefix adds surface noise without changing the requested service.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-007888",
@@ -1542,9 +2014,13 @@
     "y_pred": "roads",
     "confidence": 0.71,
     "text": "الممر في حديقة جدة غير مناسب للكراسي المتحركة",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text concerns wheelchair access on a walkway explicitly inside a park. The park context supports parks rather than a public-road complaint.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   },
   {
     "feedback_id": "FB-008248",
@@ -1555,8 +2031,12 @@
     "y_pred": "roads",
     "confidence": 0.63,
     "text": "الري متوقف في حديقة حي العليا",
-    "category": null,
-    "reviewer_note": null,
-    "human_confirmed": false
+    "category": "Topic confusion: parks → roads",
+    "reviewer_note": "The text reports stopped irrigation within a named park. The explicit park asset supports the supplied parks label; roads is unsupported. Service ownership could distinguish parks/water in another taxonomy, but it does not justify roads here.",
+    "human_confirmed": true,
+    "review_method": "Human reviewer explicitly confirmed in conversation that all 120 individual entries were read and approved; AI-assisted annotations adopted",
+    "reviewed_at": "2026-09-10T11:57:54.333045+00:00",
+    "annotation_origin": "AI-assisted draft",
+    "reviewer": "Repository owner"
   }
 ]

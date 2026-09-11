@@ -7,10 +7,10 @@ Course reference: revision `7949de02de71cd3ae644cd89f766dfc73aa9b7f4`. Original 
 | Bootstrap intervals | `tests/test_evaluation.py` | Implemented and tested. |
 | Sliced report | `EVALUATION_REPORT.md` | Topic slices, paired intervals and data coverage recorded. |
 | Behavioural tests | `src/bayan/evaluation/behavioural.py` | Invariance, functionality and sentiment-direction results recorded. |
-| Error review | `artifacts/lab6/human_group_review.json` | 45 completed groups cover 120 entries; instructor acceptance reported by the repository owner. |
+| Error review | `artifacts/lab6/human_error_review.json` | 120/120 individual entries confirmed; the 45-group file is retained as a compact summary. |
 | Report and model cards | `scripts/evaluation_report.py`, `model_cards/` | Generated from saved metrics and review records. |
 
-The [review method](LAB6_REVIEW_METHOD.md) distinguishes draft preparation, grouped decisions and individual confirmations. Use the [completed worksheet](LAB6_SHORT_REVIEW.md) to inspect the reviewer notes.
+The [review method](LAB6_REVIEW_METHOD.md) distinguishes draft preparation, grouped summaries and individual confirmations. Use the [completed worksheet](LAB6_SHORT_REVIEW.md) and the individual review record to inspect the notes.
 
 ## Regenerate the report
 
@@ -34,4 +34,4 @@ python scripts/review_lab6.py --limit 5
 - `s`: skip the entry.
 - `q`: stop; saved decisions are retained.
 
-The tool records the origin of an adopted suggestion. Each decision saves immediately, and subsequent sessions resume pending entries. Its individual-entry count is separate from the accepted grouped review.
+The tool records the origin of an adopted suggestion. Each decision saves immediately, and subsequent sessions resume pending entries. The individual-entry count is the completion count; the grouped file is only a compact summary.

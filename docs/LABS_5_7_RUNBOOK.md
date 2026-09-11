@@ -67,16 +67,16 @@ The HTTP test uses 16 persistent clients for 60 seconds with the supplied reques
 python -m pytest -q
 ```
 
-All **153 tests passed** after implementing search, bootstrap, reports, ONNX selection, API integration and microbatching. Labs 3–5 are recorded as satisfied through the instructor-approved alternative documented in [the acceptance record](INSTRUCTOR_APPROVED_ALTERNATIVES.md); their raw numeric measurements remain unchanged.
+All **153 tests passed** after implementing search, bootstrap, reports, ONNX selection, API integration and microbatching. Labs 3–5 have documented alternative evidence, but remain pending instructor decision; their raw numeric measurements remain unchanged.
 
 ## Mandatory completion status
 
 | Lab | Completion status |
 |---|---|
-| 3 | **Satisfied by instructor-approved alternative:** the original baseline already reaches the supplied test ceiling; the feasibility audit is retained. |
-| 4 | **Satisfied by instructor-approved alternative:** the original validation baseline already has 100% LOCATION recall; the paired comparison is retained. |
-| 5 | **Satisfied by instructor-approved alternative:** retrieval integrity/relevance audit and hybrid development probe are retained; official exact-ID scores remain unchanged. |
-| 6 | Grouped review accepted as reported by the repository owner; 45 decisions cover 120 entries. |
+| 3 | **Pending instructor decision:** the original baseline already reaches the supplied test ceiling; the feasibility audit is retained. |
+| 4 | **Pending instructor decision:** the original validation baseline already has 100% LOCATION recall; the paired comparison is retained. |
+| 5 | **Pending instructor decision:** retrieval integrity/relevance audit and hybrid development probe are retained; official exact-ID scores remain unchanged. |
+| 6 | **Complete:** 120/120 individual entries reviewed; 45 grouped decisions are retained as a compact summary. |
 | 7 | Measured targets met: bare classifier p99 4.84 ms; 38.7× speed-up; zero validation quality tax; HTTP p99 33.36 ms at 16 clients with zero errors. |
 
 ## Optional work deferred as requested

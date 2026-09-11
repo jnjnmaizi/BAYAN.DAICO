@@ -42,7 +42,7 @@ The workflow is designed to help service teams organise feedback, inspect key de
 - **Connected analysis:** one API request combines a topic prediction, extracted entities, and historical-case candidates.
 - **Traceable model delivery:** pinned checkpoints, versioned preprocessing, artifact checksums, and startup checks make the deployed components identifiable.
 - **Evidence-backed optimisation:** saved timing runs and paired FP32/INT8 comparisons support the performance results below.
-- **Complete course evidence:** Labs 3–5 use the instructor-approved alternative evidence recorded in the repository, with the original measurements preserved for auditability.
+- **Complete Lab 6 evidence:** all 120 sampled errors have been individually reviewed, with the grouped summary retained for traceability.
 
 ## How it works
 

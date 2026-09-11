@@ -2,7 +2,7 @@
 
 ## Completion status
 
-The repository owner reports that the instructor accepted the documented alternative evidence for Labs 3–5. Their completion status is therefore **satisfied by instructor-approved alternative**. The original numeric targets, source data, labels, and measured artifacts remain unchanged. See the [acceptance record](../artifacts/instructor_approved_alternatives.json).
+Alternative evidence for Labs 3–5 is documented, but the instructor has not approved it. Their completion status remains **pending instructor decision**. The original numeric targets, source data, labels, and measured artifacts remain unchanged. See the [decision record](../artifacts/instructor_approved_alternatives.json).
 
 ## Lab 3: saved evaluation rechecked
 
@@ -47,7 +47,7 @@ The hybrid approach recovers the wheelchair-access example: the top results are 
 
 **Remaining failure:** “The water supply to our home has stopped.” still retrieves water-service login failures. Such a result matches a service name but misses the requested physical service. A more representative judged development set is needed before selecting a final method.
 
-This is not recall@10, MRR@10, an independent held-out test, or proof of full relevance. Original course scores remain recall@10 0.023077 and MRR@10 0.026484, below their numeric targets. Synthetic duplication and sparse exact-ID labels remain a separate evaluation issue. Lab 5 is closed through the instructor-approved alternative; the probe is not relabelled as the official exact-ID score.
+This is not recall@10, MRR@10, an independent held-out test, or proof of full relevance. Original course scores remain recall@10 0.023077 and MRR@10 0.026484, below their numeric targets. Synthetic duplication and sparse exact-ID labels remain a separate evaluation issue. Lab 5 remains pending instructor decision; the probe is not relabelled as the official exact-ID score.
 
 ### Files and reproduction
 

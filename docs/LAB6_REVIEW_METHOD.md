@@ -7,9 +7,9 @@ The review sample contains 120 errors from `data/eval/validation_predictions.csv
 - Initial categories and explanations were AI-assisted drafts, recorded in `artifacts/lab6/assistant_error_review.json`. Their provenance fields remain unchanged.
 - Jana Alhumaizi submitted decisions and Arabic notes for all 45 groups. Each submitted text, label pair and ID list was checked against the original worksheet.
 - All 45 submitted decisions are Agree. They cover all 120 sampled entries through the listed group memberships.
-- The repository owner subsequently reported instructor acceptance of this grouped method. The repository does not contain independent confirmation from the instructor.
+- The grouped record is retained as a compact view of repeated text patterns. It is not being used as a substitute for the individual review.
 
-This records a completed grouped human review. It does not assert 120 separate per-entry reviews or independent human authorship of the initial drafts. The individual confirmation file remains separate from the grouped review record.
+The individual review record now contains explicit confirmation for all 120 entries. The initial explanations were AI-assisted drafts, and the final review status is based on the repository owner’s completed individual review.
 
 ## Evidence
 
@@ -19,4 +19,4 @@ This records a completed grouped human review. It does not assert 120 separate p
 - [Initial annotation record](../artifacts/lab6/assistant_error_review.json)
 - [Individual-entry review state](../artifacts/lab6/human_error_review.json)
 
-Acceptance concerns the Lab 6 grouped review separately. Labs 3–5 use the instructor-approved alternative recorded in [the completion decision](INSTRUCTOR_APPROVED_ALTERNATIVES.md), while retaining their measured results and original completion criteria. No source labels, predictions or original course requirements were changed.
+Lab 6 is complete through the 120-entry individual review. Labs 3–5 remain separate and are not treated as instructor-approved alternatives after the correction recorded by the repository owner. No source labels, predictions or original course requirements were changed.

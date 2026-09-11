@@ -97,7 +97,7 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 
 ## Lab 5 — Search
 
-**Completion decision:** Labs 3–5 are recorded as **satisfied by instructor-approved alternative**, based on the feasibility, paired-comparison, and retrieval-audit evidence linked below. The official numeric results in this section are preserved and are not rewritten as target scores.
+**Completion decision:** Labs 3–5 have documented alternative evidence, but remain **pending instructor decision**. The official numeric results in this section are preserved and are not rewritten as target scores.
 
 | Configuration | recall@10 | MRR@10 | p50 stage latency |
 |---|---:|---:|---:|
@@ -106,7 +106,7 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 | unnormalized-vector ablation | 0.015385 | 0.008034 | not separately benchmarked |
 
 - Full 20,000-case corpus; 130 answerable labelled queries, 50 candidates, top 10. MPS inference; encoder and reranker revisions pinned in the manifest. Original exact-ID labels remain unchanged.
-- Reranking MRR lift: **+0.023919**. The official recall/MRR values remain below the numeric targets; the completion decision uses the instructor-approved alternative. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
+- Reranking MRR lift: **+0.023919**. The official recall/MRR values remain below the numeric targets; the proposed alternative is pending instructor decision. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
 - Within-query language comparison: same-language relevant-ID recall@10 **0.046154**, cross-language **0.000000**; same-minus-cross MRR gap **0.026484**. All queries have mixed-language relevance sets.
 - Empty-correct: **20/20**, answerable retained **130/130**, threshold **0.0065950584**. This is calibration on the supplied set, whose 20 no-answer rows contain only one unique text; no independent threshold test is available.
 - The expected unnormalized-vector metric collapse was **not observed**. Raw vectors scored higher than normalized stage 1 under sparse exact-ID labels. Production still enforces normalized vectors and validates checksums.
@@ -124,7 +124,7 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 - Paired topic-minus-DA difference on the same 1,200 Arabic rows: **0.0000 [0.0000, 0.0000]**. No Gulf comparison can be established.
 - Separate sentiment baseline: **200/200** directional checks, all **200 ties**; validation macro-F1 **0.3333**. This does not demonstrate negation sensitivity and is not a topic-model score.
 - Error analysis: **120 sampled entries**, comprising 45 distinct text/label/prediction groups. Scenarios: playground maintenance **42**, park accessibility **46**, irrigation **32**. All observed errors are parks → roads.
-- Grouped review: **45/45 decisions with reviewer notes**, covering all 120 entries. The repository owner reports instructor acceptance. [Completed worksheet](docs/LAB6_SHORT_REVIEW.md), [review method](docs/LAB6_REVIEW_METHOD.md), and [structured record](artifacts/lab6/human_group_review.json). Individual-entry confirmations remain separate.
+- Human review: **120/120 individual entries confirmed**, with 45 grouped decisions and reviewer notes retained as a compact summary. [Completed worksheet](docs/LAB6_SHORT_REVIEW.md), [individual record](artifacts/lab6/human_error_review.json), and [review method](docs/LAB6_REVIEW_METHOD.md).
 - Three model cards created. Full results and limitations: [evaluation report](EVALUATION_REPORT.md), [review worksheet](docs/LAB6_ERROR_REVIEW.md), [model cards](model_cards).
 
 ## Lab 7 — Optimisation ladder

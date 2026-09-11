@@ -2,7 +2,7 @@
 
 **Grouped review: 45/45 completed, covering all 120 source entries.** All 45 decisions are Agree and include the reviewer’s Arabic notes. Text, expected labels, predicted labels and source IDs were checked against the original worksheet.
 
-This records grouped review, not 120 separate per-entry confirmations. Individual confirmation fields remain unchanged. The repository owner subsequently reported that the instructor accepted this grouped review as satisfying the review requirement.
+The individual review record contains confirmation for all 120 entries. This grouped worksheet is retained as a compact summary of repeated text/label/prediction combinations; it is not being used as a substitute for the individual review.
 
 The first 20 groups highlight context or taxonomy questions. No numerical confidence filter was used and no source entries were removed. The original submitted file is preserved in [LAB6_SHORT_REVIEW_SUBMITTED.md](LAB6_SHORT_REVIEW_SUBMITTED.md).
 
