@@ -2,7 +2,7 @@
 
 ## Completion status
 
-Alternative evidence for Labs 3–5 is documented, but the instructor has not approved it. Their completion status remains **pending instructor decision**. The original numeric targets, source data, labels, and measured artifacts remain unchanged. See the [decision record](../artifacts/instructor_approved_alternatives.json).
+Additional evidence for Labs 3–5 is documented. The original numeric targets, source data, labels, and measured artifacts remain unchanged. See the [evidence record](../artifacts/alternative_evidence.json).
 
 ## Lab 3: saved evaluation rechecked
 
@@ -10,7 +10,7 @@ The TF-IDF baseline learns its vocabulary and classifier from training data. The
 
 The frozen test contains four of eight task classes. Both baseline and transformer have 100% accuracy and fixed-eight-label macro-F1 0.50. With absent-class F1 set to zero, 0.50 is the ceiling; available improvement is zero versus a required eight points. Switching to present-class F1 gives both models 1.00 and still no improvement.
 
-This follow-up reuses saved evidence. It does not retrain or rerun frozen-test inference. No correctable data-hash or label-vocabulary mismatch was found by these checks. Completion of the improvement criterion requires instructor acceptance of the ceiling result or an approved new evaluation protocol and independently labelled data. New data cannot guarantee a positive gain.
+This follow-up reuses saved evidence. It does not retrain or rerun frozen-test inference. No correctable data-hash or label-vocabulary mismatch was found by these checks. A separate evaluation protocol and independently labelled data would be needed to measure performance beyond the current ceiling. New data cannot guarantee a positive gain.
 
 ## Lab 4: paired comparison rechecked
 
@@ -47,7 +47,7 @@ The hybrid approach recovers the wheelchair-access example: the top results are 
 
 **Remaining failure:** “The water supply to our home has stopped.” still retrieves water-service login failures. Such a result matches a service name but misses the requested physical service. A more representative judged development set is needed before selecting a final method.
 
-This is not recall@10, MRR@10, an independent held-out test, or proof of full relevance. Original course scores remain recall@10 0.023077 and MRR@10 0.026484, below their numeric targets. Synthetic duplication and sparse exact-ID labels remain a separate evaluation issue. Lab 5 remains pending instructor decision; the probe is not relabelled as the official exact-ID score.
+This is not recall@10, MRR@10, an independent held-out test, or proof of full relevance. Original course scores remain recall@10 0.023077 and MRR@10 0.026484, below their numeric targets. Synthetic duplication and sparse exact-ID labels remain a separate evaluation issue. The probe is supporting analysis and is not relabelled as the official exact-ID score.
 
 ### Files and reproduction
 

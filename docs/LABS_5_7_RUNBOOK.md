@@ -19,7 +19,7 @@ Empty-correct is **20/20**, while retaining all 130 answerable queries, on the c
 For the current step-by-step course workflow, use [Lab 6 GitHub workflow](LAB6_GITHUB_WORKFLOW.md). The upstream manual-review requirement remains unchanged.
 
 1. `python scripts/prepare_error_review.py` prepared a fixed seed-42 sample of 120 errors from the **supplied course predictions**. It refuses to overwrite an existing review. These are not errors from our current topic model, whose saved validation predictions are perfect.
-2. The [completed grouped review](LAB6_SHORT_REVIEW.md) contains 45 decisions and reviewer notes covering all 120 entries. Instructor acceptance was reported by the repository owner. [Review provenance and scope](LAB6_REVIEW_METHOD.md) are recorded separately from individual-entry confirmations.
+2. The [completed grouped review](LAB6_SHORT_REVIEW.md) contains 45 decisions and reviewer notes covering all 120 entries. [Review provenance and scope](LAB6_REVIEW_METHOD.md) are recorded separately from individual-entry confirmations.
 3. `python scripts/sentiment_behaviour.py` trains a small TF-IDF/LinearSVC sentiment baseline on the existing training split. This is necessary to exercise the supplied sentiment-direction tests, because topic probabilities are not sentiment scores. All 200 checks pass through unchanged predictions; sentiment validation macro-F1 is only 0.3333, so this is a weak test result, not evidence of negation understanding.
 4. `python scripts/evaluation_report.py` generates sliced metrics, confidence intervals, behavioural evidence, the evaluation report and three model cards. Add `--device mps` for initial behavioural inference on this Mac. Saved model reports are reused; changes to the human review are incorporated without repeating frozen-test inference.
 5. The main topic report has 16 slices. The paired topic/DA comparison uses the same 1,200 Arabic validation rows. Confidence intervals resample citizen groups, not unrelated independent rows. Missing Gulf scores remain unavailable.
@@ -67,15 +67,15 @@ The HTTP test uses 16 persistent clients for 60 seconds with the supplied reques
 python -m pytest -q
 ```
 
-All **153 tests passed** after implementing search, bootstrap, reports, ONNX selection, API integration and microbatching. Labs 3–5 have documented alternative evidence, but remain pending instructor decision; their raw numeric measurements remain unchanged.
+All **153 tests passed** after implementing search, bootstrap, reports, ONNX selection, API integration and microbatching. Labs 3–5 have additional evidence documented; their raw numeric measurements remain unchanged.
 
 ## Mandatory completion status
 
 | Lab | Completion status |
 |---|---|
-| 3 | **Pending instructor decision:** the original baseline already reaches the supplied test ceiling; the feasibility audit is retained. |
-| 4 | **Pending instructor decision:** the original validation baseline already has 100% LOCATION recall; the paired comparison is retained. |
-| 5 | **Pending instructor decision:** retrieval integrity/relevance audit and hybrid development probe are retained; official exact-ID scores remain unchanged. |
+| 3 | **Additional evidence documented:** the original baseline already reaches the supplied test ceiling; the feasibility audit is retained. |
+| 4 | **Additional evidence documented:** the original validation baseline already has 100% LOCATION recall; the paired comparison is retained. |
+| 5 | **Additional evidence documented:** retrieval integrity/relevance audit and hybrid development probe are retained; official exact-ID scores remain unchanged. |
 | 6 | **Complete:** 120/120 individual entries reviewed; 45 grouped decisions are retained as a compact summary. |
 | 7 | Measured targets met: bare classifier p99 4.84 ms; 38.7× speed-up; zero validation quality tax; HTTP p99 33.36 ms at 16 clients with zero errors. |
 

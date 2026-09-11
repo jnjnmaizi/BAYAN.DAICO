@@ -53,7 +53,7 @@ Measured on 2026-09-08; seed 42, Python 3.12.7, PyTorch 2.14.0, Transformers 4.4
 
 **Topic metric coverage:** the frozen test contains only four of the eight classes: digital_services, lighting, parks and water, 300 rows each. Both models have **test accuracy 1.0000**. The predeclared macro-F1 averages all eight training labels with `zero_division=0`, so absent classes contribute zero and the maximum achievable score on this test is **0.5000**. Measured transformer delta: **0.00 percentage points**; the course's +8-point target is not met. Do not interpret 0.5000 here as 50% incorrect predictions or infer performance on the absent classes.
 
-**Target feasibility audit (2026-09-09):** the saved baseline already reaches the 0.5000 ceiling, so the maximum possible improvement is **0.00 points**. This was computed without new training or test inference, with data/report hashes checked. See [machine-readable audit](artifacts/lab3/topic_target_audit.json), `python scripts/topic_target_audit.py`, and [resolution steps / instructor draft](docs/LAB3_STATUS.md).
+**Target feasibility audit (2026-09-09):** the saved baseline already reaches the 0.5000 ceiling, so the maximum possible improvement is **0.00 points**. This was computed without new training or test inference, with data/report hashes checked. See [machine-readable audit](artifacts/lab3/topic_target_audit.json), `python scripts/topic_target_audit.py`, and [resolution steps](docs/LAB3_STATUS.md).
 
 - Topic data limitation: 1,762/2,400 validation texts also occur in training after preprocessing. The synthetic templates make high scores easy; this is not evidence of generalisation to new complaint formulations.
 - NER policy: group by full sentence template with reference values excluded from the grouping key. Train 2,674 rows/12 templates, validation 935/4, test 391/2; zero template overlap. Multiword source cells are expanded with BIO continuation tags; special and non-first subword pieces are ignored in loss/evaluation.
@@ -97,7 +97,7 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 
 ## Lab 5 — Search
 
-**Completion decision:** Labs 3–5 have documented alternative evidence, but remain **pending instructor decision**. The official numeric results in this section are preserved and are not rewritten as target scores.
+**Completion decision:** Labs 3–5 have additional evidence documented. The official numeric results in this section are preserved and are not rewritten as target scores.
 
 | Configuration | recall@10 | MRR@10 | p50 stage latency |
 |---|---:|---:|---:|
@@ -106,12 +106,12 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 | unnormalized-vector ablation | 0.015385 | 0.008034 | not separately benchmarked |
 
 - Full 20,000-case corpus; 130 answerable labelled queries, 50 candidates, top 10. MPS inference; encoder and reranker revisions pinned in the manifest. Original exact-ID labels remain unchanged.
-- Reranking MRR lift: **+0.023919**. The official recall/MRR values remain below the numeric targets; the proposed alternative is pending instructor decision. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
+- Reranking MRR lift: **+0.023919**. The official recall/MRR values remain below the numeric targets; the additional evidence is reported separately. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
 - Within-query language comparison: same-language relevant-ID recall@10 **0.046154**, cross-language **0.000000**; same-minus-cross MRR gap **0.026484**. All queries have mixed-language relevance sets.
 - Empty-correct: **20/20**, answerable retained **130/130**, threshold **0.0065950584**. This is calibration on the supplied set, whose 20 no-answer rows contain only one unique text; no independent threshold test is available.
 - The expected unnormalized-vector metric collapse was **not observed**. Raw vectors scored higher than normalized stage 1 under sparse exact-ID labels. Production still enforces normalized vectors and validates checksums.
 - Evidence: [retrieval](artifacts/lab5/retrieval.json), [data audit](artifacts/lab5/data_audit.json), [manifest](artifacts/lab5/index_manifest.json).
-- Alternative evidence and decision record: [instructor-approved alternatives](docs/INSTRUCTOR_APPROVED_ALTERNATIVES.md), [acceptance JSON](artifacts/instructor_approved_alternatives.json).
+- Additional evidence and record: [alternative evidence](docs/ALTERNATIVE_EVIDENCE.md), [JSON record](artifacts/alternative_evidence.json).
 
 ## Lab 6 — Evaluation
 

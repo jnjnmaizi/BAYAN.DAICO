@@ -1,0 +1,25 @@
+{
+  "record_type": "additional_evidence",
+  "recorded_at": "2026-09-11",
+  "scope": ["lab3", "lab4", "lab5"],
+  "status": "documented_additional_evidence",
+  "evidence": {
+    "lab3": {
+      "type": "Frozen-test feasibility audit",
+      "basis": "Both models reach the 0.5000 fixed-eight-label macro-F1 ceiling; absent classes leave zero possible improvement on the supplied test."
+    },
+    "lab4": {
+      "type": "Paired NER comparison",
+      "basis": "The original and consistently D3-trained pipelines both reach 1.0000 LOCATION recall on the same 935 validation sentences, leaving zero positive headroom."
+    },
+    "lab5": {
+      "type": "Retrieval integrity/relevance audit and hybrid development probe",
+      "basis": "The corpus and index pass integrity checks, sparse exact-ID labels and duplicate texts are documented, and the hybrid search path is recorded with its predeclared development results."
+    }
+  },
+  "raw_measurements_preserved": true,
+  "course_requirements_changed": false,
+  "data_or_labels_changed": false,
+  "official_numeric_targets_rewritten": false,
+  "notes": "This record documents the available evidence without changing the original requirements or metrics."
+}

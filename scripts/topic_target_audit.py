@@ -59,7 +59,7 @@ def build_report(data_path, baseline_path, classifier_path):
         "classifier_accuracy": classifier["frozen_test"]["accuracy"],
         "observed_delta_points": 100 * (classifier["frozen_test"]["macro_f1"] - baseline["frozen_test"]["macro_f1"]),
         "new_training_or_test_inference": False,
-        "next_step": "Request a representative unseen evaluation set and a predeclared comparison protocol, or instructor acceptance of the measured zero delta. Do not weaken the baseline or tune on this test.",
+        "next_step": "Use a representative unseen evaluation set and a predeclared comparison protocol to measure performance beyond this ceiling. Do not weaken the baseline or tune on this test.",
     })
     return result
 

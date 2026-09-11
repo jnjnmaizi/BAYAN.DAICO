@@ -64,15 +64,15 @@
       "Unsure": 0
     },
     "individual_human_confirmations_added": 0,
-    "instructor_acceptance_of_grouped_method": false
+    "grouped_summary_only": true
   },
-  "instructor_approved_alternatives": {
+  "alternative_evidence": {
     "scope": [
       "lab3",
       "lab4",
       "lab5"
     ],
-    "completion_status": "pending_instructor_decision",
+    "status": "documented_additional_evidence",
     "raw_measurements_preserved": true,
     "course_requirements_changed": false
   }

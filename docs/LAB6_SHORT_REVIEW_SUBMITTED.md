@@ -1,6 +1,6 @@
 # Lab 6 — Short review worksheet (Filled)
 
-**Status: 0/120 human-confirmed.** Previous approval was withdrawn at the reviewer’s request.
+**Historical status: 0/120 human-confirmed.** This retained submission predates the completed individual review.
 
 The 120 sampled entries are grouped into **45 exact text/expected-label/prediction combinations**. Write your decision and notes once beside each group. All original IDs remain listed; no entries or labels have been removed. This worksheet reduces repeated writing, not the course requirement. Group decisions are not automatically propagated to human confirmations.
 

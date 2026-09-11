@@ -2,14 +2,14 @@
 
 ## Current completion decision
 
-Alternative evidence for Labs 3–5 is prepared, but the instructor has not approved it. Those labs remain **pending instructor decision**. The original requirements and numeric measurements below remain as an audit trail; they were not changed.
+Additional evidence for Labs 3–5 is prepared. The original requirements and numeric measurements below remain as an audit trail; they were not changed.
 
-See the [acceptance record](../artifacts/instructor_approved_alternatives.json) and [status explanation](INSTRUCTOR_APPROVED_ALTERNATIVES.md).
+See the [evidence record](../artifacts/alternative_evidence.json) and [status explanation](ALTERNATIVE_EVIDENCE.md).
 
 
 Prepared 2026-09-10. This is a supplementary plan, not a change to the course requirements or an assertion that unmet targets passed.
 
-## Decisions the instructor can make without debugging code
+## Project decisions that do not require debugging code
 
 The public course revision checked is `7949de02de71cd3ae644cd89f766dfc73aa9b7f4`.
 
@@ -19,7 +19,7 @@ The saved baseline and transformer both have 100% accuracy on the supplied 1,200
 
 Reproduce: `python scripts/topic_target_audit.py`.
 
-Proposed alternative: submit this documented ceiling result for instructor decision. A new independently labelled, unseen evaluation set remains a possible replacement protocol.
+Proposed alternative: retain this documented ceiling result and use a new independently labelled, unseen evaluation set as a possible replacement protocol.
 
 ### Lab 4: LOCATION recall already 100%
 
@@ -27,7 +27,7 @@ Original and consistently D3-trained NER both achieve 100% LOCATION recall on th
 
 Reproduce: `python scripts/compare_ner_d3.py`.
 
-Proposed alternative: submit the measured zero gain and retention of the original pipeline for instructor decision. An independently annotated NER set remains a possible replacement protocol. The degraded inference-only D3 experiment is not used as a manufactured gain.
+Proposed alternative: retain the measured zero gain and the original pipeline. An independently annotated NER set remains a possible replacement protocol. The degraded inference-only D3 experiment is not used as a manufactured gain.
 
 ### Lab 5: retrieval and relevance coverage both need attention
 
@@ -43,7 +43,7 @@ For Q-001, the top two reranked cases (CASE-002537 and CASE-008921) match the qu
 
 Technical next step: inspect candidate diversity and encoder/index correctness, then test any retrieval changes on a separate development set. A larger or more diverse candidate pool may help coverage but does not guarantee target scores. Do not use the evaluation's gold IDs to select or promote candidates.
 
-Proposed alternative: submit the retrieval integrity/relevance audit and the predeclared hybrid development probe for instructor decision. The original-score report is preserved. Independent held-out judgments remain a possible follow-up.
+Proposed alternative: retain the retrieval integrity/relevance audit and the predeclared hybrid development probe. The original-score report is preserved. Independent held-out judgments remain a possible follow-up.
 
 ### Lab 6: individual review complete
 
@@ -51,8 +51,8 @@ The reviewer completed and confirmed all 120 sampled entries. The 45 grouped dec
 
 Individual-entry confirmations remain separate from grouped decisions. The original texts, labels and predictions are unchanged.
 
-## Suggested message to the instructor
+## Suggested project note
 
-> We have reproduced the remaining issues and attached the evidence. For Labs 3 and 4, the original baselines already reach the current evaluation ceilings, leaving no possible positive gain on those sets. May we submit these documented ceiling results, or should we use a new independently labelled evaluation set under an agreed protocol? For Lab 5, please clarify the relevance definition: the current labels exclude exact-text matches that retrieval returns. We will continue investigating candidate retrieval. Lab 6 has been individually reviewed 120/120. We are keeping the original requirements, datasets and scores unchanged.
+> We reproduced the remaining issues and attached the evidence. Labs 3 and 4 reach the current evaluation ceilings, leaving no positive headroom on those sets. Lab 5 retains the original exact-ID scores alongside the retrieval audit and hybrid probe. Lab 6 has been individually reviewed 120/120. The original requirements, datasets and scores remain unchanged.
 
-The Lab 6 individual review is complete separately. Labs 3–5 remain pending instructor decision.
+The Lab 6 individual review is complete separately. Labs 3–5 retain their additional evidence and original measurements.

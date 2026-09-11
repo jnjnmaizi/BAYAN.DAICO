@@ -106,7 +106,7 @@ def main():
             {'priority':3,'fix':'Compare clean/noisy versions of park complaints while holding the correct label fixed.',
              'reason':'Hamza variants and elongated prefixes occur in the sample, but clean examples fail as well; normalize only after demonstrating a paired benefit.',
              'expected_delta':'Unknown; secondary spelling features are observations, not established causes.'}],
-        'acceptance_note':'A grouped assistant review reduces repetition, but instructor acceptance is needed if it is to replace the specified 120-row human review.'}
+        'acceptance_note':'A grouped assistant review reduces repetition; the specified 120-row human review remains the completion record.'}
     write_json(out/'assistant_review_summary.json',summary)
     import matplotlib
     matplotlib.use('Agg')
@@ -133,8 +133,7 @@ def main():
     lines+=['','## Quantifying possible correction without inventing results','',
         f"The supplied file's macro-F1 is {before:.4f}. An oracle replacing only the sampled 120 wrong predictions with their gold labels would add {summary['oracle_scenarios']['correct_sample_only']['macro_f1_gain_points']:.2f} macro-F1 points. Correcting all 300 supplied errors would add {summary['oracle_scenarios']['correct_all_supplied_errors']['macro_f1_gain_points']:.2f} points. These are ceilings from label accounting, not measured improvements from a model fix. Nothing was overwritten.",
         '', '## What remains for you','',
-        'For understanding, read the three rows above and the spelling caveat. If you want this grouped assistant review accepted instead of the course’s human review, ask the instructor to approve that substitution. Reading three summaries does not automatically certify 120 individual human reviews.',
-        '', 'You can send the instructor: “The supplied 120-error sample repeats three parks→roads scenarios. I have an explicitly labelled assistant review for every entry, a grouped summary, and a histogram. May I submit that with a representative human check instead of 120 separate handwritten annotations?”',
+        'For understanding, read the three rows above and the spelling caveat. Reading three summaries does not automatically certify 120 individual human reviews.',
         '', 'The original human review fields remain unchanged. No requirement, expected label or source prediction was edited.']
     # Draft regeneration must not replace a submitted review summary.
     if not (out/'human_group_review.json').exists():

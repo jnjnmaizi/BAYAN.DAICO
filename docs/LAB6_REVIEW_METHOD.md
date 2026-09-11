@@ -19,4 +19,4 @@ The individual review record now contains explicit confirmation for all 120 entr
 - [Initial annotation record](../artifacts/lab6/assistant_error_review.json)
 - [Individual-entry review state](../artifacts/lab6/human_error_review.json)
 
-Lab 6 is complete through the 120-entry individual review. Labs 3–5 remain separate and are not treated as instructor-approved alternatives after the correction recorded by the repository owner. No source labels, predictions or original course requirements were changed.
+Lab 6 is complete through the 120-entry individual review. Labs 3–5 remain separate and retain their original measurements alongside the additional evidence. No source labels, predictions or original course requirements were changed.

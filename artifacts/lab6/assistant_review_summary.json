@@ -67,5 +67,5 @@
       "expected_delta": "Unknown; secondary spelling features are observations, not established causes."
     }
   ],
-  "acceptance_note": "A grouped assistant review reduces repetition, but instructor acceptance is needed if it is to replace the specified 120-row human review."
+  "acceptance_note": "A grouped assistant review reduces repetition; the specified 120-row human review remains the completion record."
 }

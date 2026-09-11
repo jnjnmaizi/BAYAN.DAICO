@@ -31,7 +31,7 @@ Results:
 - NER: held-out entity-F1 1.0000, meeting the 0.80 target on 391 synthetic test sentences with two templates.
 - QA: supplied smoke set 12/12 correct answerable spans; zero unanswerable cases in that file. Separate diagnostic: 9/9 spans and 3/3 nulls. The updated course README accepts 12 answerable cases; the older checklist's 9+3 mismatch remains documented.
 
-**Remaining target:** +8 topic macro-F1 is not attainable above the current baseline ceiling on this test. Different valid evaluation evidence or instructor guidance is required; the frozen test was not rerun to chase the target.
+**Remaining target:** +8 topic macro-F1 is not attainable above the current baseline ceiling on this test. Different valid evaluation evidence or a new evaluation protocol is required; the frozen test was not rerun to chase the target.
 
 Outputs: [baseline](../artifacts/lab3/tfidf_baseline.json), [classifier](../artifacts/lab3/topic_classifier.json), [NER](../artifacts/lab3/ner.json), [QA](../artifacts/lab3/qa.json), [target audit](../artifacts/lab3/topic_target_audit.json), [QA updated requirement assessment](../artifacts/lab3/qa_course_update.json).
 
@@ -67,7 +67,7 @@ Results: topic invariance 200/200; minimum-functionality tests 15/16 (93.75%). A
 
 Assistant review: all 120 entries annotated; 45 exact texts; all supplied errors are parks predicted as roads. Scenarios: playground maintenance 42, park accessibility 46, irrigation 32. Assistant histogram and three proposed follow-ups are saved. Accounting ceilings from replacing wrong predictions with gold labels are explicitly not model improvements.
 
-**Remaining mandatory work:** human sign-off is **0/120**. Consequently the human-confirmed histogram and human approval of the proposed fixes remain pending. The assistant annotations do not satisfy the course's explicit human reading requirement. The guided tool saves only explicit per-entry decisions. Future gains from the proposed fixes are unknown; correction ceilings are not substitute forecasts.
+**Historical snapshot:** this file predates the completed 120/120 individual review. The current review state is recorded in `artifacts/lab6/human_error_review.json` and `EVALUATION_REPORT.md`.
 
 Outputs: [evaluation report](../EVALUATION_REPORT.md), [Lab 6 summary](../artifacts/lab6/summary.json), [short assistant review](LAB6_QUICK_REVIEW.md), [all assistant annotations](../artifacts/lab6/assistant_error_review.json), [assistant histogram](../artifacts/lab6/assistant_error_taxonomy.png), [human review state](../artifacts/lab6/human_error_review.json), [GitHub workflow](LAB6_GITHUB_WORKFLOW.md), [model cards](../model_cards).
 

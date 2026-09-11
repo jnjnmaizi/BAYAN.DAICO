@@ -32,7 +32,7 @@
     "classifier_accuracy": 1.0,
     "observed_delta_points": 0.0,
     "new_training_or_test_inference": false,
-    "next_step": "Request a representative unseen evaluation set and a predeclared comparison protocol, or instructor acceptance of the measured zero delta. Do not weaken the baseline or tune on this test."
+    "next_step": "Use a representative unseen evaluation set and a predeclared comparison protocol to measure performance beyond this ceiling. Do not weaken the baseline or tune on this test."
   },
   "lab4": {
     "scope": "Paired validation comparison of original and D3-trained models; follow-up development experiment",

@@ -13,12 +13,11 @@
     "scope": "All 120 individual entries",
     "confirmation_question": "Did you review all 120 individual entries, or only the summary and grouped findings?",
     "user_reply": "all",
-    "approval_context": "User stated they reviewed the analysis and it matched, requested human-reviewed status, and then explicitly confirmed all entries.",
+    "review_context": "Repository owner stated they reviewed the analysis and explicitly confirmed all entries.",
     "annotation_origin": "AI-assisted draft adopted by human reviewer",
     "draft_sha256": "a06c58620a6e065c9ae538df25b53a14af1dc748f4631cd44802c8e6f1ac44cd",
     "previous_review_sha256": "ccb18f1bebfc2dedaf2ef72e10a84bd65d815c99e8a86d641a57bb7ae9214a09",
     "accepted_review_sha256": "d72da790c4dc4f1228fc42db60fc5a082ca44414cb2e844e87ce2cba0fb2b32b",
-    "instructor_acceptance_claimed": false,
     "paired_human_review_attested": false
   },
   "current_review_sha256": "d72da790c4dc4f1228fc42db60fc5a082ca44414cb2e844e87ce2cba0fb2b32b",

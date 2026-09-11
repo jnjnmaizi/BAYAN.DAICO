@@ -99,23 +99,20 @@ def main():
             raise ValueError('Grouped review repeats source IDs')
         summary['human_group_review']={'groups_reviewed':len(grouped['groups']),
             'source_entries_covered':len(covered),'decisions':grouped['decisions'],
-            'individual_human_confirmations_added':0,'instructor_acceptance_of_grouped_method':grouped['instructor_acceptance_of_grouped_method']}
-        if grouped['instructor_acceptance_of_grouped_method'] is True and set(covered)==set(by_id):
-            human_status='satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries)'
-            summary['human_group_review']['accepted_review_requirement_satisfied']=True
-    alternatives_path=ROOT/'artifacts/instructor_approved_alternatives.json'
+            'individual_human_confirmations_added':0,'grouped_summary_only':True}
+    alternatives_path=ROOT/'artifacts/alternative_evidence.json'
     alternatives=json.loads(alternatives_path.read_text()) if alternatives_path.exists() else None
     if alternatives:
-        if alternatives.get('completion_status') not in {'satisfied_by_instructor_approved_alternative','pending_instructor_decision'}:
-            raise ValueError('Instructor alternative record has an unexpected completion status')
-        summary['instructor_approved_alternatives']={
+        if alternatives.get('status')!='documented_additional_evidence':
+            raise ValueError('Alternative evidence record has an unexpected status')
+        summary['alternative_evidence']={
             'scope': alternatives['scope'],
-            'completion_status': alternatives['completion_status'],
+            'status': alternatives['status'],
             'raw_measurements_preserved': alternatives['raw_measurements_preserved'],
             'course_requirements_changed': alternatives['course_requirements_changed']
         }
     write_json(out/'summary.json',summary)
-    acceptance_line=('Labs 3–5 are recorded as satisfied by an instructor-approved alternative; their raw metrics and original course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).' if alternatives and alternatives['completion_status']=='satisfied_by_instructor_approved_alternative' else 'Labs 3–5 have documented alternative evidence, but instructor approval is pending; their raw metrics and original course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).' if alternatives else '')
+    acceptance_line=('Labs 3–5 have additional evidence documented; their raw metrics and original course requirements remain unchanged. See [the evidence record](artifacts/alternative_evidence.json).' if alternatives else '')
     lines=['# Evaluation report — Jana Alhumaizi NLP','', 'Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is '+human_status+'.', acceptance_line,'', '## Sliced metrics with 95% bootstrap intervals','', '500 seeded bootstrap draws; citizen groups are resampled together. All eight topic labels stay in macro-F1, including absent labels. Slices with fewer than 30 groups are flagged. These are validation estimates, not new frozen-test results.','', '| Model / slice | Rows | Macro-F1 [95% CI] | Small slice |','|---|---:|---|---|']
     for name,data in report.items():
         for key,value in data['slices'].items():
@@ -140,12 +137,8 @@ def main():
     lines=[line.replace('- Human review is not complete; directional probes pass through ties on a weak separate sentiment baseline. The Lab 6 targets must not be marked fully achieved.', '- Human review is '+human_status+'. Directional probes pass through ties on a weak separate sentiment baseline; they do not establish negation understanding.') for line in lines]
     if alternatives:
         position=lines.index('## Known limitations')
-        if alternatives['completion_status']=='satisfied_by_instructor_approved_alternative':
-            title='## Instructor-approved completion decision'
-            text='Labs 3–5 are recorded as **satisfied by instructor-approved alternative**. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as the accepted evidence. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).'
-        else:
-            title='## Alternative evidence pending instructor decision'
-            text='Labs 3–5 have documented alternative evidence, but are **pending instructor decision**. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as proposals. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).'
+        title='## Additional evidence for Labs 3–5'
+        text='Labs 3–5 have additional evidence documented. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as supporting analysis. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the evidence record](artifacts/alternative_evidence.json).'
         lines[position:position]=[title,'',text,'']
     if grouped:
         import matplotlib
@@ -161,7 +154,7 @@ def main():
         fig.suptitle('Lab 6 — Grouped review results')
         fig.tight_layout();fig.savefig(out/'grouped_review_histogram.png',dpi=160);plt.close(fig)
         position=lines.index('## Error taxonomy')+1
-        acceptance=('The repository owner reports that the instructor accepted this grouped review.' if grouped['instructor_acceptance_of_grouped_method'] is True else 'The grouped review is retained as a compact summary; the individual review is counted separately.')
+        acceptance='The grouped review is retained as a compact summary; the individual review is counted separately.'
         lines[position:position]=['', f"**Grouped human review received: {len(grouped['groups'])}/45 groups**, covering {len(covered)}/120 original entries. Each group includes a submitted decision and the reviewer’s notes. See the [completed grouped worksheet](docs/LAB6_SHORT_REVIEW.md). Grouped decisions are recorded separately from per-entry confirmations. "+acceptance,'','![Grouped review results](artifacts/lab6/grouped_review_histogram.png)','']
     lines=[line.replace('Human-confirmed review: **', 'Individual-entry confirmations (separate from grouped decisions): **') for line in lines]
     body='\n'.join(lines)
