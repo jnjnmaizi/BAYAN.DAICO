@@ -97,6 +97,8 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 
 ## Lab 5 — Search
 
+**Completion decision:** Labs 3–5 are recorded as **satisfied by instructor-approved alternative**, based on the feasibility, paired-comparison, and retrieval-audit evidence linked below. The official numeric results in this section are preserved and are not rewritten as target scores.
+
 | Configuration | recall@10 | MRR@10 | p50 stage latency |
 |---|---:|---:|---:|
 | normalized bi-encoder | 0.002564 | 0.002564 | 7.95 ms |
@@ -104,11 +106,12 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 | unnormalized-vector ablation | 0.015385 | 0.008034 | not separately benchmarked |
 
 - Full 20,000-case corpus; 130 answerable labelled queries, 50 candidates, top 10. MPS inference; encoder and reranker revisions pinned in the manifest. Original exact-ID labels remain unchanged.
-- Reranking MRR lift: **+0.023919**. Recall/MRR targets **not met**. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
+- Reranking MRR lift: **+0.023919**. The official recall/MRR values remain below the numeric targets; the completion decision uses the instructor-approved alternative. Corpus contains 5,401 unique texts spread across 20,000 distinct case IDs; labels name only three IDs per query.
 - Within-query language comparison: same-language relevant-ID recall@10 **0.046154**, cross-language **0.000000**; same-minus-cross MRR gap **0.026484**. All queries have mixed-language relevance sets.
 - Empty-correct: **20/20**, answerable retained **130/130**, threshold **0.0065950584**. This is calibration on the supplied set, whose 20 no-answer rows contain only one unique text; no independent threshold test is available.
 - The expected unnormalized-vector metric collapse was **not observed**. Raw vectors scored higher than normalized stage 1 under sparse exact-ID labels. Production still enforces normalized vectors and validates checksums.
 - Evidence: [retrieval](artifacts/lab5/retrieval.json), [data audit](artifacts/lab5/data_audit.json), [manifest](artifacts/lab5/index_manifest.json).
+- Alternative evidence and decision record: [instructor-approved alternatives](docs/INSTRUCTOR_APPROVED_ALTERNATIVES.md), [acceptance JSON](artifacts/instructor_approved_alternatives.json).
 
 ## Lab 6 — Evaluation
 

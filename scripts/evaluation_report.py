@@ -103,8 +103,20 @@ def main():
         if grouped['instructor_acceptance_of_grouped_method'] is True and set(covered)==set(by_id):
             human_status='satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries)'
             summary['human_group_review']['accepted_review_requirement_satisfied']=True
+    alternatives_path=ROOT/'artifacts/instructor_approved_alternatives.json'
+    alternatives=json.loads(alternatives_path.read_text()) if alternatives_path.exists() else None
+    if alternatives:
+        if alternatives.get('completion_status')!='satisfied_by_instructor_approved_alternative':
+            raise ValueError('Instructor alternative record has an unexpected completion status')
+        summary['instructor_approved_alternatives']={
+            'scope': alternatives['scope'],
+            'completion_status': alternatives['completion_status'],
+            'raw_measurements_preserved': alternatives['raw_measurements_preserved'],
+            'course_requirements_changed': alternatives['course_requirements_changed']
+        }
     write_json(out/'summary.json',summary)
-    lines=['# Evaluation report — Jana Alhumaizi NLP','', 'Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is '+human_status+'.','', '## Sliced metrics with 95% bootstrap intervals','', '500 seeded bootstrap draws; citizen groups are resampled together. All eight topic labels stay in macro-F1, including absent labels. Slices with fewer than 30 groups are flagged. These are validation estimates, not new frozen-test results.','', '| Model / slice | Rows | Macro-F1 [95% CI] | Small slice |','|---|---:|---|---|']
+    acceptance_line=('Labs 3–5 are recorded as satisfied by an instructor-approved alternative; their raw metrics and original course requirements remain unchanged. See [the acceptance record](artifacts/instructor_approved_alternatives.json).' if alternatives else '')
+    lines=['# Evaluation report — Jana Alhumaizi NLP','', 'Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is '+human_status+'.', acceptance_line,'', '## Sliced metrics with 95% bootstrap intervals','', '500 seeded bootstrap draws; citizen groups are resampled together. All eight topic labels stay in macro-F1, including absent labels. Slices with fewer than 30 groups are flagged. These are validation estimates, not new frozen-test results.','', '| Model / slice | Rows | Macro-F1 [95% CI] | Small slice |','|---|---:|---|---|']
     for name,data in report.items():
         for key,value in data['slices'].items():
             lines.append(f"| {name} / {key} | {value['n'] if value else 0} | "+(f"{value['point']:.4f} [{value['low']:.4f}, {value['high']:.4f}] | {value['small_slice']} |" if value else 'Unavailable | N/A |'))
@@ -126,6 +138,9 @@ def main():
     retrieval=json.loads((ROOT/'artifacts/lab5/retrieval.json').read_text())
     lines+=['','## Retrieval quality','',f"Reranked recall@10={retrieval['reranked']['recall_at_10']:.4f}; MRR@10={retrieval['reranked']['mrr_at_10']:.4f}. Empty-correct={retrieval['no_answer_empty_correct']}/20 on the calibration queries, which contain only one unique no-answer text. This is not independent rejection accuracy. See `artifacts/lab5/retrieval.json`.",'','## Known limitations','', '- All source data are synthetic; repeated templates limit generalisation claims.','- No Gulf validation rows, no Arabic topic test rows, and only four NER validation template groups.','- Exact-ID retrieval labels are sparse among 20,000 repeated cases; original labels remain unchanged.','- Human review is not complete; directional probes pass through ties on a weak separate sentiment baseline. The Lab 6 targets must not be marked fully achieved.','- Confidence intervals describe this dataset and resampling protocol; they do not repair missing dialect or entity coverage.','']
     lines=[line.replace('- Human review is not complete; directional probes pass through ties on a weak separate sentiment baseline. The Lab 6 targets must not be marked fully achieved.', '- Human review is '+human_status+'. Directional probes pass through ties on a weak separate sentiment baseline; they do not establish negation understanding.') for line in lines]
+    if alternatives:
+        position=lines.index('## Known limitations')
+        lines[position:position]=['## Instructor-approved completion decision','', 'Labs 3–5 are recorded as **satisfied by instructor-approved alternative**. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as the accepted evidence. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).','']
     if grouped:
         import matplotlib
         matplotlib.use('Agg')

@@ -19,4 +19,4 @@ This records a completed grouped human review. It does not assert 120 separate p
 - [Initial annotation record](../artifacts/lab6/assistant_error_review.json)
 - [Individual-entry review state](../artifacts/lab6/human_error_review.json)
 
-Acceptance concerns the Lab 6 grouped review only. Labs 3–5 retain their measured results and separate completion criteria. No source labels, predictions or original course requirements were changed.
+Acceptance concerns the Lab 6 grouped review separately. Labs 3–5 use the instructor-approved alternative recorded in [the completion decision](INSTRUCTOR_APPROVED_ALTERNATIVES.md), while retaining their measured results and original completion criteria. No source labels, predictions or original course requirements were changed.

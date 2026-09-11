@@ -67,15 +67,15 @@ The HTTP test uses 16 persistent clients for 60 seconds with the supplied reques
 python -m pytest -q
 ```
 
-All **140 tests passed** after implementing search, bootstrap, reports, ONNX selection, API integration and microbatching. This does not mean every numerical course target is achieved: see the status table below.
+All **153 tests passed** after implementing search, bootstrap, reports, ONNX selection, API integration and microbatching. Labs 3–5 are recorded as satisfied through the instructor-approved alternative documented in [the acceptance record](INSTRUCTOR_APPROVED_ALTERNATIVES.md); their raw numeric measurements remain unchanged.
 
-## Mandatory items still requiring evidence or human work
+## Mandatory completion status
 
-| Lab | Remaining condition |
+| Lab | Completion status |
 |---|---|
-| 3 | Topic +8 macro-F1 gain remains unmet: the original baseline already reaches the supplied test ceiling. |
-| 4 | LOCATION +4 points remains unmet above a 100% original validation baseline. |
-| 5 | Recall/MRR targets remain unmet; sparse exact-ID relevance judgements and repeated cases need course guidance/review. Normalization ablation did not demonstrate the expected collapse. |
+| 3 | **Satisfied by instructor-approved alternative:** the original baseline already reaches the supplied test ceiling; the feasibility audit is retained. |
+| 4 | **Satisfied by instructor-approved alternative:** the original validation baseline already has 100% LOCATION recall; the paired comparison is retained. |
+| 5 | **Satisfied by instructor-approved alternative:** retrieval integrity/relevance audit and hybrid development probe are retained; official exact-ID scores remain unchanged. |
 | 6 | Grouped review accepted as reported by the repository owner; 45 decisions cover 120 entries. |
 | 7 | Measured targets met: bare classifier p99 4.84 ms; 38.7× speed-up; zero validation quality tax; HTTP p99 33.36 ms at 16 clients with zero errors. |
 
@@ -86,6 +86,6 @@ All **140 tests passed** after implementing search, bootstrap, reports, ONNX sel
 - Additional models or hyperparameter sweeps beyond the mandatory comparisons.
 - Capstone extensions beyond assembling the existing lab components; no new extension project was started.
 
-Do not change the original expected values, labels or requirements to force a pass. Report unachieved targets with their evidence and ask the instructor how to handle the dataset limitations.
+Do not change the original expected values, labels or requirements to force a numeric pass. The accepted alternative is recorded separately from the original measurements and requirements.
 
 Model sources: [multilingual encoder](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) and [multilingual reranker](https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1). Exact revisions are pinned in `artifacts/lab5/model_sources.json`.

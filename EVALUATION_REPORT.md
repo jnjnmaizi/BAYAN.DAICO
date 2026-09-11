@@ -1,6 +1,7 @@
 # Evaluation report — Jana Alhumaizi NLP
 
 Validation performance reaches the ceiling of this synthetic dataset, while the retrieval system misses the supplied exact-ID targets. Gulf generalisation remains unmeasurable. Human error review is satisfied through the grouped review accepted by the instructor, as reported by the repository owner (45 groups covering 120 entries).
+Labs 3–5 are recorded as satisfied by an instructor-approved alternative; their raw metrics and original course requirements remain unchanged. See [the acceptance record](artifacts/instructor_approved_alternatives.json).
 
 ## Sliced metrics with 95% bootstrap intervals
 
@@ -73,6 +74,10 @@ Using gold labels only as an accounting exercise, correcting the 120 sampled pre
 ## Retrieval quality
 
 Reranked recall@10=0.0231; MRR@10=0.0265. Empty-correct=20/20 on the calibration queries, which contain only one unique no-answer text. This is not independent rejection accuracy. See `artifacts/lab5/retrieval.json`.
+
+## Instructor-approved completion decision
+
+Labs 3–5 are recorded as **satisfied by instructor-approved alternative**. The feasibility audit, paired NER comparison, retrieval integrity/relevance audit and hybrid development probe are retained as the accepted evidence. Original exact-ID scores, labels, datasets and course requirements remain unchanged. See [the decision record](artifacts/instructor_approved_alternatives.json).
 
 ## Known limitations
 

@@ -1,5 +1,11 @@
 # Mandatory completion: evidence and decisions
 
+## Current completion decision
+
+The repository owner reports instructor acceptance of the documented alternative evidence for Labs 3–5. Those labs are recorded as **satisfied by instructor-approved alternative**. The original requirements and numeric measurements below remain as an audit trail; they were not changed.
+
+See the [acceptance record](../artifacts/instructor_approved_alternatives.json) and [status explanation](INSTRUCTOR_APPROVED_ALTERNATIVES.md).
+
 
 Prepared 2026-09-10. This is a supplementary plan, not a change to the course requirements or an assertion that unmet targets passed.
 
@@ -13,7 +19,7 @@ The saved baseline and transformer both have 100% accuracy on the supplied 1,200
 
 Reproduce: `python scripts/topic_target_audit.py`.
 
-Decision requested: accept the documented ceiling result for this dataset, or approve a new independently labelled, unseen evaluation set and a comparison protocol fixed before evaluation. A new dataset does not guarantee an eight-point gain. Do not weaken the baseline or change the frozen test to obtain a desired score.
+Accepted alternative: the instructor accepted this documented ceiling result for the supplied dataset. A new independently labelled, unseen evaluation set remains optional follow-up, not a prerequisite for the recorded completion decision.
 
 ### Lab 4: LOCATION recall already 100%
 
@@ -21,7 +27,7 @@ Original and consistently D3-trained NER both achieve 100% LOCATION recall on th
 
 Reproduce: `python scripts/compare_ner_d3.py`.
 
-Decision requested: accept the measured zero gain and the decision to retain the original pipeline, or approve an independently annotated NER evaluation set containing realistic unseen constructions. Do not substitute the degraded inference-only D3 experiment as the baseline to manufacture a gain.
+Accepted alternative: the instructor accepted the measured zero gain and retention of the original pipeline. An independently annotated NER set remains optional follow-up. The degraded inference-only D3 experiment is not used as a manufactured gain.
 
 ### Lab 5: retrieval and relevance coverage both need attention
 
@@ -37,7 +43,7 @@ For Q-001, the top two reranked cases (CASE-002537 and CASE-008921) match the qu
 
 Technical next step: inspect candidate diversity and encoder/index correctness, then test any retrieval changes on a separate development set. A larger or more diverse candidate pool may help coverage but does not guarantee target scores. Do not use the evaluation's gold IDs to select or promote candidates.
 
-Decision requested: clarify whether relevant cases mean the enumerated exact IDs exclusively or all semantically relevant historical cases. If labels need expansion, approve a separately versioned relevance review, ideally judging pooled results without showing the originating retrieval system. Preserve the original-score report. Independent held-out judgments are needed for a credible final evaluation after development.
+Accepted alternative: the instructor accepted the retrieval integrity/relevance audit and the predeclared hybrid development probe as the completion evidence for this dataset. The original-score report is preserved. Independent held-out judgments remain optional research follow-up.
 
 ### Lab 6: grouped review accepted
 
@@ -49,4 +55,4 @@ Individual-entry confirmations remain separate from grouped decisions. The origi
 
 > We have reproduced the remaining issues and attached the evidence. For Labs 3 and 4, the original baselines already reach the current evaluation ceilings, leaving no possible positive gain on those sets. May we submit these documented ceiling results, or should we use a new independently labelled evaluation set under an agreed protocol? For Lab 5, please clarify the relevance definition: the current labels exclude exact-text matches that retrieval returns. We will continue investigating candidate retrieval. The Lab 6 grouped review has been accepted. We are keeping the original requirements, datasets and scores unchanged.
 
-Acceptance recorded here concerns the Lab 6 grouped review only. Labs 3–5 retain their separate completion criteria.
+The Lab 6 grouped review remains accepted separately. Labs 3–5 use the instructor-approved alternative recorded above.
