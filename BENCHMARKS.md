@@ -112,6 +112,7 @@ All-Arabic validation consists of 1,200 MSA rows and zero Gulf rows; only four o
 - The expected unnormalized-vector metric collapse was **not observed**. Raw vectors scored higher than normalized stage 1 under sparse exact-ID labels. Production still enforces normalized vectors and validates checksums.
 - Evidence: [retrieval](artifacts/lab5/retrieval.json), [data audit](artifacts/lab5/data_audit.json), [manifest](artifacts/lab5/index_manifest.json).
 - Additional evidence and record: [alternative evidence](docs/ALTERNATIVE_EVIDENCE.md), [JSON record](artifacts/alternative_evidence.json).
+- Dataset/relevance audit: all 130 answerable queries use relevant IDs exactly 8 corpus rows apart, matching the repeating 8-topic cycle. Under the supplementary verbatim-duplicate definition, the saved reranker reaches recall@10 **0.951456** and MRR@10 **0.683545** on 103 queries. See [Lab 5 dataset audit](docs/LAB5_DATASET_AUDIT.md).
 
 ## Lab 6 — Evaluation
 

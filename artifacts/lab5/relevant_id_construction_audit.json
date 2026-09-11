@@ -1,0 +1,2627 @@
+{
+  "scope": "Diagnoses the construction of the supplied relevant_case_ids field; makes no model calls",
+  "new_inference": false,
+  "labels_modified": false,
+  "source_sha256": {
+    "data/search/bayan_cases.csv": "f36633f15e65ad10e4cf31859924da2f014e51b94024c0019bd1ecd712fb61e4",
+    "data/search/bayan_queries.jsonl": "ff24a0e7580199dd722dab58961caf06135ae789837aa20895bf59a30dc95e3a"
+  },
+  "n_topics_in_corpus": 8,
+  "answerable_queries": 130,
+  "queries_with_gap_equal_topic_count": 130,
+  "queries_with_gap_equal_topic_count_fraction": 1.0,
+  "queries_where_all_relevant_share_query_topic": 130,
+  "queries_where_all_relevant_share_query_topic_fraction": 1.0,
+  "observed_gap_patterns": {
+    "(8, 8)": 130
+  },
+  "interpretation": [
+    "For every answerable query, the three relevant_case_ids are exactly 8 rows apart in the untouched corpus order, i.e. the same cyclic topic-slot position repeated three times.",
+    "This holds regardless of the specific wording, location, or detail in the query text.",
+    "This is a structural property of how the label was assigned (position in a topic-cycled list), not a measurement of semantic or textual relevance to the query.",
+    "It explains, independent of retriever/encoder/reranker choice, why gold-in-candidate coverage and recall@10/MRR@10 are near the observed floor: a correct dense/lexical match (e.g. an exact-text duplicate case) is systematically absent from the gold set unless it happens to also land on that same cyclic slot by chance.",
+    "This does not prove the labels are unusable for every purpose, and it is not permission to edit relevant_case_ids, select candidates using them, or substitute this diagnostic for the official metric. It is evidence for documenting how relevance should be defined for this dataset."
+  ],
+  "queries": [
+    {
+      "query_id": "Q-001",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000001",
+        "CASE-000009",
+        "CASE-000017"
+      ],
+      "zero_based_indices": [
+        0,
+        8,
+        16
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-002",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000010",
+        "CASE-000018",
+        "CASE-000026"
+      ],
+      "zero_based_indices": [
+        9,
+        17,
+        25
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-003",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000019",
+        "CASE-000027",
+        "CASE-000035"
+      ],
+      "zero_based_indices": [
+        18,
+        26,
+        34
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-004",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000028",
+        "CASE-000036",
+        "CASE-000044"
+      ],
+      "zero_based_indices": [
+        27,
+        35,
+        43
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-005",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000037",
+        "CASE-000045",
+        "CASE-000053"
+      ],
+      "zero_based_indices": [
+        36,
+        44,
+        52
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-006",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000046",
+        "CASE-000054",
+        "CASE-000062"
+      ],
+      "zero_based_indices": [
+        45,
+        53,
+        61
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-007",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000055",
+        "CASE-000063",
+        "CASE-000071"
+      ],
+      "zero_based_indices": [
+        54,
+        62,
+        70
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-008",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000064",
+        "CASE-000072",
+        "CASE-000080"
+      ],
+      "zero_based_indices": [
+        63,
+        71,
+        79
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-009",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000065",
+        "CASE-000073",
+        "CASE-000081"
+      ],
+      "zero_based_indices": [
+        64,
+        72,
+        80
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-010",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000074",
+        "CASE-000082",
+        "CASE-000090"
+      ],
+      "zero_based_indices": [
+        73,
+        81,
+        89
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-011",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000083",
+        "CASE-000091",
+        "CASE-000099"
+      ],
+      "zero_based_indices": [
+        82,
+        90,
+        98
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-012",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000092",
+        "CASE-000100",
+        "CASE-000108"
+      ],
+      "zero_based_indices": [
+        91,
+        99,
+        107
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-013",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000101",
+        "CASE-000109",
+        "CASE-000117"
+      ],
+      "zero_based_indices": [
+        100,
+        108,
+        116
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-014",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000110",
+        "CASE-000118",
+        "CASE-000126"
+      ],
+      "zero_based_indices": [
+        109,
+        117,
+        125
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-015",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000119",
+        "CASE-000127",
+        "CASE-000135"
+      ],
+      "zero_based_indices": [
+        118,
+        126,
+        134
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-016",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000128",
+        "CASE-000136",
+        "CASE-000144"
+      ],
+      "zero_based_indices": [
+        127,
+        135,
+        143
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-017",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000129",
+        "CASE-000137",
+        "CASE-000145"
+      ],
+      "zero_based_indices": [
+        128,
+        136,
+        144
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-018",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000138",
+        "CASE-000146",
+        "CASE-000154"
+      ],
+      "zero_based_indices": [
+        137,
+        145,
+        153
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-019",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000147",
+        "CASE-000155",
+        "CASE-000163"
+      ],
+      "zero_based_indices": [
+        146,
+        154,
+        162
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-020",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000156",
+        "CASE-000164",
+        "CASE-000172"
+      ],
+      "zero_based_indices": [
+        155,
+        163,
+        171
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-021",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000165",
+        "CASE-000173",
+        "CASE-000181"
+      ],
+      "zero_based_indices": [
+        164,
+        172,
+        180
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-022",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000174",
+        "CASE-000182",
+        "CASE-000190"
+      ],
+      "zero_based_indices": [
+        173,
+        181,
+        189
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-023",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000183",
+        "CASE-000191",
+        "CASE-000199"
+      ],
+      "zero_based_indices": [
+        182,
+        190,
+        198
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-024",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000192",
+        "CASE-000200",
+        "CASE-000208"
+      ],
+      "zero_based_indices": [
+        191,
+        199,
+        207
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-025",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000193",
+        "CASE-000201",
+        "CASE-000209"
+      ],
+      "zero_based_indices": [
+        192,
+        200,
+        208
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-026",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000202",
+        "CASE-000210",
+        "CASE-000218"
+      ],
+      "zero_based_indices": [
+        201,
+        209,
+        217
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-027",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000211",
+        "CASE-000219",
+        "CASE-000227"
+      ],
+      "zero_based_indices": [
+        210,
+        218,
+        226
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-028",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000220",
+        "CASE-000228",
+        "CASE-000236"
+      ],
+      "zero_based_indices": [
+        219,
+        227,
+        235
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-029",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000229",
+        "CASE-000237",
+        "CASE-000245"
+      ],
+      "zero_based_indices": [
+        228,
+        236,
+        244
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-030",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000238",
+        "CASE-000246",
+        "CASE-000254"
+      ],
+      "zero_based_indices": [
+        237,
+        245,
+        253
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-031",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000247",
+        "CASE-000255",
+        "CASE-000263"
+      ],
+      "zero_based_indices": [
+        246,
+        254,
+        262
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-032",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000256",
+        "CASE-000264",
+        "CASE-000272"
+      ],
+      "zero_based_indices": [
+        255,
+        263,
+        271
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-033",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000257",
+        "CASE-000265",
+        "CASE-000273"
+      ],
+      "zero_based_indices": [
+        256,
+        264,
+        272
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-034",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000266",
+        "CASE-000274",
+        "CASE-000282"
+      ],
+      "zero_based_indices": [
+        265,
+        273,
+        281
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-035",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000275",
+        "CASE-000283",
+        "CASE-000291"
+      ],
+      "zero_based_indices": [
+        274,
+        282,
+        290
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-036",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000284",
+        "CASE-000292",
+        "CASE-000300"
+      ],
+      "zero_based_indices": [
+        283,
+        291,
+        299
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-037",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000293",
+        "CASE-000301",
+        "CASE-000309"
+      ],
+      "zero_based_indices": [
+        292,
+        300,
+        308
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-038",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000302",
+        "CASE-000310",
+        "CASE-000318"
+      ],
+      "zero_based_indices": [
+        301,
+        309,
+        317
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-039",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000311",
+        "CASE-000319",
+        "CASE-000327"
+      ],
+      "zero_based_indices": [
+        310,
+        318,
+        326
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-040",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000320",
+        "CASE-000328",
+        "CASE-000336"
+      ],
+      "zero_based_indices": [
+        319,
+        327,
+        335
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-041",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000321",
+        "CASE-000329",
+        "CASE-000337"
+      ],
+      "zero_based_indices": [
+        320,
+        328,
+        336
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-042",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000330",
+        "CASE-000338",
+        "CASE-000346"
+      ],
+      "zero_based_indices": [
+        329,
+        337,
+        345
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-043",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000339",
+        "CASE-000347",
+        "CASE-000355"
+      ],
+      "zero_based_indices": [
+        338,
+        346,
+        354
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-044",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000348",
+        "CASE-000356",
+        "CASE-000364"
+      ],
+      "zero_based_indices": [
+        347,
+        355,
+        363
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-045",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000357",
+        "CASE-000365",
+        "CASE-000373"
+      ],
+      "zero_based_indices": [
+        356,
+        364,
+        372
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-046",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000366",
+        "CASE-000374",
+        "CASE-000382"
+      ],
+      "zero_based_indices": [
+        365,
+        373,
+        381
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-047",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000375",
+        "CASE-000383",
+        "CASE-000391"
+      ],
+      "zero_based_indices": [
+        374,
+        382,
+        390
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-048",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000384",
+        "CASE-000392",
+        "CASE-000400"
+      ],
+      "zero_based_indices": [
+        383,
+        391,
+        399
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-049",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000385",
+        "CASE-000393",
+        "CASE-000401"
+      ],
+      "zero_based_indices": [
+        384,
+        392,
+        400
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-050",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000394",
+        "CASE-000402",
+        "CASE-000410"
+      ],
+      "zero_based_indices": [
+        393,
+        401,
+        409
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-051",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000403",
+        "CASE-000411",
+        "CASE-000419"
+      ],
+      "zero_based_indices": [
+        402,
+        410,
+        418
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-052",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000412",
+        "CASE-000420",
+        "CASE-000428"
+      ],
+      "zero_based_indices": [
+        411,
+        419,
+        427
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-053",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000421",
+        "CASE-000429",
+        "CASE-000437"
+      ],
+      "zero_based_indices": [
+        420,
+        428,
+        436
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-054",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000430",
+        "CASE-000438",
+        "CASE-000446"
+      ],
+      "zero_based_indices": [
+        429,
+        437,
+        445
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-055",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000439",
+        "CASE-000447",
+        "CASE-000455"
+      ],
+      "zero_based_indices": [
+        438,
+        446,
+        454
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-056",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000448",
+        "CASE-000456",
+        "CASE-000464"
+      ],
+      "zero_based_indices": [
+        447,
+        455,
+        463
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-057",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000449",
+        "CASE-000457",
+        "CASE-000465"
+      ],
+      "zero_based_indices": [
+        448,
+        456,
+        464
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-058",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000458",
+        "CASE-000466",
+        "CASE-000474"
+      ],
+      "zero_based_indices": [
+        457,
+        465,
+        473
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-059",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000467",
+        "CASE-000475",
+        "CASE-000483"
+      ],
+      "zero_based_indices": [
+        466,
+        474,
+        482
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-060",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000476",
+        "CASE-000484",
+        "CASE-000492"
+      ],
+      "zero_based_indices": [
+        475,
+        483,
+        491
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-061",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000485",
+        "CASE-000493",
+        "CASE-000501"
+      ],
+      "zero_based_indices": [
+        484,
+        492,
+        500
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-062",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000494",
+        "CASE-000502",
+        "CASE-000510"
+      ],
+      "zero_based_indices": [
+        493,
+        501,
+        509
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-063",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000503",
+        "CASE-000511",
+        "CASE-000519"
+      ],
+      "zero_based_indices": [
+        502,
+        510,
+        518
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-064",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000512",
+        "CASE-000520",
+        "CASE-000528"
+      ],
+      "zero_based_indices": [
+        511,
+        519,
+        527
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-065",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000513",
+        "CASE-000521",
+        "CASE-000529"
+      ],
+      "zero_based_indices": [
+        512,
+        520,
+        528
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-066",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000522",
+        "CASE-000530",
+        "CASE-000538"
+      ],
+      "zero_based_indices": [
+        521,
+        529,
+        537
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-067",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000531",
+        "CASE-000539",
+        "CASE-000547"
+      ],
+      "zero_based_indices": [
+        530,
+        538,
+        546
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-068",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000540",
+        "CASE-000548",
+        "CASE-000556"
+      ],
+      "zero_based_indices": [
+        539,
+        547,
+        555
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-069",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000549",
+        "CASE-000557",
+        "CASE-000565"
+      ],
+      "zero_based_indices": [
+        548,
+        556,
+        564
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-070",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000558",
+        "CASE-000566",
+        "CASE-000574"
+      ],
+      "zero_based_indices": [
+        557,
+        565,
+        573
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-071",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000567",
+        "CASE-000575",
+        "CASE-000583"
+      ],
+      "zero_based_indices": [
+        566,
+        574,
+        582
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-072",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000576",
+        "CASE-000584",
+        "CASE-000592"
+      ],
+      "zero_based_indices": [
+        575,
+        583,
+        591
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-073",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000577",
+        "CASE-000585",
+        "CASE-000593"
+      ],
+      "zero_based_indices": [
+        576,
+        584,
+        592
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-074",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000586",
+        "CASE-000594",
+        "CASE-000602"
+      ],
+      "zero_based_indices": [
+        585,
+        593,
+        601
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-075",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000595",
+        "CASE-000603",
+        "CASE-000611"
+      ],
+      "zero_based_indices": [
+        594,
+        602,
+        610
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-076",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000604",
+        "CASE-000612",
+        "CASE-000620"
+      ],
+      "zero_based_indices": [
+        603,
+        611,
+        619
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-077",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000613",
+        "CASE-000621",
+        "CASE-000629"
+      ],
+      "zero_based_indices": [
+        612,
+        620,
+        628
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-078",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000622",
+        "CASE-000630",
+        "CASE-000638"
+      ],
+      "zero_based_indices": [
+        621,
+        629,
+        637
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-079",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000631",
+        "CASE-000639",
+        "CASE-000647"
+      ],
+      "zero_based_indices": [
+        630,
+        638,
+        646
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-080",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000640",
+        "CASE-000648",
+        "CASE-000656"
+      ],
+      "zero_based_indices": [
+        639,
+        647,
+        655
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-081",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000641",
+        "CASE-000649",
+        "CASE-000657"
+      ],
+      "zero_based_indices": [
+        640,
+        648,
+        656
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-082",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000650",
+        "CASE-000658",
+        "CASE-000666"
+      ],
+      "zero_based_indices": [
+        649,
+        657,
+        665
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-083",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000659",
+        "CASE-000667",
+        "CASE-000675"
+      ],
+      "zero_based_indices": [
+        658,
+        666,
+        674
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-084",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000668",
+        "CASE-000676",
+        "CASE-000684"
+      ],
+      "zero_based_indices": [
+        667,
+        675,
+        683
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-085",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000677",
+        "CASE-000685",
+        "CASE-000693"
+      ],
+      "zero_based_indices": [
+        676,
+        684,
+        692
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-086",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000686",
+        "CASE-000694",
+        "CASE-000702"
+      ],
+      "zero_based_indices": [
+        685,
+        693,
+        701
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-087",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000695",
+        "CASE-000703",
+        "CASE-000711"
+      ],
+      "zero_based_indices": [
+        694,
+        702,
+        710
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-088",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000704",
+        "CASE-000712",
+        "CASE-000720"
+      ],
+      "zero_based_indices": [
+        703,
+        711,
+        719
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-089",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000705",
+        "CASE-000713",
+        "CASE-000721"
+      ],
+      "zero_based_indices": [
+        704,
+        712,
+        720
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-090",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000714",
+        "CASE-000722",
+        "CASE-000730"
+      ],
+      "zero_based_indices": [
+        713,
+        721,
+        729
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-091",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000723",
+        "CASE-000731",
+        "CASE-000739"
+      ],
+      "zero_based_indices": [
+        722,
+        730,
+        738
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-092",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000732",
+        "CASE-000740",
+        "CASE-000748"
+      ],
+      "zero_based_indices": [
+        731,
+        739,
+        747
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-093",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000741",
+        "CASE-000749",
+        "CASE-000757"
+      ],
+      "zero_based_indices": [
+        740,
+        748,
+        756
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-094",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000750",
+        "CASE-000758",
+        "CASE-000766"
+      ],
+      "zero_based_indices": [
+        749,
+        757,
+        765
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-095",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000759",
+        "CASE-000767",
+        "CASE-000775"
+      ],
+      "zero_based_indices": [
+        758,
+        766,
+        774
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-096",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000768",
+        "CASE-000776",
+        "CASE-000784"
+      ],
+      "zero_based_indices": [
+        767,
+        775,
+        783
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-097",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000769",
+        "CASE-000777",
+        "CASE-000785"
+      ],
+      "zero_based_indices": [
+        768,
+        776,
+        784
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-098",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000778",
+        "CASE-000786",
+        "CASE-000794"
+      ],
+      "zero_based_indices": [
+        777,
+        785,
+        793
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-099",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000787",
+        "CASE-000795",
+        "CASE-000803"
+      ],
+      "zero_based_indices": [
+        786,
+        794,
+        802
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-100",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000796",
+        "CASE-000804",
+        "CASE-000812"
+      ],
+      "zero_based_indices": [
+        795,
+        803,
+        811
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-101",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000805",
+        "CASE-000813",
+        "CASE-000821"
+      ],
+      "zero_based_indices": [
+        804,
+        812,
+        820
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-102",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000814",
+        "CASE-000822",
+        "CASE-000830"
+      ],
+      "zero_based_indices": [
+        813,
+        821,
+        829
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-103",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000823",
+        "CASE-000831",
+        "CASE-000839"
+      ],
+      "zero_based_indices": [
+        822,
+        830,
+        838
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-104",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000832",
+        "CASE-000840",
+        "CASE-000848"
+      ],
+      "zero_based_indices": [
+        831,
+        839,
+        847
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-105",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000833",
+        "CASE-000841",
+        "CASE-000849"
+      ],
+      "zero_based_indices": [
+        832,
+        840,
+        848
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-106",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000842",
+        "CASE-000850",
+        "CASE-000858"
+      ],
+      "zero_based_indices": [
+        841,
+        849,
+        857
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-107",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000851",
+        "CASE-000859",
+        "CASE-000867"
+      ],
+      "zero_based_indices": [
+        850,
+        858,
+        866
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-108",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000860",
+        "CASE-000868",
+        "CASE-000876"
+      ],
+      "zero_based_indices": [
+        859,
+        867,
+        875
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-109",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000869",
+        "CASE-000877",
+        "CASE-000885"
+      ],
+      "zero_based_indices": [
+        868,
+        876,
+        884
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-110",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000878",
+        "CASE-000886",
+        "CASE-000894"
+      ],
+      "zero_based_indices": [
+        877,
+        885,
+        893
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-111",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000887",
+        "CASE-000895",
+        "CASE-000903"
+      ],
+      "zero_based_indices": [
+        886,
+        894,
+        902
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-112",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000896",
+        "CASE-000904",
+        "CASE-000912"
+      ],
+      "zero_based_indices": [
+        895,
+        903,
+        911
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-113",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000897",
+        "CASE-000905",
+        "CASE-000913"
+      ],
+      "zero_based_indices": [
+        896,
+        904,
+        912
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-114",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000906",
+        "CASE-000914",
+        "CASE-000922"
+      ],
+      "zero_based_indices": [
+        905,
+        913,
+        921
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-115",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000915",
+        "CASE-000923",
+        "CASE-000931"
+      ],
+      "zero_based_indices": [
+        914,
+        922,
+        930
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-116",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000924",
+        "CASE-000932",
+        "CASE-000940"
+      ],
+      "zero_based_indices": [
+        923,
+        931,
+        939
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-117",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000933",
+        "CASE-000941",
+        "CASE-000949"
+      ],
+      "zero_based_indices": [
+        932,
+        940,
+        948
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-118",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-000942",
+        "CASE-000950",
+        "CASE-000958"
+      ],
+      "zero_based_indices": [
+        941,
+        949,
+        957
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-119",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-000951",
+        "CASE-000959",
+        "CASE-000967"
+      ],
+      "zero_based_indices": [
+        950,
+        958,
+        966
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-120",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-000960",
+        "CASE-000968",
+        "CASE-000976"
+      ],
+      "zero_based_indices": [
+        959,
+        967,
+        975
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-121",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-000961",
+        "CASE-000969",
+        "CASE-000977"
+      ],
+      "zero_based_indices": [
+        960,
+        968,
+        976
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-122",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-000970",
+        "CASE-000978",
+        "CASE-000986"
+      ],
+      "zero_based_indices": [
+        969,
+        977,
+        985
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-123",
+      "query_topic": "waste",
+      "relevant_case_ids": [
+        "CASE-000979",
+        "CASE-000987",
+        "CASE-000995"
+      ],
+      "zero_based_indices": [
+        978,
+        986,
+        994
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-124",
+      "query_topic": "water",
+      "relevant_case_ids": [
+        "CASE-000988",
+        "CASE-000996",
+        "CASE-001004"
+      ],
+      "zero_based_indices": [
+        987,
+        995,
+        1003
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-125",
+      "query_topic": "billing",
+      "relevant_case_ids": [
+        "CASE-000997",
+        "CASE-001005",
+        "CASE-001013"
+      ],
+      "zero_based_indices": [
+        996,
+        1004,
+        1012
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-126",
+      "query_topic": "digital_services",
+      "relevant_case_ids": [
+        "CASE-001006",
+        "CASE-001014",
+        "CASE-001022"
+      ],
+      "zero_based_indices": [
+        1005,
+        1013,
+        1021
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-127",
+      "query_topic": "licensing",
+      "relevant_case_ids": [
+        "CASE-001015",
+        "CASE-001023",
+        "CASE-001031"
+      ],
+      "zero_based_indices": [
+        1014,
+        1022,
+        1030
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-128",
+      "query_topic": "parks",
+      "relevant_case_ids": [
+        "CASE-001024",
+        "CASE-001032",
+        "CASE-001040"
+      ],
+      "zero_based_indices": [
+        1023,
+        1031,
+        1039
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-129",
+      "query_topic": "roads",
+      "relevant_case_ids": [
+        "CASE-001025",
+        "CASE-001033",
+        "CASE-001041"
+      ],
+      "zero_based_indices": [
+        1024,
+        1032,
+        1040
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    },
+    {
+      "query_id": "Q-130",
+      "query_topic": "lighting",
+      "relevant_case_ids": [
+        "CASE-001034",
+        "CASE-001042",
+        "CASE-001050"
+      ],
+      "zero_based_indices": [
+        1033,
+        1041,
+        1049
+      ],
+      "consecutive_gaps": [
+        8,
+        8
+      ],
+      "gaps_equal_topic_count": true,
+      "all_relevant_share_query_topic": true
+    }
+  ]
+}

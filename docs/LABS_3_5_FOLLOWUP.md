@@ -49,6 +49,12 @@ The hybrid approach recovers the wheelchair-access example: the top results are 
 
 This is not recall@10, MRR@10, an independent held-out test, or proof of full relevance. Original course scores remain recall@10 0.023077 and MRR@10 0.026484, below their numeric targets. Synthetic duplication and sparse exact-ID labels remain a separate evaluation issue. The probe is supporting analysis and is not relabelled as the official exact-ID score.
 
+### Relevance-construction audit
+
+The [dataset audit](LAB5_DATASET_AUDIT.md) adds a read-only check of the supplied labels. For all 130 answerable queries, the three official relevant IDs are exactly eight corpus rows apart, matching the repeating eight-topic cycle. This is a structural property of the supplied label construction and explains why a genuine text match can be counted as incorrect under the official IDs.
+
+The saved reranker reaches recall@10 **0.951456** and MRR@10 **0.683545** for the 103 queries with a verbatim duplicate in the corpus under that conservative supplementary definition. The official exact-ID result remains unchanged; no labels or cases were modified.
+
 ### Files and reproduction
 
 - [Hybrid implementation](../src/bayan/search/hybrid.py)

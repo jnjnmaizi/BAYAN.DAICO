@@ -86,6 +86,6 @@ All **153 tests passed** after implementing search, bootstrap, reports, ONNX sel
 - Additional models or hyperparameter sweeps beyond the mandatory comparisons.
 - Capstone extensions beyond assembling the existing lab components; no new extension project was started.
 
-Do not change the original expected values, labels or requirements to force a numeric pass. The accepted alternative is recorded separately from the original measurements and requirements.
+Do not change the original expected values, labels or requirements to force a numeric pass. Additional evidence is recorded separately from the original measurements and requirements.
 
 Model sources: [multilingual encoder](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) and [multilingual reranker](https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1). Exact revisions are pinned in `artifacts/lab5/model_sources.json`.
