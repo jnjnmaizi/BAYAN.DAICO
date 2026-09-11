@@ -1,0 +1,11 @@
+{
+  "dataset": "HeshamHaroon/ArabicRAGB",
+  "split": "train",
+  "sample_rows": 500,
+  "unique_passages": 478,
+  "metric_definition": "one supplied positive passage per query; char TF-IDF top-10",
+  "recall_at_10": 0.946,
+  "mrr_at_10": 0.8294936507936509,
+  "official_bayan_metrics_modified": false,
+  "limitations": "Small streaming sample and a lexical baseline; this is an independent external benchmark, not a replacement for the official Bayan exact-ID score."
+}

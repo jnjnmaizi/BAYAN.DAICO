@@ -1,0 +1,11 @@
+{
+  "dataset": "U4RASD/ArBNTopic",
+  "download_status": "loaded",
+  "train_rows": 15827,
+  "test_rows": 1583,
+  "label_count": 14,
+  "accuracy": 0.7403663929248263,
+  "macro_f1": 0.7197142032609543,
+  "official_bayan_metrics_modified": false,
+  "interpretation": "Independent external benchmark only; this score is not a replacement for Bayan Lab 3's eight-label frozen-test result."
+}

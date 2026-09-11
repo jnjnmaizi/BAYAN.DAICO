@@ -1,0 +1,80 @@
+{
+  "created": "2026-09-11",
+  "purpose": "Secondary external-data evaluation; official Bayan metrics are unchanged",
+  "official_data_modified": false,
+  "datasets": {
+    "ArBNTopic": {
+      "source": "https://huggingface.co/datasets/U4RASD/ArBNTopic",
+      "license": "See the dataset card before redistribution",
+      "task": "Arabic topic classification",
+      "published_size": 19784,
+      "published_label_count": 14,
+      "role": "Independent topic coverage check for Lab 3; not mapped to Bayan's eight labels",
+      "download_status": "loaded",
+      "splits": {"train": 15827, "validation": 2374, "test": 1583},
+      "train_label_count": 14,
+      "train_label_support": {
+        "Anthropology-and-Sociology": 775,
+        "Art-and-Literature": 775,
+        "Culture": 1523,
+        "Education": 780,
+        "Finance-and-Economy": 1403,
+        "History": 799,
+        "Language-and-Linguistics": 602,
+        "Law": 779,
+        "Medical": 1513,
+        "Philosophy": 822,
+        "Politics": 1572,
+        "Religion": 1501,
+        "Science-and-Technology": 1491,
+        "Sports": 1492
+      }
+    },
+    "Alyah": {
+      "source": "https://huggingface.co/datasets/tiiuae/alyah-emirati-benchmark",
+      "license": "See the dataset card before redistribution",
+      "task": "Emirati dialect multiple-choice evaluation",
+      "published_test_size": 1173,
+      "role": "Gulf/Emirati robustness evaluation for Lab 4; not substituted for LOCATION recall",
+      "download_status": "loaded",
+      "splits": {"test": 1173},
+      "category_count": 7,
+      "category_support": {
+        "Etiquette & Values": 173,
+        "Greetings & Daily Expressions": 61,
+        "Historical & Heritage Knowledge": 89,
+        "Imagery & Figurative Meaning": 121,
+        "Language & Dialect": 619,
+        "Poetry & Creative Expression": 32,
+        "Religious & Social Sensitivity": 78
+      }
+    },
+    "IAHLT Arabic NER": {
+      "source": "https://huggingface.co/datasets/iahlt/arabic_ner_mafat",
+      "license": "See the dataset card before redistribution",
+      "task": "Arabic span and token NER",
+      "published_rows": 40000,
+      "download_status": "loaded",
+      "stream_sample_rows": 2000,
+      "stream_sample_location_like_spans": 1179,
+      "stream_sample_span_labels": {
+        "ANG": 26, "DUC": 83, "EVE": 56, "FAC": 154, "GPE": 1055,
+        "LOC": 124, "MISC": 310, "ORG": 417, "PER": 897, "TIMEX": 213,
+        "TTL": 193, "WOA": 127
+      },
+      "role": "Independent Arabic NER/location robustness check for Lab 4"
+    },
+    "ArabicRAGB": {
+      "source": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB",
+      "license": "CC BY-SA 4.0 according to the dataset card",
+      "task": "Arabic passage-grounded retrieval",
+      "published_rows": 13163,
+      "download_status": "loaded",
+      "stream_sample_rows": 2000,
+      "stream_sample_unique_passages": 1603,
+      "stream_sample_query_dialects": {"egyptian": 605, "gulf": 593, "levantine": 115, "maghrebi": 96, "msa": 591},
+      "stream_sample_source_categories": {"education": 9, "government": 7, "healthcare": 22, "international": 2, "news": 21, "wikipedia": 1939},
+      "role": "Independent retrieval benchmark with explicit query-positive passage pairs for Lab 5"
+    }
+  }
+}
