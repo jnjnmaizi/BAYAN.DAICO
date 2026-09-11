@@ -1,6 +1,6 @@
 <div align="center">
 
-# Jana Alhumaizi NLP
+# JanaAlhumaizi.NLP
 
 ### Bilingual feedback. Structured insight. Measured performance.
 
@@ -18,9 +18,9 @@ An Arabic and English NLP prototype that turns citizen feedback into service top
 
 Citizen-service teams receive free-text complaints that vary in language, spelling, and detail. Reading each message, identifying the responsible service, and locating related cases takes time and makes consistent handling difficult.
 
-**Jana Alhumaizi NLP demonstrates how one NLP service can support that workflow.** It prepares bilingual text, masks supported personal identifiers, predicts one of eight service topics, extracts useful entities, and searches a corpus of 20,000 historical cases. A separate extractive question-answering component selects answers from supplied context.
+**JanaAlhumaizi.NLP demonstrates how one NLP service can support that workflow.** It prepares bilingual text, masks supported personal identifiers, predicts one of eight service topics, extracts useful entities, and searches a corpus of 20,000 historical cases. A separate extractive question-answering component selects answers from supplied context.
 
-Built by **Jana Alhumaizi** as an applied project for **SDA-AIE-211 — Natural Language Processing with Transformers**. Current status: **working educational prototype evaluated on synthetic data**.
+**JanaAlhumaizi.NLP** is an independent project inspired by the [SDAIA Academy BAYAN project](https://github.com/AljawharaAlbahlalDev/SDA-AIE-211-Bayan-Course), with project-specific preprocessing, model, evaluation, serving and optimisation modifications. It was built by **Jana Alhumaizi** for **SDA-AIE-211 — Natural Language Processing with Transformers**. Current status: **working educational prototype evaluated on synthetic data**.
 
 ## Value for a service team
 
@@ -103,6 +103,61 @@ The chart uses saved runs on an **Apple Silicon CPU, four threads, batch size on
 Sources: [classifier timing](artifacts/lab7/classifier_int8_benchmark.json), [NER timing](artifacts/lab7/ner_int8_benchmark.json), [HTTP load](artifacts/lab7/http_load.json), [classifier quality](artifacts/lab7/classifier_int8_quality.json), [NER quality](artifacts/lab7/ner_int8_quality.json), and [full benchmarks](BENCHMARKS.md).
 
 Results describe the recorded prototype runs on synthetic course data and the hardware specified above. Full metric definitions and evaluation context are available in the [technical evaluation report](EVALUATION_REPORT.md).
+
+## Secondary external evaluation
+
+The repository also contains a separate external-data track for coverage gaps
+in the supplied course evaluation. It does not modify the official Bayan data,
+labels, requirements, or scores.
+
+| External benchmark | Purpose | Recorded result |
+|---|---|---:|
+| [ArBNTopic](https://huggingface.co/datasets/U4RASD/ArBNTopic) | 14-class Arabic topic coverage | Accuracy **0.740366**, macro-F1 **0.719714** on 1,583 test rows |
+| [Alyah](https://huggingface.co/datasets/tiiuae/alyah-emirati-benchmark) | Emirati/Gulf dialect coverage | 1,173 manually curated test questions |
+| [IAHLT Arabic NER](https://huggingface.co/datasets/iahlt/arabic_ner_mafat) | Independent Arabic location-entity coverage | 1,179 location-like spans in a 2,000-row sample |
+| [ArabicRAGB](https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB) | Query-to-positive-passage retrieval | Recall@10 **0.946000**, MRR@10 **0.829494** on 500 sampled queries |
+
+These are independent benchmarks with different label sets or relevance
+definitions. They provide additional evidence and do not replace the official
+course metrics. Reproduce them with the [Colab notebook](notebooks/secondary_evaluation.ipynb)
+or the scripts in `scripts/secondary_*.py`. The full explanation is in the
+[secondary results report](docs/SECONDARY_RESULTS_2026-09-11.md).
+
+## Evaluation notes and limitations
+
+- **Synthetic data:** the course datasets are synthetic and contain repeated
+  templates, so the measured scores describe this benchmark rather than broad
+  real-world service performance.
+- **Lab 3 coverage:** the frozen topic test contains only four of the eight
+  training labels. Both models reach 100% accuracy and the fixed eight-label
+  macro-F1 ceiling is 0.5000, leaving no available headroom for the requested
+  improvement.
+- **Lab 4 Gulf coverage:** the supplied validation split contains no Gulf rows,
+  so a Gulf generalisation delta cannot be measured. The original LOCATION
+  recall is already 1.0000 on its validation set, so a positive four-point
+  improvement is not possible on that split.
+- **Lab 5 relevance labels:** the official retrieval score uses the supplied
+  exact case IDs. The audit found that the 130 answerable queries use IDs that
+  follow the repeating eight-topic corpus cycle, while repeated case text can
+  have different IDs. Semantically or textually correct results can therefore
+  count as incorrect under the official labels.
+- **Official versus secondary metrics:** the official Bayan metrics remain
+  unchanged. External benchmark results are reported separately because their
+  label sets, tasks, or relevance definitions differ.
+- **Lab 6 review scope:** the 120 sampled errors were individually confirmed;
+  the 45 grouped decisions are retained as a compact traceability summary.
+- **Lab 7 performance scope:** latency was measured on one Apple Silicon
+  machine using fixed payloads, batch size one, four threads and the recorded
+  concurrency. It does not guarantee the same latency for every payload,
+  hardware platform or production workload.
+- **Runtime artifacts:** large model checkpoints, FAISS files and pinned
+  encoder/reranker assets are excluded from Git. A clean clone needs those
+  artifacts prepared before the full API and search service can start.
+- **External-data licensing:** the secondary scripts download public dataset
+  releases at runtime. Raw external records are not redistributed in this
+  repository; review each dataset card and licence before reuse.
+- **No source rewriting:** no official labels, requirements, frozen-test rows
+  or failed official scores were changed to create a numeric pass.
 
 ## Run locally
 
